@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Picture/Allpoly.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display:flexbox;
+    padding: 2% 6%;
+    justify-content: space-around;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: left;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 0%;
+}
+.container{
+    width:100%;
+    min-height: 5vh;
+    padding: 1%;
+    display:flex
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    height: 10%;
+    margin-left:225px;
+    margin-top: 20px;
+    max-height: 10vh;
+    background: rgba(247, 244, 244, 0.578);
+    display:flex;
+    align-items: center;
+    border: 40px;
+    border-radius: 0%;
+    padding: 5px 10px;
+    backdrop-filter: blur(4px) saturate(100%);
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline:none;
+    padding: 20px 20px;
+    font-size: 20px;
+    color:#ffffff;
+}
+::placeholder{
+    color: #ffffff;
+}
+.search-bar button img{
+    width: 25px;
+}
+.search-bar button{
+    border:0;
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    cursor:pointer
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: #ffffff;
+}
+th {
+    text-align: center;
+}
+table, th, td{
+    border:1px solid #000;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: #ec891152;
+}
