@@ -81,6 +81,7 @@
                             <!--                                </div>-->
                             <!--                            </li>-->
                             <li class="nav-item mx-2">
+
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button">
                                     View Map
                                     <!--                                    <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
