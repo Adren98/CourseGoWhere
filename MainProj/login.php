@@ -131,7 +131,7 @@ include 'navfloating.php';
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Login</div>
+                    <div class="card-header"><h2 style = "text-align:center">Login</h2></div>
                     <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                             <div class="form-group row">
@@ -162,7 +162,7 @@ include 'navfloating.php';
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-4">
-                                    <a href="#" class="btn btn-link">
+                                    <a href="register.php" class="btn btn-link">
                                         Register
                                     </a>
                                 </div>
