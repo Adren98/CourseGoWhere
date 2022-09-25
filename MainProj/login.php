@@ -34,7 +34,6 @@ if (isset($_POST['submit'])) {
     $password = mysqli_real_escape_string($connection, $_POST['password']);
 
 
-
     if ($findAccount = mysqli_prepare($connection, "SELECT * FROM User WHERE email =?")) {
 
         $findAccount->bind_param('s', $username);
@@ -50,7 +49,7 @@ if (isset($_POST['submit'])) {
 
             $hash = $row['password'];
 
-var_dump(password_verify($password, $hash));
+            var_dump(password_verify($password, $hash));
             if (password_verify($password, $hash)) {
 
                 $_SESSION['email'] = $username;
@@ -70,7 +69,7 @@ var_dump(password_verify($password, $hash));
         }
 
 
-    }else{
+    } else {
         echo "Error: " . $findAccount . "<br>" . mysqli_error($connection);
     }
 
@@ -133,7 +132,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header"><h2 style = "text-align:center">Login</h2></div>
                     <div class="card-body">
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
                                     Address</label>
