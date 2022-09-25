@@ -15,7 +15,6 @@
 
 session_start();
 
-var_dump(hash('md5', '123'));
 
 $username = $password = $wrong = "";
 
@@ -51,8 +50,7 @@ if (isset($_POST['submit'])) {
 
             $hash = $row['password'];
 
-var_dump($password);
-var_dump($hash);
+var_dump(password_verify($password, $hash));
             if (password_verify($password, $hash)) {
 
                 $_SESSION['email'] = $username;
