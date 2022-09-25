@@ -38,7 +38,7 @@
                 </li>
                 <li class="nav-item my-auto ms-3 ms-lg-0">
 
-                    <a href="#" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>
+                    <a href="login.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>
 
                 </li>
             </ul>

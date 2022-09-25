@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
 include 'navfloating.php';
 
 ?>
-
+<br><br><br>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
 
 <head>

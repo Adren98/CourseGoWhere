@@ -8,8 +8,81 @@
        $data = htmlspecialchars($data);
        return $data;
    }
+    $email = $password = $confirmpassword = "";
+    $confirmpasswordER =  $emailER =$emailusedER= $passwordER = "";
+    $validcount = 0;
+    require_once('config.php');
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    if (mysqli_connect_errno()) {
+        die(mysqli_connect_error());
+    }
 
+    if (isset($_POST['submit'])) {
 
+       
+        if (empty($_POST['email'])) { //check name if empty
+            $emailER = "Please enter your email";
+        } else {
+            if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+                $emailER = "Please enter a valid email address.";
+            } else {
+                $email = test_input($_POST["email"]);
+                $validcount++;
+            }
+        }
+        if (empty($_POST["password"])) { //check password if empty
+            $passwordER = "Please enter a password.";
+        } else {
+
+            if (!preg_match("/\w{8,}/", $_POST["password"])) {
+                $passwordER = "Password must be alphanumeric and be at least 8 characters long";
+            } else {
+                $password = test_input($_POST["password"]);
+                $validcount++;
+            }
+        }
+        if (empty($_POST["confirmpassword"])) { //check passwordconfirm if empty
+            $passwordconfirmER = "Please re-enter the confirmed password";
+        } else {
+            if ($_POST["password"] == $_POST["confirmpassword"]) {
+                $confirm = test_input($_POST["confirmpassword"]);
+                $validcount++;
+            } else {
+                $confirmpasswordER = "Passwords do not match";
+            
+            }
+        }
+
+    }
+    if( $validcount ==3){
+        $email = mysqli_real_escape_string($connection, $email);
+        $confirm = mysqli_real_escape_string($connection, $confirm);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $user = "user";
+        //check if user is registered already
+        if($output = mysqli_prepare($connection, "SELECT email FROM User WHERE email = ?" )){
+            $output->bind_param("s",$email);
+            $output->execute();
+            $results = $output->get_result();
+            if($results->num_rows>0){
+                $emailusedER ="Email already registered";
+            }else{
+                //email is new. time to register user to DB
+                if($insert = mysqli_prepare($connection, "INSERT INTO User (email,password,user_type) VALUES (?,?,?)")){
+                    $insert->bind_param("sss",$email,$password,$user);
+                    if($insert->execute()){
+                        echo "<script type='text/javascript'>"
+                        . "alert('Thank you for signing up with us!');"
+                                ." window.location='index.php';</script>";
+                    }
+                    else {
+                        echo "fail";
+                    }
+                }
+            } 
+        }
+    }
+mysqli_close($connection);
 
 ?>
 
@@ -74,6 +147,7 @@ include 'navfloating.php';
                                 <div class="col-md-4">
                                     <input type="text" id="email_address" class="form-control-text" name="email"
                                            required autofocus>
+                                    <small style="margin-bottom:0px" class="help-block"><?php echo $emailER ?></small>
                                 </div>
                                 
                             </div>
@@ -83,6 +157,7 @@ include 'navfloating.php';
                                 <div class="col-md-4">
                                     <input type="password" id="password" class="form-control-text" name="password"
                                            required>
+                                    <small style="margin-bottom:0px" class="help-block"><?php echo $passwordER ?></small>
                                 </div>
                             </div>
                             <br>
@@ -91,13 +166,14 @@ include 'navfloating.php';
                                 <div class="col-md-4">
                                     <input type="password" id="confirmpassword" class="form-control-text" name="confirmpassword"
                                            required>
+                                    <small style="margin-bottom:0px" class="help-block"><?php echo $confirmpasswordER ?></small>
                                 </div>
                             </div>
 
                            
                             
                             <div class="col-md-6 offset-md-4">
-                                <small style="margin-bottom:0px" class="help-block"><?php echo $wrong ?></small>
+                                <small style="margin-bottom:0px" class="help-block"><?php echo $emailusedER ?></small>
                                 <button type="submit" class="btn btn-primary" name="submit">
                                     Register
                                 </button>
