@@ -12,6 +12,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
+<?php
+
+include 'navfloating.php';
+?>
 
 <head>
 
@@ -55,10 +59,6 @@
 
 <body class="index-page bg-gray-200">
 
-<?php
-
-include 'navfloating.php';
-?>
 
 
 <header class="header-2">
