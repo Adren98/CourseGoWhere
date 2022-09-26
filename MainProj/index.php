@@ -70,7 +70,7 @@ include 'navfloating.php';
                     <h1 class="text-white pt-3 mt-n5">CourseGoWhere?</h1>
                     <p class="lead text-white mt-3">A free site to help plan your future! <br/> We aim
                         to find you the course you deserve !</p>
-                    <a class="btn btn-lg  bg-gradient-primary" href="/courses.php"
+                    <a class="btn btn-lg  bg-gradient-primary" href="courses.php"
                        style="color : white; text-decoration: underline">Click here to proceed</a>
                 </div>
             </div>
