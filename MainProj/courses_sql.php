@@ -1,10 +1,6 @@
 <?php
 require_once('config.php');
 
-function test()
-{
-    return "test";
-}
 
 function getFieldOfInterest()
 {
