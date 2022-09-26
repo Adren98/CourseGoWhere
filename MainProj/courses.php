@@ -60,8 +60,9 @@ include 'navfloating.php';
 
 
             <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
-                <div class="col-lg-12">
+                <div class="col-lg-12"
                     <div class ="card-body align-items-center justify-content-center">
+                        <h5 style="text-align: center;">Filter (WIP)</h5><br>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                             <div class="form-group row">
                                 <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of Interest</label>
