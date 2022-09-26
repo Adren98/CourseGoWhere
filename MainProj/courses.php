@@ -75,14 +75,11 @@ include 'nav.php';
 
 
 
-            <div class="input-group justify-content-center">
-                <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" placeholder="Search"/>
-<!--                    <label class="form-label" for="form1">Search</label>-->
+            <div style="width: 18rem;" class="card justify-content-center">
+                <div class="col-lg-12">
+                    centered filter form
                 </div>
-                <button type="button" class="btn btn-primary">
-                    <i class="fas fa-search"></i>
-                </button>
+
             </div>
 
             <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
