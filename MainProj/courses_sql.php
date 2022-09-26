@@ -6,14 +6,15 @@ function test()
     return "test";
 }
 
-function getFieldOfInterest(){
+function getFieldOfInterest()
+{
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
     if (mysqli_connect_errno()) {
         die(mysqli_connect_error());
 
     }
 
-    $a=array();
+    $a = array();
 
     if ($output = mysqli_prepare($connection, "SELECT course_cluster FROM CoursesCatalogue")) {
         $output->execute();
@@ -22,14 +23,12 @@ function getFieldOfInterest(){
         while (($row = $result->fetch_assoc()) != NULL) {
 
 
-
-
-            array_push($a,$row['course_cluster']);
+            array_push($a, $row['course_cluster']);
 
 
         }
         return $a;
-    }else{
+    } else {
         return NULL;
     }
 }
@@ -44,7 +43,7 @@ function getAllCourse()
     }
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
         $output->execute();
-       $result = $output->get_result();
+        $result = $output->get_result();
         $index = 0;
         while (($row = $result->fetch_assoc()) != NULL) {
 
