@@ -2,8 +2,6 @@
 require_once('config.php');
 
 
-
-
 function getFieldOfInterest()
 {
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
