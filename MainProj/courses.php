@@ -85,8 +85,8 @@ include 'navfloating.php';
                             <br>
                             <div class="form-group row">
                                 <label for="CutOffPoint" class="col-md-4 col-form-label text-md-right">Cut Off Point</label>
-                                <div class="col-md-4">
-                                    <input type="range" id="cutoffpoint" class="form-control-text" name="cutoffpoint" min =0 max =40>
+                                <div class="col-md-1">
+                                    <input type="number" id="cutoffpoint" class="form-control-text" name="cutoffpoint" min =0 max =40>
                                     
                                 </div>
                             </div>
