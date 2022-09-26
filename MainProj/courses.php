@@ -28,7 +28,7 @@ session_start();
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <title>
-       CourseGoWhere
+        CourseGoWhere
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -57,7 +57,6 @@ include 'navfloating.php';
     <div class="row">
 
         <div class="col-lg-12 mx-auto">
-
 
 
             <div class="card justify-content-center">
@@ -137,60 +136,60 @@ include 'navfloating.php';
             </div>
 
             <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-<!--            <footer class="footer py-5">-->
-<!--                <div class="container">-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-lg-8 mb-4 mx-auto text-center">-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                Company-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                About Us-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                Team-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                Products-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                Blog-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-<!--                                Pricing-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-<!--                                <span class="text-lg fab fa-dribbble"></span>-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-<!--                                <span class="text-lg fab fa-twitter"></span>-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-<!--                                <span class="text-lg fab fa-instagram"></span>-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-<!--                                <span class="text-lg fab fa-pinterest"></span>-->
-<!--                            </a>-->
-<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-<!--                                <span class="text-lg fab fa-github"></span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-8 mx-auto text-center mt-1">-->
-<!--                            <p class="mb-0 text-secondary">-->
-<!--                                Copyright ©-->
-<!--                                <script>-->
-<!--                                    document.write(new Date().getFullYear())-->
-<!--                                </script>-->
-<!--                                Material by Creative Tim.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </footer>-->
+            <!--            <footer class="footer py-5">-->
+            <!--                <div class="container">-->
+            <!--                    <div class="row">-->
+            <!--                        <div class="col-lg-8 mb-4 mx-auto text-center">-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                Company-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                About Us-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                Team-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                Products-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                Blog-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+            <!--                                Pricing-->
+            <!--                            </a>-->
+            <!--                        </div>-->
+            <!--                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+            <!--                                <span class="text-lg fab fa-dribbble"></span>-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+            <!--                                <span class="text-lg fab fa-twitter"></span>-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+            <!--                                <span class="text-lg fab fa-instagram"></span>-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+            <!--                                <span class="text-lg fab fa-pinterest"></span>-->
+            <!--                            </a>-->
+            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+            <!--                                <span class="text-lg fab fa-github"></span>-->
+            <!--                            </a>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    <div class="row">-->
+            <!--                        <div class="col-8 mx-auto text-center mt-1">-->
+            <!--                            <p class="mb-0 text-secondary">-->
+            <!--                                Copyright ©-->
+            <!--                                <script>-->
+            <!--                                    document.write(new Date().getFullYear())-->
+            <!--                                </script>-->
+            <!--                                Material by Creative Tim.-->
+            <!--                            </p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </footer>-->
 
 </body>
 

@@ -18,7 +18,7 @@ function getAllCourse()
         return $output->get_result();
 
 
-    }else{
+    } else {
         return NULL;
     }
 
