@@ -64,8 +64,9 @@ $index = 0;
 <!-- Navbar Light -->
 <?php
 
-include 'nav.php';
+include 'navfloating.php';
 ?>
+<br><br><br>
 <!-- End Navbar -->
 <div class="container mt-5">
 
