@@ -6,6 +6,35 @@ function test()
     return "test";
 }
 
+function getFieldOfInterest(){
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    if (mysqli_connect_errno()) {
+        die(mysqli_connect_error());
+
+    }
+
+    $a=array();
+
+    if ($output = mysqli_prepare($connection, "SELECT course_cluster FROM CoursesCatalogue")) {
+        $output->execute();
+        $result = $output->get_result();
+
+        while (($row = $result->fetch_assoc()) != NULL) {
+
+
+
+
+            array_push($a,$row['course_cluster']);
+
+
+        }
+        return $a;
+    }else{
+        return NULL;
+    }
+}
+
+
 function getAllCourse()
 {
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
