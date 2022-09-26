@@ -21,19 +21,15 @@ if (mysqli_connect_errno()) {
     die(mysqli_connect_error());
 }
 if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
-    $output->execute();
-    $results = $output->get_result();
+$output->execute();
+$results = $output->get_result();
 $index = 0;
 //var_dump($results->fetch_assoc());
 
 
-
-
 //    var_dump($results->fetch_assoc());
 //    var_dump($results->fetch_assoc());
 //    var_dump($results->fetch_assoc());
-
-
 
 
 ?>
@@ -72,19 +68,22 @@ include 'nav.php';
 ?>
 <!-- End Navbar -->
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-12 mx-auto">
-            <div class="mb-4 w-100 w-md-50 w-lg-25">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="https://demos.creative-tim.com/material-kit-pro/index">Navigation</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Pagination</li>
-                    </ol>
-                </nav>
-                <h3>Pagination</h3>
-            </div>
 
+    <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+
+
+            <div class="input-group justify-content-center">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" placeholder="Search"/>
+<!--                    <label class="form-label" for="form1">Search</label>-->
+                </div>
+                <button type="button" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
 
             <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
                 <div class="container border-bottom">
@@ -129,21 +128,20 @@ include 'nav.php';
                             <tbody>
 
                             <?php
-                            while(($row=$results->fetch_assoc())!=NULL){
+                            while (($row = $results->fetch_assoc()) != NULL) {
 
-                            $index++;
-                            echo '<tr>';
-                            echo '<th scope="row">'.$index.'</th>';
-                            echo '<td>'.$row['course_name'].'</td>';
-                            echo '<td>'.$row['year'].'</td>';
-                            echo '<td>'.$row['course_cluster'].'</td>';
-                            echo '<td>'.$row['cut_off_point'].'</td>';
-                            echo '<td>'.$row['course_url'].'</td>';
-                            echo '<td>'.$row['new_course'].'</td>';
+                                $index++;
+                                echo '<tr>';
+                                echo '<th scope="row">' . $index . '</th>';
+                                echo '<td>' . $row['course_name'] . '</td>';
+                                echo '<td>' . $row['year'] . '</td>';
+                                echo '<td>' . $row['course_cluster'] . '</td>';
+                                echo '<td>' . $row['cut_off_point'] . '</td>';
+                                echo '<td>' . $row['course_url'] . '</td>';
+                                echo '<td>' . $row['new_course'] . '</td>';
                             }
                             }
                             ?>
-
 
 
                             </tbody>

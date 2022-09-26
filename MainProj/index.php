@@ -25,7 +25,7 @@
     <title>
 
 
-        Material Kit 2 by Creative Tim
+        CourseGOWhere
 
 
     </title>
