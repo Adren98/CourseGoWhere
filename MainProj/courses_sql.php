@@ -2,35 +2,6 @@
 require_once('config.php');
 
 
-function getCutOffPoint()
-{
-
-
-    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
-    if (mysqli_connect_errno()) {
-        die(mysqli_connect_error());
-
-    }
-
-    $a = array();
-
-    if ($output = mysqli_prepare($connection, "SELECT cut_off_point FROM CoursesCatalogue")) {
-        $output->execute();
-        $result = $output->get_result();
-
-        while (($row = $result->fetch_assoc()) != NULL) {
-
-
-            array_push($a, $row['cut_off_point']);
-
-
-        }
-        return sort($a);
-    } else {
-        return NULL;
-    }
-
-}
 
 
 function getFieldOfInterest()
