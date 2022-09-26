@@ -2,8 +2,8 @@
 require_once('config.php');
 
 
-function getCutOffPoint(){
-
+function getCutOffPoint()
+{
 
 
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
