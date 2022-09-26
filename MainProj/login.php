@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 
             $hash = $row['password'];
 
-            var_dump(password_verify($password, $hash));
+//            var_dump(password_verify($password, $hash));
             if (password_verify($password, $hash)) {
 
                 $_SESSION['email'] = $username;
