@@ -110,21 +110,9 @@ include 'navfloating.php';
 
                             <?php
                             require_once 'courses_sql.php';
-                            $result = getAllCourse();
-                            $index = 0;
-                            while (($row = $result->fetch_assoc()) != NULL) {
+                            getAllCourse();
 
-                                $index++;
-                                echo '<tr>';
-                                echo '<th scope="row">' . $index . '</th>';
-                                echo '<td>' . $row['course_name'] . '</td>';
-                                echo '<td>' . $row['year'] . '</td>';
-                                echo '<td>' . $row['course_cluster'] . '</td>';
-                                echo '<td>' . $row['cut_off_point'] . '</td>';
-                                echo '<td>' . $row['course_url'] . '</td>';
-                                echo '<td>' . $row['new_course'] . '</td>';
 
-                            }
                             ?>
 
 

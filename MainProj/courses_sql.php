@@ -15,13 +15,22 @@ function getAllCourse()
     }
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
         $output->execute();
-        return $output->get_result();
+       $result = $output->get_result();
+        $index = 0;
+        while (($row = $result->fetch_assoc()) != NULL) {
 
+            $index++;
+            echo '<tr>';
+            echo '<th scope="row">' . $index . '</th>';
+            echo '<td>' . $row['course_name'] . '</td>';
+            echo '<td>' . $row['year'] . '</td>';
+            echo '<td>' . $row['course_cluster'] . '</td>';
+            echo '<td>' . $row['cut_off_point'] . '</td>';
+            echo '<td>' . $row['course_url'] . '</td>';
+            echo '<td>' . $row['new_course'] . '</td>';
 
-    } else {
-        return NULL;
+        }
     }
-
 
 }
 
