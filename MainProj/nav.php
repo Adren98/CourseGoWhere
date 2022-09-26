@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/presentation" rel="tooltip"
-           title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+        <a class="navbar-brand" href="/" rel="tooltip"
+           title="Home" data-placement="bottom" target="_blank">
             CourseGoWhere
         </a>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
