@@ -15,28 +15,12 @@
 <?php
 
 session_start();
-require_once('config.php');
-$connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
-if (mysqli_connect_errno()) {
-    die(mysqli_connect_error());
-}
-if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
-$output->execute();
-$results = $output->get_result();
-$index = 0;
-//var_dump($results->fetch_assoc());
-
-
-//    var_dump($results->fetch_assoc());
-//    var_dump($results->fetch_assoc());
-//    var_dump($results->fetch_assoc());
-
 
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
     <meta charset="utf-8"/>
@@ -126,7 +110,10 @@ include 'navfloating.php';
                             <tbody>
 
                             <?php
-                            while (($row = $results->fetch_assoc()) != NULL) {
+                            require_once 'courses_sql.php';
+                            $result = getAllCourse();
+                            $index = 0;
+                            while (($row = $result->fetch_assoc()) != NULL) {
 
                                 $index++;
                                 echo '<tr>';
@@ -137,7 +124,7 @@ include 'navfloating.php';
                                 echo '<td>' . $row['cut_off_point'] . '</td>';
                                 echo '<td>' . $row['course_url'] . '</td>';
                                 echo '<td>' . $row['new_course'] . '</td>';
-                            }
+
                             }
                             ?>
 
@@ -150,73 +137,61 @@ include 'navfloating.php';
             </div>
 
             <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-            <footer class="footer py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mb-4 mx-auto text-center">
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                Company
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                About Us
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                Team
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                Products
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                Blog
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                                Pricing
-                            </a>
-                        </div>
-                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                                <span class="text-lg fab fa-dribbble"></span>
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                                <span class="text-lg fab fa-twitter"></span>
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                                <span class="text-lg fab fa-instagram"></span>
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                                <span class="text-lg fab fa-pinterest"></span>
-                            </a>
-                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                                <span class="text-lg fab fa-github"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8 mx-auto text-center mt-1">
-                            <p class="mb-0 text-secondary">
-                                Copyright ©
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script>
-                                Material by Creative Tim.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-            <!--   Core JS Files   -->
-            <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
-            <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-            <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-            <script src="./assets/js/plugins/prism.min.js"></script>
-            <script src="./assets/js/plugins/highlight.min.js"></script>
-            <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-            <script src="./assets/js/plugins/parallax.min.js"></script>
-            <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-            <!--  Google Maps Plugin    -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-            <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<!--            <footer class="footer py-5">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-8 mb-4 mx-auto text-center">-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Company-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                About Us-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Team-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Products-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Blog-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Pricing-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-dribbble"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-twitter"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-instagram"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-pinterest"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-github"></span>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-8 mx-auto text-center mt-1">-->
+<!--                            <p class="mb-0 text-secondary">-->
+<!--                                Copyright ©-->
+<!--                                <script>-->
+<!--                                    document.write(new Date().getFullYear())-->
+<!--                                </script>-->
+<!--                                Material by Creative Tim.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </footer>-->
+
 </body>
 
 </html>
