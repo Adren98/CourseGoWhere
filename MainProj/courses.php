@@ -77,7 +77,7 @@ include 'nav.php';
 
             <div style="width: 18rem;" class="card justify-content-center">
                 <div class="col-lg-12">
-                    centered filter form
+                    todo: A centered filter form
                 </div>
 
             </div>
