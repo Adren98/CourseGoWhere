@@ -59,9 +59,68 @@ include 'navfloating.php';
         <div class="col-lg-12 mx-auto">
 
 
-            <div class="card justify-content-center" style="margin-left:300px;margin-right:300px">
+            <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
                 <div class="col-lg-12">
-                    todo: A centered filter form
+                    <div class ="card-body align-items-center justify-content-center">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                            <div class="form-group row">
+                                <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of Interest</label>
+                                <div class="col-md-4">  
+                                    <!-- Create a dropdown list with <select> -->
+                                    <select id="FOI" name = "FOI">  
+                                        <?php
+                                            require_once "courses_sql.php";
+                                            $FOIarr = getFieldOfInterest();
+                                            
+                                            foreach($FOIarr as $interest){
+                                                echo '<option value = '. $interest .'>'. $interest. '</option>' ;
+                                            }
+                                            
+                                        ?>
+                                        
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <label for="CutOffPoint" class="col-md-4 col-form-label text-md-right">Cut Off Point</label>
+                                <div class="col-md-4">
+                                    <input type="range" id="cutoffpoint" class="form-control-text" name="cutoffpoint" min =0 max =40>
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row ">
+                                <label for="school" class="col-md-4 col-form-label text-md-right">School</label>
+                                <div class="col-md-4">
+                                    <input type="checkbox" id="NP" name="NP" value ="NP">
+                                    <label for = "NYP"> Ngee Ann Poly</label><br>
+                                    <input type="checkbox" id="NYP" name="NYP" value ="NYP">
+                                    <label for = "NP">Nanyang Poly</label><br>
+                                    <input type="checkbox" id="RP" name="RP" value ="RP">
+                                    <label for = "RP"> Republic Poly</label><br>
+                                    <input type="checkbox" id="SP" name="SP" value ="SP">
+                                    <label for = "SP"> Singapore Poly</label><br>
+                                    <input type="checkbox" id="TP" name="TP" value ="TP">
+                                    <label for = "TP"> Temasek Poly</label><br>
+                                    
+                                </div>
+                            </div>
+
+                           
+                            
+                            <div class="col-md-6 offset-md-4">
+                                
+                                <button type="submit" class="btn btn-primary" name="submitFilter">
+                                    Filter
+                                </button>
+
+                            </div>
+                    </div>
+                    </form>
+                    </div>
+                    
                 </div>
 
             </div>
