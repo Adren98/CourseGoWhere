@@ -60,68 +60,71 @@ include 'navfloating.php';
 
 
             <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
-                <div class="col-lg-12"
-                    <div class ="card-body align-items-center justify-content-center">
+                <div class="col-lg-12">
+                    <div class="card-body align-items-center justify-content-center">
                         <h5 style="text-align: center;">Filter (WIP)</h5><br>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group row">
-                                <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of Interest</label>
-                                <div class="col-md-4">  
+                                <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of
+                                    Interest</label>
+                                <div class="col-md-4">
                                     <!-- Create a dropdown list with <select> -->
-                                    <select id="FOI" name = "FOI">  
+                                    <select id="Field_of_interest" name="FOI">
                                         <?php
-                                            require_once "courses_sql.php";
-                                            $FOIarr = getFieldOfInterest();
-                                            
-                                            foreach($FOIarr as $interest){
-                                                echo '<option value = '. $interest .'>'. $interest. '</option>' ;
-                                            }
-                                            
+                                        require_once "courses_sql.php";
+                                        $FOIarr = getFieldOfInterest();
+
+                                        foreach ($FOIarr as $interest) {
+                                            echo '<option value = ' . $interest . '>' . $interest . '</option>';
+                                        }
+
                                         ?>
-                                        
+
                                     </select>
                                 </div>
-                                
+
                             </div>
                             <br>
                             <div class="form-group row">
-                                <label for="CutOffPoint" class="col-md-4 col-form-label text-md-right">Cut Off Point</label>
+                                <label for="cutoffpoint" class="col-md-4 col-form-label text-md-right">Cut Off
+                                    Point</label>
                                 <div class="col-md-1">
-                                    <input type="number" id="cutoffpoint" class="form-control-text" name="cutoffpoint" min =0 max =40>
-                                    
+                                    <input type="number" id="cutoffpoint" class="form-control-text" name="cutoffpoint"
+                                           min=0
+                                           max=40>
+
                                 </div>
                             </div>
                             <br>
                             <div class="form-group row ">
                                 <label for="school" class="col-md-4 col-form-label text-md-right">School</label>
                                 <div class="col-md-4">
-                                    <input type="checkbox" id="NP" name="NP" value ="NP">
-                                    <label for = "NYP"> Ngee Ann Poly</label><br>
-                                    <input type="checkbox" id="NYP" name="NYP" value ="NYP">
-                                    <label for = "NP">Nanyang Poly</label><br>
-                                    <input type="checkbox" id="RP" name="RP" value ="RP">
-                                    <label for = "RP"> Republic Poly</label><br>
-                                    <input type="checkbox" id="SP" name="SP" value ="SP">
-                                    <label for = "SP"> Singapore Poly</label><br>
-                                    <input type="checkbox" id="TP" name="TP" value ="TP">
-                                    <label for = "TP"> Temasek Poly</label><br>
-                                    
+                                    <input type="checkbox" id="NP" name="NP" value="NP">
+                                    <label for="NYP"> Ngee Ann Poly</label><br>
+                                    <input type="checkbox" id="NYP" name="NYP" value="NYP">
+                                    <label for="NP">Nanyang Poly</label><br>
+                                    <input type="checkbox" id="RP" name="RP" value="RP">
+                                    <label for="RP"> Republic Poly</label><br>
+                                    <input type="checkbox" id="SP" name="SP" value="SP">
+                                    <label for="SP"> Singapore Poly</label><br>
+                                    <input type="checkbox" id="TP" name="TP" value="TP">
+                                    <label for="TP"> Temasek Poly</label><br>
+
                                 </div>
                             </div>
 
-                           
-                            
+
                             <div class="col-md-6 offset-md-4">
-                                
+
                                 <button type="submit" class="btn btn-primary" name="submitFilter">
                                     Filter
                                 </button>
 
                             </div>
+
+                        </form>
                     </div>
-                    </form>
-                    </div>
-                    
+
                 </div>
 
             </div>
@@ -183,62 +186,65 @@ include 'navfloating.php';
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
-            <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-            <!--            <footer class="footer py-5">-->
-            <!--                <div class="container">-->
-            <!--                    <div class="row">-->
-            <!--                        <div class="col-lg-8 mb-4 mx-auto text-center">-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                Company-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                About Us-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                Team-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                Products-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                Blog-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
-            <!--                                Pricing-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-            <!--                                <span class="text-lg fab fa-dribbble"></span>-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-            <!--                                <span class="text-lg fab fa-twitter"></span>-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-            <!--                                <span class="text-lg fab fa-instagram"></span>-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-            <!--                                <span class="text-lg fab fa-pinterest"></span>-->
-            <!--                            </a>-->
-            <!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
-            <!--                                <span class="text-lg fab fa-github"></span>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                    <div class="row">-->
-            <!--                        <div class="col-8 mx-auto text-center mt-1">-->
-            <!--                            <p class="mb-0 text-secondary">-->
-            <!--                                Copyright ©-->
-            <!--                                <script>-->
-            <!--                                    document.write(new Date().getFullYear())-->
-            <!--                                </script>-->
-            <!--                                Material by Creative Tim.-->
-            <!--                            </p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </footer>-->
+<!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+<!--            <footer class="footer py-5">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-8 mb-4 mx-auto text-center">-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Company-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                About Us-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Team-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Products-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Blog-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">-->
+<!--                                Pricing-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-dribbble"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-twitter"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-instagram"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-pinterest"></span>-->
+<!--                            </a>-->
+<!--                            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">-->
+<!--                                <span class="text-lg fab fa-github"></span>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-8 mx-auto text-center mt-1">-->
+<!--                            <p class="mb-0 text-secondary">-->
+<!--                                Copyright ©-->
+<!--                                <script>-->
+<!--                                    document.write(new Date().getFullYear())-->
+<!--                                </script>-->
+<!--                                Material by Creative Tim.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </footer>-->
 
 </body>
 
