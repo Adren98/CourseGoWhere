@@ -59,7 +59,7 @@ include 'navfloating.php';
         <div class="col-lg-12 mx-auto">
 
 
-            <div class="card justify-content-center">
+            <div class="card justify-content-center" style="margin-left:300px;margin-right:300px">
                 <div class="col-lg-12">
                     todo: A centered filter form
                 </div>
