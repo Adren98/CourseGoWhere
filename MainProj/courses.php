@@ -36,7 +36,7 @@ $index = 0;
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8"/>
