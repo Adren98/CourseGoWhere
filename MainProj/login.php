@@ -134,7 +134,7 @@ include 'navfloating.php';
                     <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group row">
-                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right d-flex justify-content-end">E-Mail
                                     Address</label>
                                 <div class="col-md-4">
                                     <input type="text" id="email_address" class="form-control-text" name="email"
@@ -143,7 +143,7 @@ include 'navfloating.php';
                             </div>
                             <br>
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right" style="display: flex; justify-content:end;">Password</label>
                                 <div class="col-md-4">
                                     <input type="password" id="password" class="form-control-text" name="password"
                                            required>
@@ -187,10 +187,3 @@ include 'navfloating.php';
 
 
 </body>
-
-
-
-
-
-
-
