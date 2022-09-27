@@ -231,7 +231,7 @@ include 'navfloating.php';
                                     $parameters[] = $Field_of_Interest;
                                 }
                                 if ($cut_off_point != "") {
-                                    $sql[] = "cut_off_point >= ?";
+                                    $sql[] = "cut_off_point <= ?";
                                     $parameters[] = $cut_off_point;
                                 }
                                 if (!empty($school)) {
