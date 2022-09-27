@@ -54,6 +54,7 @@ session_start();
                 td = tr[i].getElementsByTagName("td")[0];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
+                    console.log(td);
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         tr[i].style.display = "";
                     } else {
@@ -158,7 +159,7 @@ include 'navfloating.php';
 <!--                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>-->
                             <div class="input-group flex-nowrap">
 <!--                                <span class="input-group-text" id="addon-wrapping">@</span>-->
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                                <input id="myInput" onkeyup="filter()" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="addon-wrapping">
                             </div>
 
                         </div>
@@ -184,7 +185,7 @@ include 'navfloating.php';
                 </div>
                 <div class="tab-content tab-space">
                     <div class="tab-pane active" id="preview-pagination-simple">
-                        <table class="table">
+                        <table class="table" id="myTable">
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
