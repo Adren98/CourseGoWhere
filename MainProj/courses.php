@@ -42,6 +42,27 @@ session_start();
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
+
+    <script>
+        function filter() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="pagination-sections">
@@ -134,7 +155,12 @@ include 'navfloating.php';
                 <div class="container border-bottom">
                     <div class="row justify-space-between py-2">
                         <div class="col-lg-3 me-auto">
-                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>
+<!--                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>-->
+                            <div class="input-group flex-nowrap">
+<!--                                <span class="input-group-text" id="addon-wrapping">@</span>-->
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+
                         </div>
                         <div class="col-lg-3">
                             <div class="nav-wrapper position-relative end-0">
