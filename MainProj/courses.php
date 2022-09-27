@@ -62,7 +62,7 @@ include 'navfloating.php';
             <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
                 <div class="col-lg-12">
                     <div class="card-body align-items-center justify-content-center">
-                        <h5 style="text-align: center;">Filter (WIP)</h5><br>
+                        <h5 style="text-align: center;">Filter</h5><br>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group row">
                                 <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of
@@ -73,6 +73,7 @@ include 'navfloating.php';
                                         <?php
                                         require_once "courses_sql.php";
                                         $FOIarr = getFieldOfInterest();
+                                        echo '<option value = "NIL">None Selected</option>';
 
                                         foreach ($FOIarr as $interest) {
                                             echo '<option value = ' . $interest . '>' . $interest . '</option>';
@@ -99,15 +100,15 @@ include 'navfloating.php';
                             <div class="form-group row ">
                                 <label for="school" class="col-md-4 col-form-label text-md-right">School</label>
                                 <div class="col-md-4">
-                                    <input type="checkbox" id="NP" name="NP" value="NP">
+                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="NP">
                                     <label for="NYP"> Ngee Ann Poly</label><br>
-                                    <input type="checkbox" id="NYP" name="NYP" value="NYP">
+                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="NYP">
                                     <label for="NP">Nanyang Poly</label><br>
-                                    <input type="checkbox" id="RP" name="RP" value="RP">
+                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="RP">
                                     <label for="RP"> Republic Poly</label><br>
-                                    <input type="checkbox" id="SP" name="SP" value="SP">
+                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="SP">
                                     <label for="SP"> Singapore Poly</label><br>
-                                    <input type="checkbox" id="TP" name="TP" value="TP">
+                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="TP">
                                     <label for="TP"> Temasek Poly</label><br>
 
                                 </div>
@@ -116,7 +117,7 @@ include 'navfloating.php';
 
                             <div class="col-md-6 offset-md-4">
 
-                                <button type="submit" class="btn btn-primary" name="submitFilter">
+                                <button type="submit" class="btn btn-primary" name="submit">
                                     Filter
                                 </button>
 
@@ -174,7 +175,72 @@ include 'navfloating.php';
 
                             <?php
                             require_once 'courses_sql.php';
-                            getAllCourse();
+
+
+
+                            if (isset($_POST['submit'])) {
+
+                                $Field_of_Interest="";
+                                $cut_off_point="";
+                                $school=array();
+
+                                if (isset($_POST['FOI'])) {
+                                    $Field_of_Interest = $_POST['FOI'];
+                                }
+                                if (isset($_POST['cutoffpoint'])) {
+                                    $cut_off_point = $_POST['cutoffpoint'];
+                                }
+                                if (isset($_POST['checkboxSchool'])) {
+                                    $school = $_POST['checkboxSchool'];
+                                }
+
+
+
+                                $sql = [];
+                                $parameters = [];
+
+                                if ($Field_of_Interest != "NIL") {
+                                    $sql[] = "course_cluster = ?";
+                                    $parameters[] = $Field_of_Interest;
+                                }
+                                if ($cut_off_point != "") {
+                                    $sql[] = "cut_off_point >= ?";
+                                    $parameters[] = $cut_off_point;
+                                }
+                                if (!empty($school)) {
+
+                                    if(count($school)==1){
+                                        $sql[] = "school = ?";
+                                        $parameters[] = $school[0];
+                                    }
+                                    else{
+                                        $sql[] = "school IN (".implode(',', array_fill(0, count($school), '?')).")";
+                                        $parameters = array_merge($parameters, $school);
+                                    }
+
+                                }
+                                if(!empty($sql)){
+                                    $sql = "SELECT * FROM CoursesCatalogue WHERE ".implode(' AND ', $sql);
+                                    getFilteredCourses($sql,$parameters);
+                                }
+                                else{
+                                    getAllCourse();
+                                }
+
+
+//                                $result = getFilteredCourses($sql, $parameters);
+//                                var_dump($sql);
+
+
+//                                var_dump($school);
+
+
+                            }else{
+                                getAllCourse();
+                            }
+
+
+
 
 
                             ?>
