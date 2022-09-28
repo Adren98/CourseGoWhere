@@ -1,7 +1,16 @@
 <!DOCTYPE html>
+<?php
 
+session_start();
+
+if ($_SESSION['user_type'] != 'admin') {
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+
+}
+
+?>
 <br><br><br>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
 
@@ -33,53 +42,52 @@
     <!-- <link rel="stylesheet" type="text/css" href="./assets/css/loginstyles.css"> -->
 
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
-    <h1 class ="offset-md-4">Admin Home Page</h1>
+    <h1 class="offset-md-4">Admin Home Page</h1><title>CourseGoWhere</title>
 
 </head>
-<body >
+<body>
 <div class="tab-content tab-space">
     <button type="submit" class="btn btn-primary" name="addcourse">
         Add Course
     </button>
-                    <div class="tab-pane active" id="preview-pagination-simple">
-                        <table class="table" id="myTable">
-                            <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">CourseName</th>
-                                <th scope="col">Year</th>
-                                <th scope="col">course_cluster</th>
-                                <th scope="col">cut_off_point</th>
-                                <th scope="col">course_url</th>
-                                <th scope="col">new_course</th>
-                                <th scope="col">School</th>
-                                <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th> 
-                                
-                            </tr>
-                            </thead>
-                            <tbody>
-                            
-                            <?php
-                            require 'adminfunction.php';
-                            // require 'config.php';
-                            // $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    <div class="tab-pane active" id="preview-pagination-simple">
+        <table class="table" id="myTable">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">CourseName</th>
+                <th scope="col">Year</th>
+                <th scope="col">course_cluster</th>
+                <th scope="col">cut_off_point</th>
+                <th scope="col">course_url</th>
+                <th scope="col">new_course</th>
+                <th scope="col">School</th>
+                <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th>
 
-                            // if (mysqli_connect_errno()) {
+            </tr>
+            </thead>
+            <tbody>
 
-                            //     die(mysqli_connect_error());
-                            // }
-                            getAdminAllCourse();
+            <?php
+            require 'adminfunction.php';
+            // require 'config.php';
+            // $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
-                            
+            // if (mysqli_connect_errno()) {
 
-                            ?>
-                            
+            //     die(mysqli_connect_error());
+            // }
+            getAdminAllCourse();
 
-                            </tbody>
-                        </table>
 
-                    </div>
-                </div>
-                
-                
+            ?>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
 </body>
