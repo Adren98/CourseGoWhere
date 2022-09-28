@@ -13,8 +13,19 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
 <?php
+session_start();
+
+
+if(isset($_SESSION['user_type'])&&$_SESSION['user_type'] == 'admin'){
+    echo "<script type='text/javascript'> window.location='admin.php';</script>";
+
+}
+
+
+
 
 include 'navfloating.php';
+
 ?>
 
 <head>
@@ -494,7 +505,7 @@ include 'navfloating.php';
         } else {
             console.error(countUp2.error);
         }
-        ;
+
     }
 </script>
 
