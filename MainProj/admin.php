@@ -1,7 +1,16 @@
 <!DOCTYPE html>
+<?php
 
+session_start();
+
+if( $_SESSION['user_type'] != 'admin'){
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+//    header("Location: index.php");
+}
+
+?>
 <br><br><br>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
 
@@ -33,7 +42,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="./assets/css/loginstyles.css"> -->
 
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
-    <h1 class ="offset-md-4">Admin Home Page</h1>
+    <h1 class ="offset-md-4">Admin Home Page</h1><title>CourseGoWhere</title>
 
 </head>
 <body >
