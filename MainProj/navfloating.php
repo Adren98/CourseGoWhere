@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./assets/css/planner.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Navbar -->
 <div class="container position-sticky z-index-sticky top-0">
@@ -96,12 +98,8 @@
                             </li>
 
                             <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button">
-                                    Planner
-                                    <!--                                    <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
-                                </a>
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button" onclick="openPlannerPopup()">Planner</a>
                             </li>
-
 
                             <!--                            <li class="nav-item dropdown dropdown-hover mx-2">-->
                             <!--                                <a class="nav-link ps-2 d-flex cursor-pointer align-items-center"-->
@@ -527,8 +525,93 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="planner_popup" id="planner">
+                    <h2>Planner</h2>
+                    <p>Arrange your courses from most(top) to least(bottom) interested</p>
+                    <div class="DDcontainer">
+                        <div class="item">
+                            <span class="course_name"> Name 1</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 2</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 3</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 4</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 5</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 6</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 7</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 8</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 9</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 10</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 11</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="item">
+                            <span class="course_name"> Name 12</span>
+                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    <script>
+                        const dragArea = document.querySelector(".DDcontainer");
+                        new Sortable(dragArea,{
+                            animation:350
+                        });
+                    </script>
+                    <button type="button" onclick="closePlannerPopup()">Save Planner</button>
+                </div>
             </nav>
             <!-- End Navbar -->
         </div>
     </div>
 </div>
+
+<!-- Planner popup & draggable -->
+<script>
+    let popup = document.getElementById("planner");
+    function openPlannerPopup(){
+        popup.classList.add("open-planner_popup");
+    }
+    function closePlannerPopup(){
+        popup.classList.remove("open-planner_popup");
+    }
+</script>
