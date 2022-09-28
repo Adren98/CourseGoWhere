@@ -32,8 +32,8 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<td>' . $row['course_url'] . '</td>';
         echo '<td>' . $row['new_course'] . '</td>';
         echo '<td>' . $row['school'] . '</td>';
-        echo '<td><button type="button" class="btn btn-primary name="delete" onclick=submitData('.$row['idCourses'].')>' . "Delete" . '</button></td>'; 
-        echo '<td><button type="button" class="btn btn-primary name ="edit" onclick=Edit()>' . "Edit" . '</button></td>'; 
+        echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData('.$row['idCourses'].')>' . "Delete" . '</button></td>';
+        echo '<td><button type="button" class="btn btn-primary" name ="edit" onclick=Edit()>' . "Edit" . '</button></td>';
         echo '</tr>';
     }
     $output->close();
@@ -64,6 +64,7 @@ function getAdminAllCourse()
         die(mysqli_connect_error());
 
     }
+
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
         $result = printAdminHtmlRow($output, $connection);
     }

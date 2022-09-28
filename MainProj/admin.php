@@ -42,52 +42,63 @@ if ($_SESSION['user_type'] != 'admin') {
     <!-- <link rel="stylesheet" type="text/css" href="./assets/css/loginstyles.css"> -->
 
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
-    <h1 class="offset-md-4">Admin Home Page</h1><title>CourseGoWhere</title>
+    <title>CourseGoWhere</title>
 
 </head>
-<body>
-<div class="tab-content tab-space">
-    <button type="submit" class="btn btn-primary" name="addcourse">
-        Add Course
-    </button>
-    <div class="tab-pane active" id="preview-pagination-simple">
-        <table class="table" id="myTable">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">CourseName</th>
-                <th scope="col">Year</th>
-                <th scope="col">course_cluster</th>
-                <th scope="col">cut_off_point</th>
-                <th scope="col">course_url</th>
-                <th scope="col">new_course</th>
-                <th scope="col">School</th>
-                <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th>
 
-            </tr>
-            </thead>
-            <tbody>
-
-            <?php
-            require 'adminfunction.php';
-            // require 'config.php';
-            // $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
-
-            // if (mysqli_connect_errno()) {
-
-            //     die(mysqli_connect_error());
-            // }
-            getAdminAllCourse();
-
-
-            ?>
-
-
-            </tbody>
-        </table>
-
+<body class="tab-content tab-space">
+<h1 style = "display:flex ; justify-content: center;">Admin Home Page</h1>
+<div class="row">
+    <div class="col-lg-6">
+        <button type="submit" class="btn btn-primary" name="addcourse">
+            Add Course
+        </button>
+    </div>
+    <div class="col-lg-6">
+        <form method="post" action="logout_abort.php" >
+            <button type="submit" class="btn btn-primary" name="logout" style=" float: right; " >
+                Logout
+            </button>
+        </form>
     </div>
 </div>
 
 
+<div class="tab-pane active" id="preview-pagination-simple">
+    <table class="table" id="myTable">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">CourseName</th>
+            <th scope="col">Year</th>
+            <th scope="col">course_cluster</th>
+            <th scope="col">cut_off_point</th>
+            <th scope="col">course_url</th>
+            <th scope="col">new_course</th>
+            <th scope="col">School</th>
+            <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <?php
+        require 'adminfunction.php';
+        // require 'config.php';
+        // $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+
+        // if (mysqli_connect_errno()) {
+
+        //     die(mysqli_connect_error());
+        // }
+        getAdminAllCourse();
+
+
+        ?>
+
+
+        </tbody>
+    </table>
+
+</div>
 </body>
