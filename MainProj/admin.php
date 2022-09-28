@@ -3,7 +3,7 @@
 
 session_start();
 
-if ($_SESSION['user_type'] != 'admin') {
+if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
     echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
 
 }
