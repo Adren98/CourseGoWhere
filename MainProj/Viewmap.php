@@ -80,7 +80,7 @@ include 'navfloating.php';
         <div class="col-lg-3 col-sm-12">
 
             <div class="row" >
-            <pre class="wp-block-syntaxhighlighter-code"style="margin-top: 10px;margin-right: 10px"><form method="POST">
+            <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
             <p>
                 Select choice of School:
                 <select name="School" id="School" onchange="this.form.submit()">
@@ -96,8 +96,8 @@ include 'navfloating.php';
 
 
             <div class="row">
-                <div class="card" style="width:250px;height: 150px;">
-                    <img class="card-img-top" width="200" height="150" src="assets/img/ivana-square.jpg"
+                <div class="card" style="width:250px;height: 350px;">
+                    <img class="card-img-top" width="200" height="150" src="Picture/ngee-ann-polytechnic.png"
                          alt="Card image">
                     <div class="card-body">
                         <h4 class="card-title">Ngee Ann Polytechnic</h4>
