@@ -55,11 +55,11 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
         </a>
     </div>
     <div class="col-lg-6">
-        <form method="post" action="logout_abort.php" >
-            <button type="submit" class="btn btn-primary" name="logout" style=" float: right; " >
-                Logout
-            </button>
-        </form>
+
+               <a style=" float: right;" class="btn btn-primary" href="Controller/logout_abort.php">Logout</a>
+
+
+
     </div>
 </div>
 
@@ -74,11 +74,14 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
             $courses = getcolNames();
 
             foreach ($courses as $course) {
-                echo '<td>' . $course. '</td>';
+                echo '<th scope="col">' . $course. '</th>';
             }
 
 
             ?>
+            <th scope="col">Delete Column</th>
+            <th scope="col">Edit Column</th>
+
 
 
         </tr>

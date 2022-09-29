@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="./assets/css/planner.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+        integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Navbar -->
 <div class="container position-sticky z-index-sticky top-0">
@@ -84,21 +86,25 @@
                             <!--                            </li>-->
                             <li class="nav-item mx-2">
 
-                                <a href="Viewmap.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button">
+                                <a href="Viewmap.php"
+                                   class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   role="button">
                                     View Map
                                     <!--                                    <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
                                 </a>
                             </li>
 
                             <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   role="button">
                                     Amenities
                                     <!--                                    <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
                                 </a>
                             </li>
 
                             <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" role="button" onclick="openPlannerPopup()">Planner</a>
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   role="button" onclick="openPlannerPopup()">Planner</a>
                             </li>
 
                             <!--                            <li class="nav-item dropdown dropdown-hover mx-2">-->
@@ -518,8 +524,19 @@
                             <!--                                </a>-->
                             <!--                            </li>-->
                             <li class="nav-item my-auto ms-3 ms-lg-0">
+                                <?php
+if(isset($_SESSION['email'])){
+//    welcome message
 
-                                <a href="login.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>
+    echo '<a class="btn btn-sm btn-primary mb-0" href="Controller/logout_abort.php">Logout</a>';
+}else{
+    echo '<a class="btn btn-sm btn-primary mb-0" href="login.php">Login/Register</a>';
+}
+
+                                ?>
+
+
+<!--                                <a href="login.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>-->
 
                             </li>
                         </ul>
@@ -561,23 +578,27 @@
 <script>
 
     let popup = document.getElementById("planner");
-    function openPlannerPopup(){
+
+    function openPlannerPopup() {
         popup.classList.add("open-planner_popup");
     }
-    function closePlannerPopup(){
+
+    function closePlannerPopup() {
         popup.classList.remove("open-planner_popup");
         console.log('Planner saved!');
     }
 
-    window.addEventListener('click', ({ target }) => {
+    window.addEventListener('click', ({target}) => {
         const withinplanner = target.closest('.planner_popup');
         const plannerbutton = target.closest('.nav-item');
         const clickedOnClosedPopup = !plannerbutton && !withinplanner && popup.classList.contains("open-planner_popup");
-        if(clickedOnClosedPopup){popup.classList.remove("open-planner_popup");}
+        if (clickedOnClosedPopup) {
+            popup.classList.remove("open-planner_popup");
+        }
     });
 
     const dragArea = document.querySelector(".DDcontainer");
-    new Sortable(dragArea,{animation:350});
+    new Sortable(dragArea, {animation: 350});
 
 </script>
 <!--     
