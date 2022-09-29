@@ -72,216 +72,44 @@ session_start();
 
 include 'navfloating.php';
 ?>
-<br><br><br>
-<!-- End Navbar -->
+
+
 <div class="container mt-5">
+    <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
+        <p>
+            <input type="text" name="address" placeholder="Enter address">
+        </p>
+        <input type="submit" name="submit_address">
 
-    <div class="row">
+        </form></pre>
+        <?php
+        if (isset($_POST["submit_address"]))
+        {
 
-        <div class="col-lg-12 mx-auto">
+            $address = $_POST["address"]? :"singapore";
+            $address = str_replace(" ", "+"," $address");
+            ?>
 
+            <iframe width="90%" style="margin-top: 15% ;margin-left: 5%" height="600" src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
 
-            <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
-                <div class="col-lg-12">
-                    <div class="card-body align-items-center justify-content-center">
-                        <h5 style="text-align: center;">Filter</h5><br>
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="form-group row">
-                                <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of
-                                    Interest</label>
-                                <div class="col-md-4">
-                                    <!-- Create a dropdown list with <select> -->
-                                    <select id="Field_of_interest" name="FOI">
-                                        <?php
-                                        require_once "courses_sql.php";
-                                        $FOIarr = getFieldOfInterest();
-                                        echo '<option value = "NIL">None Selected</option>';
+            <?php
+        }
+        else
+        {
+            ?>
 
-                                        foreach ($FOIarr as $interest) {
-                                            echo '<option value = ' . $interest . '>' . $interest . '</option>';
-                                        }
+            <iframe width="90%" style="margin-top: 15%; margin-left: 5%"  height="600" src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
 
-                                        ?>
-
-                                    </select>
-                                </div>
-
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="cutoffpoint" class="col-md-4 col-form-label text-md-right">Cut Off
-                                    Point</label>
-                                <div class="col-md-1">
-                                    <input type="number" id="cutoffpoint" class="form-control-text" name="cutoffpoint"
-                                           min=0
-                                           max=40>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row ">
-                                <label for="school" class="col-md-4 col-form-label text-md-right">School</label>
-                                <div class="col-md-4">
-                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="NP">
-                                    <label for="NYP"> Ngee Ann Poly</label><br>
-                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="NYP">
-                                    <label for="NP">Nanyang Poly</label><br>
-                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="RP">
-                                    <label for="RP"> Republic Poly</label><br>
-                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="SP">
-                                    <label for="SP"> Singapore Poly</label><br>
-                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="TP">
-                                    <label for="TP"> Temasek Poly</label><br>
-
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-6 offset-md-4">
-
-                                <button type="submit" class="btn btn-primary" name="submit">
-                                    Filter
-                                </button>
-
-                            </div>
-
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-                <div class="container border-bottom">
-                    <div class="row justify-space-between py-2">
-                        <div class="col-lg-3 me-auto">
-                            <!--                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>-->
-                            <div class="input-group flex-nowrap">
-                                <!--                                <span class="input-group-text" id="addon-wrapping">@</span>-->
-                                <input id="myInput" onkeyup="filter()" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="addon-wrapping">
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="nav-wrapper position-relative end-0">
-                                <!--                                <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">-->
-                                <!--                                    <li class="nav-item">-->
-                                <!--                                        <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab"-->
-                                <!--                                           href="#preview-pagination-simple" role="tab" aria-selected="true">-->
-                                <!--                                            <i class="fas fa-desktop text-sm me-2"></i> Preview-->
-                                <!--                                        </a>-->
-                                <!--                                    </li>-->
-                                <!--                                    <li class="nav-item">-->
-                                <!--                                        <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab"-->
-                                <!--                                           href="#code-pagination-simple" role="tab" aria-selected="false">-->
-                                <!--                                            <i class="fas fa-code text-sm me-2"></i> Code-->
-                                <!--                                        </a>-->
-                                <!--                                    </li>-->
-                                <!--                                </ul>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content tab-space">
-                    <div class="tab-pane active" id="preview-pagination-simple">
-                        <table class="table" id="myTable">
-                            <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">CourseName</th>
-                                <th scope="col">Year</th>
-                                <th scope="col">course_cluster</th>
-                                <th scope="col">cut_off_point</th>
-                                <th scope="col">course_url</th>
-                                <th scope="col">new_course</th>
-                                <th scope="col">School</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            require_once 'courses_sql.php';
-
-
-
-                            if (isset($_POST['submit'])) {
-
-                                $Field_of_Interest="";
-                                $cut_off_point="";
-                                $school=array();
-
-                                if (isset($_POST['FOI'])) {
-                                    $Field_of_Interest = $_POST['FOI'];
-                                }
-                                if (isset($_POST['cutoffpoint'])) {
-                                    $cut_off_point = $_POST['cutoffpoint'];
-                                }
-                                if (isset($_POST['checkboxSchool'])) {
-                                    $school = $_POST['checkboxSchool'];
-                                }
-
-
-
-                                $sql = [];
-                                $parameters = [];
-
-                                if ($Field_of_Interest != "NIL") {
-                                    $sql[] = "course_cluster = ?";
-                                    $parameters[] = $Field_of_Interest;
-                                }
-                                if ($cut_off_point != "") {
-                                    $sql[] = "cut_off_point <= ?";
-                                    $parameters[] = $cut_off_point;
-                                }
-                                if (!empty($school)) {
-
-                                    if(count($school)==1){
-                                        $sql[] = "school = ?";
-                                        $parameters[] = $school[0];
-                                    }
-                                    else{
-                                        $sql[] = "school IN (".implode(',', array_fill(0, count($school), '?')).")";
-                                        $parameters = array_merge($parameters, $school);
-                                    }
-
-                                }
-                                if(!empty($sql)){
-                                    $sql = "SELECT * FROM CoursesCatalogue WHERE ".implode(' AND ', $sql);
-                                    getFilteredCourses($sql,$parameters);
-                                }
-                                else{
-                                    getAllCourse();
-                                }
-
-
-//                                $result = getFilteredCourses($sql, $parameters);
-//                                var_dump($sql);
-
-
-//                                var_dump($school);
-
-
-                            }else{
-                                getAllCourse();
-                            }
-
-
-
-
-
-                            ?>
-
-
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <?php
+        }
+        ?>
 </div>
+
+
+
+
+
+
 
 <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
 <!--            <footer class="footer py-5">-->
