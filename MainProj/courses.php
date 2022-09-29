@@ -132,25 +132,24 @@ include 'navfloating.php';
                                     $schoolarr = array();
                                     foreach ($schoolslist as $school) {
 
-                                        echo '<input type="checkbox" id="'.$school['school'].'" name="checkboxSchool[]" value="'. $school['school'].'"> ';
+                                        echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '"> ';
                                         echo '<label for="school">' . $school['school'] . '</label><br>';
                                     }
-//                                    var_dump($schoolarr);
 
 
                                     ?>
 
 
-<!--                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="Ngee Ann Polytechnic">-->
-<!--                                    <label for="NYP"> Ngee Ann Poly</label><br>-->
-<!--                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="Nanyang Polytechnic">-->
-<!--                                    <label for="NP">Nanyang Poly</label><br>-->
-<!--                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="Republic Polytechnic">-->
-<!--                                    <label for="RP"> Republic Poly</label><br>-->
-<!--                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="Singapore Polytechnic">-->
-<!--                                    <label for="SP"> Singapore Poly</label><br>-->
-<!--                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="Temasek Polytechnic">-->
-<!--                                    <label for="TP"> Temasek Poly</label><br>-->
+                                    <!--                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="Ngee Ann Polytechnic">-->
+                                    <!--                                    <label for="NYP"> Ngee Ann Poly</label><br>-->
+                                    <!--                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="Nanyang Polytechnic">-->
+                                    <!--                                    <label for="NP">Nanyang Poly</label><br>-->
+                                    <!--                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="Republic Polytechnic">-->
+                                    <!--                                    <label for="RP"> Republic Poly</label><br>-->
+                                    <!--                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="Singapore Polytechnic">-->
+                                    <!--                                    <label for="SP"> Singapore Poly</label><br>-->
+                                    <!--                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="Temasek Polytechnic">-->
+                                    <!--                                    <label for="TP"> Temasek Poly</label><br>-->
 
                                 </div>
                             </div>
@@ -214,7 +213,7 @@ include 'navfloating.php';
                                 $courses = getcolNames();
 
                                 foreach ($courses as $course) {
-                                    echo '<th scope="col">' . $course. '</th>';
+                                    echo '<th scope="col">' . $course . '</th>';
                                 }
 
 
