@@ -1,6 +1,16 @@
 <?php
 
+$username = $password = $wrong = "";
 
+
+
+if (isset($_POST['submit'])) {
+
+    require_once 'Controller/login.php';
+    list($username, $wrong) = login( $wrong);
+
+
+}
 /**
  * @param string $wrong
  * @return array

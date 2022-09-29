@@ -1,91 +1,90 @@
-
-
 <?php session_start();
 
-   function test_input($data) {
-       $data = trim($data);
-       $data = stripslashes($data);
-       $data = htmlspecialchars($data);
-       return $data;
-   }
-    $email = $password = $confirmpassword = "";
-    $confirmpasswordER =  $emailER =$emailusedER= $passwordER = "";
-    $validcount = 0;
-    require_once('config.php');
-    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
-    if (mysqli_connect_errno()) {
-        die(mysqli_connect_error());
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+$confirmpasswordER = $emailER = $emailusedER = $passwordER = "";
+$validcount = 0;
+
+$email = $password = $confirmpassword = "";
+require_once('config.php');
+$connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+if (mysqli_connect_errno()) {
+    die(mysqli_connect_error());
+}
+
+if (isset($_POST['submit'])) {
+
+
+    if (empty($_POST['email'])) { //check name if empty
+        $emailER = "Please enter your email";
+    } else {
+        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            $emailER = "Please enter a valid email address.";
+        } else {
+            $email = test_input($_POST["email"]);
+            $validcount++;
+        }
+    }
+    if (empty($_POST["password"])) { //check password if empty
+        $passwordER = "Please enter a password.";
+    } else {
+
+        if (!preg_match("/\w{8,}/", $_POST["password"])) {
+            $passwordER = "Password must be alphanumeric and be at least 8 characters long";
+        } else {
+            $password = test_input($_POST["password"]);
+            $validcount++;
+        }
+    }
+    if (empty($_POST["confirmpassword"])) { //check passwordconfirm if empty
+        $passwordconfirmER = "Please re-enter the confirmed password";
+    } else {
+        if ($_POST["password"] == $_POST["confirmpassword"]) {
+            $confirm = test_input($_POST["confirmpassword"]);
+            $validcount++;
+        } else {
+            $confirmpasswordER = "Passwords do not match";
+
+        }
     }
 
-    if (isset($_POST['submit'])) {
-
-       
-        if (empty($_POST['email'])) { //check name if empty
-            $emailER = "Please enter your email";
+}
+if ($validcount == 3) {
+    $email = mysqli_real_escape_string($connection, $email);
+    $confirm = mysqli_real_escape_string($connection, $confirm);
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    $user = "user";
+    //check if user is registered already
+    if ($output = mysqli_prepare($connection, "SELECT email FROM User WHERE email = ?")) {
+        $output->bind_param("s", $email);
+        $output->execute();
+        $results = $output->get_result();
+        if ($results->num_rows > 0) {
+            $emailusedER = "Email already registered";
         } else {
-            if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-                $emailER = "Please enter a valid email address.";
-            } else {
-                $email = test_input($_POST["email"]);
-                $validcount++;
-            }
-        }
-        if (empty($_POST["password"])) { //check password if empty
-            $passwordER = "Please enter a password.";
-        } else {
-
-            if (!preg_match("/\w{8,}/", $_POST["password"])) {
-                $passwordER = "Password must be alphanumeric and be at least 8 characters long";
-            } else {
-                $password = test_input($_POST["password"]);
-                $validcount++;
-            }
-        }
-        if (empty($_POST["confirmpassword"])) { //check passwordconfirm if empty
-            $passwordconfirmER = "Please re-enter the confirmed password";
-        } else {
-            if ($_POST["password"] == $_POST["confirmpassword"]) {
-                $confirm = test_input($_POST["confirmpassword"]);
-                $validcount++;
-            } else {
-                $confirmpasswordER = "Passwords do not match";
-            
-            }
-        }
-
-    }
-    if( $validcount ==3){
-        $email = mysqli_real_escape_string($connection, $email);
-        $confirm = mysqli_real_escape_string($connection, $confirm);
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $user = "user";
-        //check if user is registered already
-        if($output = mysqli_prepare($connection, "SELECT email FROM User WHERE email = ?" )){
-            $output->bind_param("s",$email);
-            $output->execute();
-            $results = $output->get_result();
-            if($results->num_rows>0){
-                $emailusedER ="Email already registered";
-            }else{
-                //email is new. time to register user to DB
-                if($insert = mysqli_prepare($connection, "INSERT INTO User (email,password,user_type) VALUES (?,?,?)")){
-                    $insert->bind_param("sss",$email,$password,$user);
-                    if($insert->execute()){
-                        echo "<script type='text/javascript'>"
+            //email is new. time to register user to DB
+            if ($insert = mysqli_prepare($connection, "INSERT INTO User (email,password,user_type) VALUES (?,?,?)")) {
+                $insert->bind_param("sss", $email, $password, $user);
+                if ($insert->execute()) {
+                    echo "<script type='text/javascript'>"
                         . "alert('Thank you for signing up with us!');"
-                                ." window.location='index.php';</script>";
-                    }
-                    else {
-                        echo "fail";
-                    }
+                        . " window.location='index.php';</script>";
+                } else {
+                    echo "fail";
                 }
-            } 
+            }
         }
     }
+}
 mysqli_close($connection);
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -95,7 +94,7 @@ include 'navfloating.php';
 
 ?>
 <br><br><br>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
 
@@ -127,6 +126,7 @@ include 'navfloating.php';
     <!-- <link rel="stylesheet" type="text/css" href="./assets/css/loginstyles.css"> -->
 
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
+    <title>CourseGoWhere</title>
 
 
 </head>
@@ -138,48 +138,73 @@ include 'navfloating.php';
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><h2 style = "text-align:center">Register</h2></div>
+                    <div class="card-header"><h2 style="text-align:center">Register</h2></div>
                     <div class="card-body">
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+
+
+
+
+
                             <div class="form-group row">
-                                <label for="email_address" class="col-md-4 col-form-label text-md-right d-flex justify-content-end">E-Mail
+                                <label for="email_address"
+                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">E-Mail
                                     Address</label>
                                 <div class="col-md-4">
                                     <input type="text" id="email_address" class="form-control-text" name="email"
                                            required autofocus>
-                                    <small style="margin-bottom:0px" class="help-block"><?php echo $emailER ?></small>
+                                    <small style="margin-bottom:0" class="help-block"><?php echo $emailER ?></small>
                                 </div>
-                                
+
                             </div>
                             <br>
+
+
+
+
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Password</label>
+                                <label for="password"
+                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Password</label>
                                 <div class="col-md-4">
                                     <input type="password" id="password" class="form-control-text" name="password"
                                            required>
-                                    <small style="margin-bottom:0px" class="help-block"><?php echo $passwordER ?></small>
+                                    <small style="margin-bottom:0"
+                                           class="help-block"><?php echo $passwordER ?></small>
                                 </div>
                             </div>
                             <br>
+
+
+
+
+
                             <div class="form-group row ">
-                                <label for="password" class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Confirm Password</label>
+                                <label for="confirmpassword"
+                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Confirm
+                                    Password</label>
                                 <div class="col-md-4">
-                                    <input type="password" id="confirmpassword" class="form-control-text" name="confirmpassword"
+                                    <input type="password" id="confirmpassword" class="form-control-text"
+                                           name="confirmpassword"
                                            required>
-                                    <small style="margin-bottom:0px" class="help-block"><?php echo $confirmpasswordER ?></small>
+                                    <small style="margin-bottom:0"
+                                           class="help-block"><?php echo $confirmpasswordER ?></small>
                                 </div>
                             </div>
 
-                           
-                            
+
+
+
+
+
+
                             <div class="col-md-6 offset-md-4">
-                                <small style="margin-bottom:0px" class="help-block"><?php echo $emailusedER ?></small>
-                                <button type="submit" class="btn btn-primary" name="submit" style ="margin-top: 10px">
+                                <small style="margin-bottom:0" class="help-block"><?php echo $emailusedER ?></small>
+                                <button type="submit" class="btn btn-primary" name="submit" style="margin-top: 10px">
                                     Register
                                 </button>
 
                             </div>
-                    </div>
+
                     </form>
                 </div>
             </div>
