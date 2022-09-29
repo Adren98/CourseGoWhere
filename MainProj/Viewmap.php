@@ -77,9 +77,16 @@ include 'navfloating.php';
 <div class="container mt-5">
     <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
         <p>
-            <input type="text" name="address" placeholder="Enter address">
+<!--            <input type="text" name="address" placeholder="Enter address">-->
+
+            <select name="address" id="cars" onchange="document.getElementById('primaryButton').click()">
+  <option value="">None selected</option>
+  <option value="NYP">NYP</option>
+  <option value="Ngee Ann Poly">NP</option>
+
+</select>
         </p>
-        <input type="submit" name="submit_address">
+        <input id="primaryButton" type="submit" name="submit_address">
 
         </form></pre>
         <?php
