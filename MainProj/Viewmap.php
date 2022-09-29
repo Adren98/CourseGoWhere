@@ -77,9 +77,9 @@ include 'navfloating.php';
     <div class="row">
 
 
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-lg-4 col-sm-12">
 
-            <div class="row" >
+            <div class="row" style="padding-left: 0">
             <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
             <p>
                 Select choice of School:
@@ -102,35 +102,48 @@ include 'navfloating.php';
                     if($address =="Nanyang Polytechnic" )
                     {
                         $picture_location ="Picture/nanyang-polytechnic.png";
+                        $information = "The history of the NYP can be traced back to its predecessor institutions of the late 1970s and early 1980s - the Japan-Singapore Institute (JSI), German-Singapore Institute (GSI) and French-Singapore Institute(FSI) set up by the Economic Development Board (EDB) of Singapore.";
+                        $button_address = "https://www.nyp.edu.sg";
                     }
                     elseif ($address =="Ngee Ann Polytechnic")
                     {
                         $picture_location ="Picture/ngee-ann-polytechnic.png";
+                        $information = "The history of Ngee Ann Polytechnic (NP) could be traced back to 1963, when it started out as Ngee Ann College. Its founder, The Ngee Ann Kongsi, had envisioned setting up a quality educational institution to link the Chinese-speaking community to its cultural roots during the colonial-rule era. The College had since morphed into a full-fledged polytechnic, a public institution overseen by an independent Council.";
+                        $button_address = "https://www.np.edu.sg";
                     }
                     elseif ($address =="Republic Polytechnic")
                     {
                         $picture_location ="Picture/republic-polytechnic.png";
+                        $information = "First established in 2002, Republic Polytechnic (RP) had an initial enrolment of just 800. Over the years, RP has grown from strength to strength building our reputation as a tertiary institution of academic excellence. Today, we are home to a lively community of about 14,000 students and more than 1,000 staff.";
+                        $button_address = "https://www.rp.edu.sg";
                     }
                     elseif ($address =="Singapore Polytechnic")
                     {
                         $picture_location ="Picture/singapore-polytechnic.png";
+                        $information = "Singapore Polytechnic was set up on 27 October 1954, making it the very first polytechnic to be established in Singapore. Singapore Polytechnic started out right in the heart of the financial district. Today, the polytechnic is located strategically in Dover Road - in the educational belt and science hub in the western part of Singapore. ";
+                        $button_address = "https://www.sp.edu.sg";
                     }
-                    elseif ($address =="Temasek Polytechnic")
-                    {
-                        $picture_location ="Picture/temasek polytechnic.png";
+                    elseif ($address =="Temasek Polytechnic") {
+                        $picture_location = "Picture/temasek-polytechnic.png";
+                        $information = "Situated in Tampines next to the idyllic Bedok Reservoir, Temasek Polytechnic is a leading institution of higher learning in Singapore. Established in April 1990, we take pride in equipping our students with lifelong skills and digital knowledge for a future of dynamic change.";
+                        $button_address = "https://www.tp.edu.sg";
                     }
-                    echo $picture_location;
+                }
+                else
+                {
+                    $picture_location ="Picture/logo.png";
+                    $information = "Select your School";
+                    $button_address = "";
                 }
                 ?>
 
 
-                <div class="card" style="width:250px;height: 350px;">
-                    <img class="card-img-top" width="200" height="150"
-                         alt="Card image" src=<?php echo $picture_location?>
+                <div class="card" style="width:500px;height:auto;">
+                    <img class="card-img-top" width="180" height="150"
+                         alt="Card image" src=<?php echo $picture_location?>>
                     <div class="card-body">
-                        <h4 class="card-title">Ngee Ann Polytechnic</h4>
-                        <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
-                        <a href="#" class="btn btn-primary">School Course</a>
+                        <p class="card-text"><?php echo $information?></p>
+                        <a href= <?php echo $button_address?> class="btn btn-primary">Visit School</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +152,7 @@ include 'navfloating.php';
         </div>
 
 
-        <div class="col-lg-9 col-sm-12" style="margin-top: 10%">
+        <div class="col-lg-8 col-sm-12" style="margin-top: 10%">
             <div class="col-sm">
                 <?php
                 if (isset($_POST["School"])) {
@@ -148,14 +161,14 @@ include 'navfloating.php';
                     $address = str_replace(" ", "+", " $address");
                     ?>
 
-                    <iframe width="100%" height="500 "
+                    <iframe width="100%" height="700 "
                             src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
 
                     <?php
                 } else {
                     ?>
 
-                    <iframe width="100%" height="500"
+                    <iframe width="100%" height="700"
                             src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
 
                     <?php
