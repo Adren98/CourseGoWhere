@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
             <ul class="navbar-nav navbar-nav-hover ms-auto">
                 <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    <a href="Viewmap.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                        role="button">
                         View Map
-                        <!--                                    <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
+                        <!--                                     <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-1">-->
                     </a>
                 </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
