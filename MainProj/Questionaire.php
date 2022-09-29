@@ -111,22 +111,22 @@ include 'navfloating.php';
                     </div>
                 </div>
 
-<!--                <div class="row">-->
-<!--                    <div class="col-4">-->
-<!--                        <label for="mathInterest" class="col-form-label text-md-right"-->
-<!--                               style="display: flex; justify-content:end;">Interest level for Math</label>-->
-<!---->
-<!--                    </div>-->
-<!---->
-<!--                    <div class="col-8">-->
-<!--                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="1">-->
-<!--                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="2">-->
-<!--                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="3">-->
-<!--                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="4">-->
-<!--                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="5">-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="row">
+                    <div class="col-2">
+                        <label for="mathInterest" class="col-form-label text-md-right"
+                               style="display: flex; justify-content:end;">Interest level for</label>
+
+                    </div>
+
+                    <div class="col-10">
+                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="1">
+                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="2">
+                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="3">
+                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="4">
+                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="5">
+
+                    </div>
+                </div>
 
 
 
