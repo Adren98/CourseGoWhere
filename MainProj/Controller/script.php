@@ -3,10 +3,10 @@
 <script type="text/javascript">
   function submitData(action){
     alert(action);
-    // if(action !=="insert" || action!=="edit"){
-    //     var element =document.getElementById(action);
-    //     element.parentNode.removeChild(element);
-    // }
+    if(action !=="insert" && action!=="edit"){
+        var element =document.getElementById(action);
+        element.parentNode.removeChild(element);
+    }
 
     $(document).ready(function(){
       var data = {
