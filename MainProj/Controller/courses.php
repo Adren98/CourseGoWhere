@@ -5,8 +5,17 @@ function getcolNames(){
     require_once 'courses_sql.php';
     $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CoursesCatalogue'";
     $result = genGenericSQL($sql);
-    return $result;
 
+    $colnames = array();
+    foreach ($result as $colname){
+        if($colname['COLUMN_NAME'] != 'id'){
+            array_push($colnames, $colname['COLUMN_NAME']);
+        }
+
+    }
+
+
+    return $colnames;
 
 }
 

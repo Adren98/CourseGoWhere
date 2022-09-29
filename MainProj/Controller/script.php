@@ -29,7 +29,7 @@
         data: data,
         success:function(response){
           alert(response);
-          if(response == "Deleted Successfully"){
+          if(response === "Deleted Successfully"){
             $("#"+action).css("display", "none");
           }
         }

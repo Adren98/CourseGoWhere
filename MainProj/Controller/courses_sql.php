@@ -61,11 +61,8 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
     $result = $output->get_result();
     $index = 0;
 
-    $arrofcolnames = getcolNames();
-    $colnames = array();
-    foreach ($arrofcolnames as $colname){
-        $colnames[] = $colname['COLUMN_NAME'];
-    }
+    $colnames = getcolNames();
+
     while (($row = $result->fetch_assoc()) != NULL) {
 
         $index++;

@@ -37,7 +37,7 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<td>' . $row['course_url'] . '</td>';
 
         echo '<td>' . $row['school'] . '</td>';
-        echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData('.$row['idCourses'].')>' . "Delete" . '</button></td>';
+        echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData('.$row['course_id'].')>' . "Delete" . '</button></td>';
         echo '<td><button type="button" class="btn btn-primary" name ="edit" onclick=Edit()>' . "Edit" . '</button></td>';
         echo '</tr>';
     }
@@ -56,7 +56,7 @@ function delete(){
   
     $id = $_POST["action"];
   
-    $query = "DELETE FROM CoursesCatalogue WHERE idCourses = $id";
+    $query = "DELETE FROM CoursesCatalogue WHERE course_id = $id";
     mysqli_query($connection, $query);
     echo "Deleted Successfully";
     

@@ -96,6 +96,7 @@ include 'navfloating.php';
                                         <?php
                                         require_once "Controller/courses_sql.php";
                                         $FOIarr = getFieldOfInterest();
+                                        $FOIarr = array_unique($FOIarr);
                                         echo '<option value = "NIL">None Selected</option>';
 
                                         foreach ($FOIarr as $interest) {
@@ -157,10 +158,11 @@ include 'navfloating.php';
                 <div class="container border-bottom">
                     <div class="row justify-space-between py-2">
                         <div class="col-lg-3 me-auto">
-<!--                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>-->
+                            <!--                            <p class="lead text-dark pt-1 mb-0">Pagination Simple</p>-->
                             <div class="input-group flex-nowrap">
-<!--                                <span class="input-group-text" id="addon-wrapping">@</span>-->
-                                <input id="myInput" onkeyup="filter()" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="addon-wrapping">
+                                <!--                                <span class="input-group-text" id="addon-wrapping">@</span>-->
+                                <input id="myInput" onkeyup="filter()" type="text" class="form-control"
+                                       placeholder="Search" aria-label="Search" aria-describedby="addon-wrapping">
                             </div>
 
                         </div>
@@ -189,25 +191,25 @@ include 'navfloating.php';
                         <table class="table" id="myTable">
                             <thead>
                             <tr>
-                            <?php
-                            require_once "Controller/courses.php";
+                                <?php
+                                require_once "Controller/courses.php";
 
-                            $courses = getcolNames();
+                                $courses = getcolNames();
 
-                            foreach ($courses as $course) {
-                                echo '<th scope="col">' . $course["COLUMN_NAME"] . '</th>';
-                            }
+                                foreach ($courses as $course) {
+                                    echo '<th scope="col">' . $course. '</th>';
+                                }
 
 
-                            ?>
+                                ?>
 
-<!--                                <th scope="col">#</th>-->
-<!--                                <th scope="col">CourseName</th>-->
-<!--                                <th scope="col">Year</th>-->
-<!--                                <th scope="col">course_cluster</th>-->
-<!--                                <th scope="col">cut_off_point</th>-->
-<!--                                <th scope="col">course_url</th>-->
-<!--                                <th scope="col">School</th>-->
+                                <!--                                <th scope="col">#</th>-->
+                                <!--                                <th scope="col">CourseName</th>-->
+                                <!--                                <th scope="col">Year</th>-->
+                                <!--                                <th scope="col">course_cluster</th>-->
+                                <!--                                <th scope="col">cut_off_point</th>-->
+                                <!--                                <th scope="col">course_url</th>-->
+                                <!--                                <th scope="col">School</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -215,20 +217,13 @@ include 'navfloating.php';
                             <?php
 
 
-
-
                             if (isset($_POST['submit'])) {
                                 require_once "Controller/courses.php";
                                 coursesDisplay();
 
-                            }
-                            else
-                            {
+                            } else {
                                 getAllCourse();
                             }
-
-
-
 
 
                             ?>
