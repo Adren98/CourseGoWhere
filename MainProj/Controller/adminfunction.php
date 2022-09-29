@@ -23,20 +23,32 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
     $index = 0;
     
     require 'script.php';
+
+    require_once "Controller/courses.php";
+
+    $colnames = getcolNames();
+
     while (($row = $result->fetch_assoc()) != NULL) {
 
         $index++;
 
-        echo '<tr id='.$row['idCourses'].'>';
-//        echo '<th scope="row">' . $index . '</th>';
-        echo '<td>' . $row['course_code'] . '</td>';
-        echo '<td>' . $row['course_name'] . '</td>';
-        echo '<td>' . $row['year'] . '</td>';
-        echo '<td>' . $row['course_cluster'] . '</td>';
-        echo '<td>' . $row['cut_off_point'] . '</td>';
-        echo '<td>' . $row['course_url'] . '</td>';
 
-        echo '<td>' . $row['school'] . '</td>';
+
+        echo '<tr id='.$row['course_id'].'>';
+        foreach ($colnames as $colname){
+            echo '<td>' . $row[$colname] . '</td>';
+        }
+
+
+//        echo '<th scope="row">' . $index . '</th>';
+//        echo '<td>' . $row['course_code'] . '</td>';
+//        echo '<td>' . $row['course_name'] . '</td>';
+//        echo '<td>' . $row['year'] . '</td>';
+//        echo '<td>' . $row['course_cluster'] . '</td>';
+//        echo '<td>' . $row['cut_off_point'] . '</td>';
+//        echo '<td>' . $row['course_url'] . '</td>';
+//
+//        echo '<td>' . $row['school'] . '</td>';
         echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData('.$row['course_id'].')>' . "Delete" . '</button></td>';
         echo '<td><button type="button" class="btn btn-primary" name ="edit" onclick=Edit()>' . "Edit" . '</button></td>';
         echo '</tr>';

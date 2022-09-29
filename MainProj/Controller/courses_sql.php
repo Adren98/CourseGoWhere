@@ -53,7 +53,6 @@ function getFilteredCourses($sql, array $parameters)
 /**
  * @param mysqli_stmt $output
  * @param mysqli $connection
- * @return false|mysqli_result
  */
 function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 {
@@ -86,7 +85,7 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
     }
     $output->close();
     $connection->close();
-    return $result;
+
 }
 
 function getFieldOfInterest()
@@ -127,7 +126,7 @@ function getAllCourse()
 
     }
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
-        $result = printHtmlRow($output, $connection);
+       printHtmlRow($output, $connection);
     }
 
 }

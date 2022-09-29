@@ -68,15 +68,18 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
     <table class="table" id="myTable">
         <thead>
         <tr>
-            <th scope="col">CourseCode</th>
-            <th scope="col">CourseName</th>
-            <th scope="col">Year</th>
-            <th scope="col">course_cluster</th>
-            <th scope="col">cut_off_point</th>
-            <th scope="col">course_url</th>
-<!--            <th scope="col">Course_ID</th>-->
-            <th scope="col">School</th>
-            <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th>
+            <?php
+            require_once "Controller/courses.php";
+
+            $courses = getcolNames();
+
+            foreach ($courses as $course) {
+                echo '<td>' . $course. '</td>';
+            }
+
+
+            ?>
+
 
         </tr>
         </thead>
