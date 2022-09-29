@@ -43,7 +43,7 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<td>' . $row['course_cluster'] . '</td>';
         echo '<td>' . $row['cut_off_point'] . '</td>';
         echo '<td>' . $row['course_url'] . '</td>';
-        echo '<td>' . $row['new_course'] . '</td>';
+
         echo '<td>' . $row['school'] . '</td>';
 
     }
