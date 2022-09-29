@@ -74,8 +74,12 @@ include 'navfloating.php';
 ?>
 
 <div class="container">
-    <div class="col-6">
-        <div class="row">
+    <div class="row">
+
+
+        <div class="col-lg-6 col-sm-12">
+
+            <div class="row">
             <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
             <p>
                 Select choice of School:
@@ -88,87 +92,53 @@ include 'navfloating.php';
                     <option value="Temasek Polytechnic">Temasek Polytechnic</option>
                 </select>
             </p>
-        </div>
-        <div class="row">
-            <div class="card" style="width:200px;height: 100px;">
-            <img class="card-img-top" width="180" height="100" src="assets/img/ivana-square.jpg" alt="Card image">
-            <div class="card-body">
-                <h4 class="card-title">Ngee Ann Polytechnic</h4>
-                <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
-                <a href="#" class="btn btn-primary">School Course</a>
             </div>
+
+
+            <div class="row">
+                <div class="card" style="width:200px;height: 100px;">
+                    <img class="card-img-top" width="180" height="100" src="assets/img/ivana-square.jpg"
+                         alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Ngee Ann Polytechnic</h4>
+                        <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
+                        <a href="#" class="btn btn-primary">School Course</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="col-sm">
+                <?php
+                if (isset($_POST["School"])) {
+
+                    $address = $_POST["School"] ?: "singapore";
+                    $address = str_replace(" ", "+", " $address");
+                    ?>
+
+                    <iframe width="50%" height="600 " style=" padding-left: = 50 %"
+                            src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
+
+                    <?php
+                } else {
+                    ?>
+
+                    <iframe width="50%" height="600" style=" padding-left: = 50%"
+                            src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
+
+                    <?php
+                }
+                ?>
+            </div>
+
         </div>
 
     </div>
-    <div class="col-6">
-    </div>
-
-    <div class="col-sm">
-        <?php
-        if (isset($_POST["School"])) {
-
-            $address = $_POST["School"] ?: "singapore";
-            $address = str_replace(" ", "+", " $address");
-            ?>
-
-            <iframe width="50%"  height="600 " style=" padding-left: = 50 %"
-                    src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
-
-            <?php
-        } else {
-            ?>
-
-            <iframe width="50%"  height="600" style=" padding-left: = 50%"
-                    src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
-
-            <?php
-        }
-        ?>
-    </div>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
