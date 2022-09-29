@@ -115,7 +115,6 @@ include 'navfloating.php';
 </div>
 
 
-
 </body>
 
 </html>
