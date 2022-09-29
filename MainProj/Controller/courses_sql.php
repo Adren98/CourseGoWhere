@@ -117,6 +117,12 @@ function getFieldOfInterest()
     }
 }
 
+function getSchoolsCol(){
+
+    $sql = 'SELECT DISTINCT school FROM CoursesCatalogue';
+    return genGenericSQL($sql);
+
+}
 
 function getAllCourse()
 {
