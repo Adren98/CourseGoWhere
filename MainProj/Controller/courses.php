@@ -26,19 +26,20 @@ function getcolNames(){
  */
 function coursesDisplay()
 {
+
     require_once 'courses_sql.php';
     $Field_of_Interest = "";
     $cut_off_point = "";
     $school = array();
 
-    if (isset($_POST['FOI'])) {
-        $Field_of_Interest = $_POST['FOI'];
+    if (isset($_GET['FOI'])) {
+        $Field_of_Interest = $_GET['FOI'];
     }
-    if (isset($_POST['cutoffpoint'])) {
-        $cut_off_point = $_POST['cutoffpoint'];
+    if (isset($_GET['cutoffpoint'])) {
+        $cut_off_point = $_GET['cutoffpoint'];
     }
-    if (isset($_POST['checkboxSchool'])) {
-        $school = $_POST['checkboxSchool'];
+    if (isset($_GET['checkboxSchool'])) {
+        $school = $_GET['checkboxSchool'];
     }
 
 

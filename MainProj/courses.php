@@ -64,7 +64,53 @@ session_start();
                 }
             }
         }
+
+        window.onload = function () {
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    console.log("click");
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+
+        }
+
     </script>
+
+    <style>
+        .collapsible {
+            background-color: #adadad;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 
 <body class="pagination-sections">
@@ -84,9 +130,14 @@ include 'navfloating.php';
 
             <div class="card justify-content-center" style="margin-left:200px;margin-right:200px">
                 <div class="col-lg-12">
-                    <div class="card-body align-items-center justify-content-center">
+                    <button class="collapsible" style="text-align: center"><span
+                                class="material-icons">arrow_drop_down</span>Open Filter Options <span
+                                class="material-icons">arrow_drop_down</span></button>
+
+
+                    <div class="content card-body align-items-center justify-content-center">
                         <h5 style="text-align: center;">Filter</h5><br>
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
                             <div class="form-group row">
                                 <label for="Field_of_interest" class="col-md-4 col-form-label text-md-right">Field of
                                     Interest</label>
@@ -94,6 +145,7 @@ include 'navfloating.php';
                                     <!-- Create a dropdown list with <select> -->
                                     <select id="Field_of_interest" name="FOI">
                                         <?php
+
                                         require_once "Controller/courses_sql.php";
                                         $FOIarr = getFieldOfInterest();
                                         $FOIarr = array_unique($FOIarr);
@@ -101,6 +153,12 @@ include 'navfloating.php';
 
                                         foreach ($FOIarr as $interest) {
                                             echo '<option value = ' . $interest . '>' . $interest . '</option>';
+//                                            if(isset($_GET['FOI']) && $_GET['FOI'] == $interest){
+//                                                echo '<option value = "' . $interest . '" selected>' . $interest . '</option>';
+//                                            }else{
+//                                                echo '<option value = ' . $interest . '>' . $interest . '</option>';
+//                                            }
+
                                         }
 
                                         ?>
@@ -114,9 +172,16 @@ include 'navfloating.php';
                                 <label for="cutoffpoint" class="col-md-4 col-form-label text-md-right">Cut Off
                                     Point</label>
                                 <div class="col-md-1">
-                                    <input type="number" id="cutoffpoint" class="form-control-text" name="cutoffpoint"
-                                           min=0
-                                           max=40>
+
+<!--                                    --><?php
+                                    if(isset($_GET['cutoffpoint'])){
+                                        echo '<input type="number" id="cutoffpoint" name="cutoffpoint" value="'.$_GET['cutoffpoint'].'">';
+
+                                    }else{
+                                        echo '<input type="number" id="cutoffpoint" name="cutoffpoint">';
+                                    }
+                                 ?>
+
 
                                 </div>
                             </div>
@@ -132,8 +197,16 @@ include 'navfloating.php';
                                     $schoolarr = array();
                                     foreach ($schoolslist as $school) {
 
-                                        echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '"> ';
-                                        echo '<label for="school">' . $school['school'] . '</label><br>';
+                                        if(isset($_GET['school']) && $_GET['school'] == $school){
+                                            echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '" checked>';
+                                            echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+
+                                        }else{
+                                            echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '">';
+                                            echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+                                        }
+//                                        echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '"> ';
+//                                        echo '<label for="school">' . $school['school'] . '</label><br>';
                                     }
 
 
@@ -203,7 +276,8 @@ include 'navfloating.php';
                     </div>
                 </div>
                 <div class="tab-content tab-space">
-                    <div class="tab-pane active" id="preview-pagination-simple">
+                    <div class="tab-pane active" id="preview-pagination-simple"
+                         style=" overflow-x: auto;overflow-y: auto; height: 500px">
                         <table class="table" id="myTable">
                             <thead>
                             <tr>
@@ -233,7 +307,7 @@ include 'navfloating.php';
                             <?php
 
 
-                            if (isset($_POST['submit'])) {
+                            if (isset($_GET['submit'])) {
                                 require_once "Controller/courses.php";
                                 coursesDisplay();
 
