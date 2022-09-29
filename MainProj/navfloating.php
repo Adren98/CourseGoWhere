@@ -533,71 +533,23 @@
                         <div class="item">
                             <span class="course_name"> Name 1</span>
                             <span class="remarks"> Remarks</span>
+                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                         <div class="item">
                             <span class="course_name"> Name 2</span>
                             <span class="remarks"> Remarks</span>
+                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                         <div class="item">
                             <span class="course_name"> Name 3</span>
                             <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 4</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 5</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 6</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 7</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 8</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 9</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 10</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 11</span>
-                            <span class="remarks"> Remarks</span>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 12</span>
-                            <span class="remarks"> Remarks</span>
+                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
-                    <script>
-                        const dragArea = document.querySelector(".DDcontainer");
-                        new Sortable(dragArea,{
-                            animation:350
-                        });
-                    </script>
-                    <button type="button" onclick="closePlannerPopup()">Save Planner</button>
+                    <button type="button" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>
                 </div>
             </nav>
             <!-- End Navbar -->
@@ -607,11 +559,27 @@
 
 <!-- Planner popup & draggable -->
 <script>
+
     let popup = document.getElementById("planner");
     function openPlannerPopup(){
         popup.classList.add("open-planner_popup");
     }
     function closePlannerPopup(){
         popup.classList.remove("open-planner_popup");
+        console.log('Planner saved!');
     }
+
+    window.addEventListener('click', ({ target }) => {
+        const withinplanner = target.closest('.planner_popup');
+        const plannerbutton = target.closest('.nav-item');
+        const clickedOnClosedPopup = !plannerbutton && !withinplanner && popup.classList.contains("open-planner_popup");
+        if(clickedOnClosedPopup){popup.classList.remove("open-planner_popup");}
+    });
+
+    const dragArea = document.querySelector(".DDcontainer");
+    new Sortable(dragArea,{animation:350});
+
 </script>
+<!--     
+
+ -->
