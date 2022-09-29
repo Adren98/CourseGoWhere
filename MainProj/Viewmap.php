@@ -126,7 +126,7 @@ include 'navfloating.php';
 
                 <div class="card" style="width:250px;height: 350px;">
                     <img class="card-img-top" width="200" height="150"
-                         alt="Card image" src= $picture_location ?>
+                         alt="Card image" src=<?php echo $picture_location?>
                     <div class="card-body">
                         <h4 class="card-title">Ngee Ann Polytechnic</h4>
                         <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
