@@ -74,8 +74,13 @@ include 'navfloating.php';
 ?>
 
 
-<div class="container mt-5">
-    <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-6">
+
+              <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
         <p>
 <!--            <input type="text" name="address" placeholder="Enter address">-->
 
@@ -89,33 +94,53 @@ include 'navfloating.php';
         <input id="primaryButton" type="submit" name="submit_address">
 
         </form></pre>
-        <?php
-        if (isset($_POST["submit_address"]))
-        {
+        </div>
 
-            $address = $_POST["address"]? :"singapore";
-            $address = str_replace(" ", "+"," $address");
+    <div class="col-6">
+
+        <div class="card" >
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+
+    <div class="row">
+
+
+        <?php
+        if (isset($_POST["submit_address"])) {
+
+            $address = $_POST["address"] ?: "singapore";
+            $address = str_replace(" ", "+", " $address");
             ?>
 
-            <iframe width="90%" style="margin-top: 15% ;margin-left: 5%" height="600" src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
+            <iframe width="90%" style="margin-top: 15% ;margin-left: 5%" height="600"
+                    src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
 
             <?php
-        }
-        else
-        {
+        } else {
             ?>
 
-            <iframe width="90%" style="margin-top: 15%; margin-left: 5%"  height="600" src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
+            <iframe width="90%" style="margin-top: 15%; margin-left: 5%" height="600"
+                    src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
 
             <?php
         }
         ?>
+    </div>
+
+
 </div>
-
-
-
-
-
 
 
 <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
