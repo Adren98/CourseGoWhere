@@ -1,0 +1,34 @@
+
+business n management(
+Do you balancing numbers
+Do you wish to take on roles such as business advisor, consultant and financial analyst?
+)
+engineering(
+    Enjoy physical Creation ?
+
+)
+media and design(
+are you interested in online content creation ?
+
+)
+IT(
+Are you interested in coding
+)
+Applied science(
+
+)
+
+Built Enviroment(
+Do you aspire to create infrastructure/buildings in the future
+)
+Humanities(
+)
+Health Sciences(
+Do you like to do like to promote sport as a way of life and get Singaporeans to champion their health?
+Interested in being a health care proffesional ?
+A Passion To Touch Lives
+)
+Maritime studies(
+)
+School preferences ?
+
