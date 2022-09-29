@@ -73,65 +73,52 @@ session_start();
 include 'navfloating.php';
 ?>
 
-
 <div class="container">
-
-
-    <div class="row">
-        <div class="col-6">
-
-              <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
-        <p>
-<!--            <input type="text" name="address" placeholder="Enter address">-->
-
-            <select name="address" id="cars" onchange="document.getElementById('primaryButton').click()">
-  <option value="">None selected</option>
-  <option value="NYP">NYP</option>
-  <option value="Ngee Ann Poly">NP</option>
-
-</select>
-        </p>
-        <input id="primaryButton" type="submit" name="submit_address">
-
-        </form></pre>
-        </div>
-
     <div class="col-6">
-
-        <div class="card" >
-            <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="row">
+            <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
+            <p>
+                Select choice of School:
+                <select name="School" id="School" onchange="this.form.submit()">
+                    <option value="Singapore">None selected</option>
+                    <option value="Nanyang Polytechnic">Nanyang Polytechnic</option>
+                    <option value="Ngee Ann Polytechnic">Ngee Ann Polytechnic</option>
+                    <option value="Republic Polytechnic">Republic Polytechnic</option>
+                    <option value="Singapore Polytechnic">Singapore Polytechnic</option>
+                    <option value="Temasek Polytechnic">Temasek Polytechnic</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <div class="card" style="width:200px;height: 100px;">
+            <img class="card-img-top" width="180" height="100" src="assets/img/ivana-square.jpg" alt="Card image">
             <div class="card-body">
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
+                <h4 class="card-title">Ngee Ann Polytechnic</h4>
+                <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
+                <a href="#" class="btn btn-primary">School Course</a>
             </div>
         </div>
 
-
+    </div>
+    <div class="col-6">
     </div>
 
-
-    </div>
-
-
-    <div class="row">
-
-
+    <div class="col-sm">
         <?php
-        if (isset($_POST["submit_address"])) {
+        if (isset($_POST["School"])) {
 
-            $address = $_POST["address"] ?: "singapore";
+            $address = $_POST["School"] ?: "singapore";
             $address = str_replace(" ", "+", " $address");
             ?>
 
-            <iframe width="90%" style="margin-top: 15% ;margin-left: 5%" height="600"
+            <iframe width="50%"  height="600 " style=" padding-left: = 50 %"
                     src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
 
             <?php
         } else {
             ?>
 
-            <iframe width="90%" style="margin-top: 15%; margin-left: 5%" height="600"
+            <iframe width="50%"  height="600" style=" padding-left: = 50%"
                     src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
 
             <?php
@@ -139,8 +126,49 @@ include 'navfloating.php';
         ?>
     </div>
 
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
