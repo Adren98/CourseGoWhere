@@ -2,7 +2,8 @@
 require_once('config.php');
 
 
-function genGenericSQL($sql){
+function genGenericSQL($sql)
+{
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
     if (mysqli_connect_errno()) {
@@ -11,7 +12,7 @@ function genGenericSQL($sql){
     }
 //var_dump("DEBUGGER:",$sql);
 
-    if ($output = mysqli_prepare($connection, strval($sql))){
+    if ($output = mysqli_prepare($connection, strval($sql))) {
         $output->execute();
         $result = $output->get_result();
 
@@ -39,13 +40,12 @@ function getFilteredCourses($sql, array $parameters)
     }
 //var_dump("DEBUGGER:",$sql);
 
-    if ($output = mysqli_prepare($connection, strval($sql))){
-        $output->bind_param(str_repeat('s', count($parameters)),...$parameters);
+    if ($output = mysqli_prepare($connection, strval($sql))) {
+        $output->bind_param(str_repeat('s', count($parameters)), ...$parameters);
         printHtmlRow($output, $connection);
     } else {
         die(mysqli_error($connection));
     }
-
 
 
 }
@@ -68,7 +68,7 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<tr>';
 
 
-        foreach ($colnames as $colname){
+        foreach ($colnames as $colname) {
             echo '<td>' . $row[$colname] . '</td>';
         }
 //        echo '<td>' . $row['course_name'] . '</td>';
@@ -78,7 +78,6 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 //        echo '<td>' . $row['course_url'] . '</td>';
 //
 //        echo '<td>' . $row['school'] . '</td>';
-
 
 
         echo '</tr>';
@@ -117,7 +116,8 @@ function getFieldOfInterest()
     }
 }
 
-function getSchoolsCol(){
+function getSchoolsCol()
+{
 
     $sql = 'SELECT DISTINCT school FROM CoursesCatalogue';
     return genGenericSQL($sql);
@@ -132,13 +132,10 @@ function getAllCourse()
 
     }
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
-       printHtmlRow($output, $connection);
+        printHtmlRow($output, $connection);
     }
 
 }
-
-
-
 
 
 ?>
