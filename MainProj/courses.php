@@ -16,6 +16,7 @@
 
 session_start();
 
+
 ?>
 
 
@@ -194,7 +195,6 @@ include 'navfloating.php';
                                 <th scope="col">course_cluster</th>
                                 <th scope="col">cut_off_point</th>
                                 <th scope="col">course_url</th>
-                                <th scope="col">new_course</th>
                                 <th scope="col">School</th>
                             </tr>
                             </thead>
