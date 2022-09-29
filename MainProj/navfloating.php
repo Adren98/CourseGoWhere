@@ -578,20 +578,19 @@ if(isset($_SESSION['email'])){
 <script>
 
     let popup = document.getElementById("planner");
-
     function openPlannerPopup() {
-        popup.classList.add("open-planner_popup");
+        if(popup.classList.contains("open-planner_popup")){popup.classList.remove("open-planner_popup");}
+        else{popup.classList.add("open-planner_popup");}
     }
-
     function closePlannerPopup() {
         popup.classList.remove("open-planner_popup");
-        console.log('Planner saved!');
     }
 
     window.addEventListener('click', ({target}) => {
         const withinplanner = target.closest('.planner_popup');
         const plannerbutton = target.closest('.nav-item');
-        const clickedOnClosedPopup = !plannerbutton && !withinplanner && popup.classList.contains("open-planner_popup");
+        const plannerpu = popup.classList.contains("open-planner_popup");
+        const clickedOnClosedPopup = !plannerbutton && !withinplanner && plannerpu;
         if (clickedOnClosedPopup) {
             popup.classList.remove("open-planner_popup");
         }
