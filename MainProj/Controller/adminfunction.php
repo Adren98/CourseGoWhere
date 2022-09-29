@@ -109,7 +109,7 @@ function insert()
         $colnames = getcolNames();
 
 
-        $query = 'insert';
+        $query = 'insert ';
         $query = $query . 'INTO CoursesCatalogue (';
         foreach ($colnames as $colname) {
             $query = $query . $colname . ",";
