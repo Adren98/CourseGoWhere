@@ -124,15 +124,15 @@ include 'navfloating.php';
                             <div class="form-group row ">
                                 <label for="school" class="col-md-4 col-form-label text-md-right">School</label>
                                 <div class="col-md-4">
-                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="NP">
+                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="Ngee Ann Polytechnic">
                                     <label for="NYP"> Ngee Ann Poly</label><br>
-                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="NYP">
+                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="Nanyang Polytechnic">
                                     <label for="NP">Nanyang Poly</label><br>
-                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="RP">
+                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="Republic Polytechnic">
                                     <label for="RP"> Republic Poly</label><br>
-                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="SP">
+                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="Singapore Polytechnic">
                                     <label for="SP"> Singapore Poly</label><br>
-                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="TP">
+                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="Temasek Polytechnic">
                                     <label for="TP"> Temasek Poly</label><br>
 
                                 </div>
