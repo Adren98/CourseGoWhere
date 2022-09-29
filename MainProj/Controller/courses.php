@@ -8,7 +8,7 @@ function getcolNames(){
 
     $colnames = array();
     foreach ($result as $colname){
-        if($colname['COLUMN_NAME'] != 'id'){
+        if($colname['COLUMN_NAME'] != 'course_id'){
             array_push($colnames, $colname['COLUMN_NAME']);
         }
 
