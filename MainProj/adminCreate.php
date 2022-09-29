@@ -16,82 +16,100 @@ require 'Controller/script.php';
                     </h1>
                     <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="form-group row">
-                                <label for="coursecode"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Course
-                                    Code</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="coursecode" class="form-control-text" name="coursecode"
-                                           required autofocus>
 
-                                </div>
+                            <?php
+                            require_once 'Controller/courses.php';
 
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="courseName"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Course
-                                    Name</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="courseName" class="form-control-text" name="courseName"
-                                           required>
+                            $cols = getcolNames();
+                            foreach ($cols as $col){
+                                echo "<div class='form-group row'>";
+                                echo "<label for='".$col."' class='col-md-4 col-form-label text-md-right d-flex justify-content-end'>".$col."</label>";
+                                echo "<div class='col-md-6'>";
+                                echo "<input id='".$col."' type='text' class='form-control-text' name='".$col."' value='' required autofocus>";
+                                echo "</div>";
+                                echo "</div>";
+                                echo "<br>";
+                            }
 
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
+                            ?>
 
-                                <label for="year"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Year</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="year" class="form-control-text" name="year"
-                                           required>
 
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="school"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">School</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="school" class="form-control-text" name="school"
-                                           required>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="course_cluster"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">course_cluster</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="course_cluster" class="form-control-text"
-                                           name="course_cluster"
-                                           required>
-
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-group row">
-                                <label for="cutoff"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Cut Off
-                                    Points</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="cutoff" class="form-control-text" name="cutoff"
-                                           required>
-
-                                </div>
-                            </div>
-                            <br>
-
-                            <div class="form-group row">
-                                <label for="url"
-                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">URL</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="url" class="form-control-text" name="url"
-                                    >
-
-                                </div>
-
-                            </div>
+<!--                            <div class="form-group row">-->
+<!--                                <label for="coursecode"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Course-->
+<!--                                    Code</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="coursecode" class="form-control-text" name="coursecode"-->
+<!--                                           required autofocus>-->
+<!---->
+<!--                                </div>-->
+<!---->
+<!--                            </div>-->
+<!--                            <br>-->
+<!--                            <div class="form-group row">-->
+<!--                                <label for="courseName"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Course-->
+<!--                                    Name</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="courseName" class="form-control-text" name="courseName"-->
+<!--                                           required>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+<!--                            <div class="form-group row">-->
+<!---->
+<!--                                <label for="year"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Year</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="year" class="form-control-text" name="year"-->
+<!--                                           required>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+<!--                            <div class="form-group row">-->
+<!--                                <label for="school"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">School</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="school" class="form-control-text" name="school"-->
+<!--                                           required>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+<!--                            <div class="form-group row">-->
+<!--                                <label for="course_cluster"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">course_cluster</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="course_cluster" class="form-control-text"-->
+<!--                                           name="course_cluster"-->
+<!--                                           required>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+<!--                            <div class="form-group row">-->
+<!--                                <label for="cutoff"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">Cut Off-->
+<!--                                    Points</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="cutoff" class="form-control-text" name="cutoff"-->
+<!--                                           required>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br>-->
+<!---->
+<!--                            <div class="form-group row">-->
+<!--                                <label for="url"-->
+<!--                                       class="col-md-4 col-form-label text-md-right d-flex justify-content-end">URL</label>-->
+<!--                                <div class="col-md-4">-->
+<!--                                    <input type="text" id="url" class="form-control-text" name="url"-->
+<!--                                    >-->
+<!---->
+<!--                                </div>-->
+<!---->
+<!--                            </div>-->
 
                             <br>
 

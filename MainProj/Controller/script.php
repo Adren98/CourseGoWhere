@@ -12,13 +12,23 @@
       var data = {
         action: action,
 
-          coursecode: $("#coursecode").val(),
-          year: $("#year").val(),
-          courseName: $("#courseName").val(),
-          course_cluster: $("#course_cluster").val(),
-          cutoff: $("#cutoff").val(),
-          url: $("#url").val(),
-          school: $("#school").val(),
+          <?php
+
+          require_once 'courses.php';
+          $cols = getcolNames();
+
+            foreach ($cols as $col){
+                echo $col.": $('#".$col."').val(),";
+            }
+
+          ?>
+          // coursecode: $("#coursecode").val(),
+          // year: $("#year").val(),
+          // courseName: $("#courseName").val(),
+          // course_cluster: $("#course_cluster").val(),
+          // cutoff: $("#cutoff").val(),
+          // url: $("#url").val(),
+          // school: $("#school").val(),
 
 
       };
