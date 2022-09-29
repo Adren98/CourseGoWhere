@@ -94,11 +94,39 @@ include 'navfloating.php';
             </p>
             </div>
 
-
             <div class="row">
+                <?php
+                if (isset($_POST["School"]))
+                {
+                    $address = $_POST["School"];
+                    if($address =="Nanyang Polytechnic" )
+                    {
+                        $picture_location ="Picture/nanyang-polytechnic.png";
+                    }
+                    elseif ($address =="Ngee Ann Polytechnic")
+                    {
+                        $picture_location ="Picture/ngee-ann-polytechnic.png";
+                    }
+                    elseif ($address =="Republic Polytechnic")
+                    {
+                        $picture_location ="Picture/republic-polytechnic.png";
+                    }
+                    elseif ($address =="Singapore Polytechnic")
+                    {
+                        $picture_location ="Picture/singapore-polytechnic.png";
+                    }
+                    elseif ($address =="Temasek Polytechnic")
+                    {
+                        $picture_location ="Picture/temasek polytechnic.png";
+                    }
+                    echo $picture_location;
+                }
+                ?>
+
+
                 <div class="card" style="width:250px;height: 350px;">
-                    <img class="card-img-top" width="200" height="150" src="Picture/ngee-ann-polytechnic.png"
-                         alt="Card image">
+                    <img class="card-img-top" width="200" height="150"
+                         alt="Card image" src= $picture_location ?>
                     <div class="card-body">
                         <h4 class="card-title">Ngee Ann Polytechnic</h4>
                         <p class="card-text">Founded in 1999 , this is one of the largest sch</p>
