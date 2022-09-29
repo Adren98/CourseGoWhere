@@ -75,27 +75,42 @@ include 'navfloating.php';
 <br><br><br>
 <!-- End Navbar -->
 <div class="card">
+
     <form>
 
         <div class="form-group row">
-            <label for="mathInterest" class="col-md-4 col-form-label text-md-right" style="display: flex; justify-content:end;">Interest level for Math</label>
-            <div class="col-md-4">
-                <input class="col-md-2" type="radio" id="mathInterest"  name="mathInterest" value="1" >
-                <input class="col-md-2" type="radio" id="mathInterest"  name="mathInterest" value="2" >
-                <input class="col-md-2" type="radio" id="mathInterest"  name="mathInterest" value="3" >
-                <input class="col-md-2" type="radio" id="mathInterest"  name="mathInterest" value="4" >
-                <input class="col-md-2" type="radio" id="mathInterest"  name="mathInterest" value="5" >
+            <div class="row">
+                <div class="col-md-4 ">Not interested</div>
+                <div class="col-md-4">Interested</div>
+            </div>
+
+
+            <div class="row">
+
+                <label for="mathInterest" class="col-md-4 col-form-label text-md-right"
+                       style="display: flex; justify-content:end;">Interest level for Math</label>
+                <div class="col-md-4">
+                    <input class="col-md-2" type="radio" id="mathInterest" name="mathInterest" value="1">
+                    <input class="col-md-2" type="radio" id="mathInterest" name="mathInterest" value="2">
+                    <input class="col-md-2" type="radio" id="mathInterest" name="mathInterest" value="3">
+                    <input class="col-md-2" type="radio" id="mathInterest" name="mathInterest" value="4">
+                    <input class="col-md-2" type="radio" id="mathInterest" name="mathInterest" value="5">
+
+                </div>
+                <label for="speaking" class="col-md-4 col-form-label text-md-right"
+                       style="display: flex; justify-content:end;">Public Speaking</label>
+                <div class="col-md-4">
+                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="1">
+                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="2">
+                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="3">
+                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="4">
+                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="5">
+
+                </div>
 
             </div>
-            <label for="speaking" class="col-md-4 col-form-label text-md-right" style="display: flex; justify-content:end;">Public Speaking</label>
-            <div class="col-md-4">
-                <input class="col-md-2" type="radio" id="speaking"  name="speaking" value="1" >
-                <input class="col-md-2" type="radio" id="speaking"  name="speaking" value="2" >
-                <input class="col-md-2" type="radio" id="speaking"  name="speaking" value="3" >
-                <input class="col-md-2" type="radio" id="speaking"  name="speaking" value="4" >
-                <input class="col-md-2" type="radio" id="speaking"  name="speaking" value="5" >
 
-            </div>
+        </div>
     </form>
 </div>
 
