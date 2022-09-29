@@ -67,7 +67,7 @@ function delete(){
     }
   
     $id = $_POST["action"];
-  
+
     $query = "DELETE FROM CoursesCatalogue WHERE course_id = $id";
     mysqli_query($connection, $query);
     echo "Deleted Successfully";
@@ -88,13 +88,25 @@ function insert(){
     $cutoff = $_POST["cutoff"];
     $url = $_POST["url"];
     $school =$_POST["school"];
-    echo     '<script type="text/javascript">    alert("Before quiery");    </script>';
-    $query = "INSERT INTO CoursesCatalogue (course_name, course_code, year, course_cluster, cut_off_point, course_url,
-                              school) VALUES ('$courseName', '$coursecode','$year', '$course_cluster','$cutoff','$url','$school')";
-    mysqli_query($connection,$query);
-    echo "Inserted";
-    echo     '<script type="text/javascript">    alert("added");    </script>';
+    echo     '<script type="text/javascript">    alert("Before query");    </script>';
+
+    //Check if exist in DB
+    $exist = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue WHERE course_code = '$coursecode' and school = '$school' " );
+    $exist->execute();
+    $result = $exist->get_result();
+    if ($result->num_rows != 0) {
+        echo "course " ."$coursecode" ." from " ."$school" ." exist in database \n";
+
+    }
+    else {
+        $query = "INSERT INTO CoursesCatalogue (course_name, course_code, year, course_cluster, cut_off_point, course_url,
+                                school) VALUES ('$courseName', '$coursecode','$year', '$course_cluster','$cutoff','$url','$school')";
+        mysqli_query($connection,$query);
+        echo "Inserted";
+        echo     '<script type="text/javascript">    alert("added");    </script>';
+    }
 }
+
 function getAdminAllCourse()
 {
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
