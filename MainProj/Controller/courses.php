@@ -33,7 +33,7 @@ function coursesDisplay()
     $school = array();
 
     if (isset($_GET['FOI'])) {
-        $Field_of_Interest = $_GET['FOI'];
+        $Field_of_Interest = urldecode($_GET['FOI']);
     }
     if (isset($_GET['cutoffpoint'])) {
         $cut_off_point = $_GET['cutoffpoint'];

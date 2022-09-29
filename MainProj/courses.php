@@ -152,12 +152,12 @@ include 'navfloating.php';
                                         echo '<option value = "NIL">None Selected</option>';
 
                                         foreach ($FOIarr as $interest) {
-                                            echo '<option value = ' . $interest . '>' . $interest . '</option>';
-//                                            if(isset($_GET['FOI']) && $_GET['FOI'] == $interest){
-//                                                echo '<option value = "' . $interest . '" selected>' . $interest . '</option>';
-//                                            }else{
-//                                                echo '<option value = ' . $interest . '>' . $interest . '</option>';
-//                                            }
+
+                                            if (isset($_GET['FOI']) && $_GET['FOI'] == urlencode($interest)) {
+                                                echo '<option value = "' . urlencode($interest) . '" selected>' . $interest . '</option>';
+                                            } else {
+                                                echo '<option value = ' . urlencode($interest) . '>' . $interest . '</option>';
+                                            }
 
                                         }
 
@@ -173,14 +173,14 @@ include 'navfloating.php';
                                     Point</label>
                                 <div class="col-md-1">
 
-<!--                                    --><?php
-                                    if(isset($_GET['cutoffpoint'])){
-                                        echo '<input type="number" id="cutoffpoint" name="cutoffpoint" value="'.$_GET['cutoffpoint'].'">';
+                                    <!--                                    --><?php
+                                    if (isset($_GET['cutoffpoint'])) {
+                                        echo '<input type="number" id="cutoffpoint" name="cutoffpoint" value="' . $_GET['cutoffpoint'] . '">';
 
-                                    }else{
+                                    } else {
                                         echo '<input type="number" id="cutoffpoint" name="cutoffpoint">';
                                     }
-                                 ?>
+                                    ?>
 
 
                                 </div>
@@ -197,32 +197,27 @@ include 'navfloating.php';
                                     $schoolarr = array();
                                     foreach ($schoolslist as $school) {
 
-                                        if(isset($_GET['school']) && $_GET['school'] == $school){
-                                            echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '" checked>';
-                                            echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+                                        if (isset($_GET['checkboxSchool'])) {
 
-                                        }else{
+                                            if (in_array($school['school'], $_GET['checkboxSchool'])) {
+                                                echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '" checked>';
+                                                echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+                                            } else {
+                                                echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '">';
+                                                echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+                                            }
+                                        } else {
                                             echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '">';
                                             echo '<label for="' . $school['school'] . '">' . $school['school'] . '</label><br>';
+
                                         }
-//                                        echo '<input type="checkbox" id="' . $school['school'] . '" name="checkboxSchool[]" value="' . $school['school'] . '"> ';
-//                                        echo '<label for="school">' . $school['school'] . '</label><br>';
+
+
                                     }
 
 
                                     ?>
 
-
-                                    <!--                                    <input type="checkbox" id="NP" name="checkboxSchool[]" value="Ngee Ann Polytechnic">-->
-                                    <!--                                    <label for="NYP"> Ngee Ann Poly</label><br>-->
-                                    <!--                                    <input type="checkbox" id="NYP" name="checkboxSchool[]" value="Nanyang Polytechnic">-->
-                                    <!--                                    <label for="NP">Nanyang Poly</label><br>-->
-                                    <!--                                    <input type="checkbox" id="RP" name="checkboxSchool[]" value="Republic Polytechnic">-->
-                                    <!--                                    <label for="RP"> Republic Poly</label><br>-->
-                                    <!--                                    <input type="checkbox" id="SP" name="checkboxSchool[]" value="Singapore Polytechnic">-->
-                                    <!--                                    <label for="SP"> Singapore Poly</label><br>-->
-                                    <!--                                    <input type="checkbox" id="TP" name="checkboxSchool[]" value="Temasek Polytechnic">-->
-                                    <!--                                    <label for="TP"> Temasek Poly</label><br>-->
 
                                 </div>
                             </div>
@@ -232,6 +227,9 @@ include 'navfloating.php';
 
                                 <button type="submit" class="btn btn-primary" name="submit">
                                     Filter
+                                </button>
+                                <button type="submit" class="btn btn-primary" name="submitClear">
+                                    Clear Filter
                                 </button>
 
                             </div>
@@ -305,6 +303,14 @@ include 'navfloating.php';
                             <tbody>
 
                             <?php
+
+                            if (isset($_GET['submitClear'])) {
+
+                                echo '<script>history.pushState(null, "", location.href.split("?")[0]);location.reload();</script>';
+
+
+
+                            }
 
 
                             if (isset($_GET['submit'])) {
