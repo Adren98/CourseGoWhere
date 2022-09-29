@@ -3,12 +3,15 @@ require_once('config.php');
 
 if(isset($_POST["action"])){
     if($_POST["action"] == "insert"){
+        echo 'I AM HERE in insert action:';
       insert();
     }
     else if($_POST["action"] == "edit"){
+        echo 'I AM HERE in edit action:';
       edit();
     }
     else{
+        echo 'I AM HERE in delete action:';
       delete();
     }
   }
@@ -23,14 +26,16 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
     while (($row = $result->fetch_assoc()) != NULL) {
 
         $index++;
+
         echo '<tr id='.$row['idCourses'].'>';
-        echo '<th scope="row">' . $index . '</th>';
+//        echo '<th scope="row">' . $index . '</th>';
+        echo '<td>' . $row['course_code'] . '</td>';
         echo '<td>' . $row['course_name'] . '</td>';
         echo '<td>' . $row['year'] . '</td>';
         echo '<td>' . $row['course_cluster'] . '</td>';
         echo '<td>' . $row['cut_off_point'] . '</td>';
         echo '<td>' . $row['course_url'] . '</td>';
-        echo '<td>' . $row['new_course'] . '</td>';
+
         echo '<td>' . $row['school'] . '</td>';
         echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData('.$row['idCourses'].')>' . "Delete" . '</button></td>';
         echo '<td><button type="button" class="btn btn-primary" name ="edit" onclick=Edit()>' . "Edit" . '</button></td>';
@@ -57,6 +62,27 @@ function delete(){
     
 
   }
+function insert(){
+    echo"Inserting ";
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    if (mysqli_connect_errno()) {
+
+        die(mysqli_connect_error());
+    }
+    $coursecode = $_POST["coursecode"];
+    $year= $_POST["year"];
+    $courseName = $_POST["courseName"];
+    $course_cluster =$_POST["course_cluster"];
+    $cutoff = $_POST["cutoff"];
+    $url = $_POST["url"];
+    $school =$_POST["school"];
+    echo     '<script type="text/javascript">    alert("Before quiery");    </script>';
+    $query = "INSERT INTO CoursesCatalogue (course_name, course_code, year, course_cluster, cut_off_point, course_url,
+                              school) VALUES ('$courseName', '$coursecode','$year', '$course_cluster','$cutoff','$url','$school')";
+    mysqli_query($connection,$query);
+    echo "Inserted";
+    echo     '<script type="text/javascript">    alert("added");    </script>';
+}
 function getAdminAllCourse()
 {
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);

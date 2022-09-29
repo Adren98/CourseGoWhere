@@ -50,9 +50,9 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 <h1 style = "display:flex ; justify-content: center;">Admin Home Page</h1>
 <div class="row">
     <div class="col-lg-6">
-        <button type="submit" class="btn btn-primary" name="addcourse">
+        <a type="submit" class="btn btn-primary"  href="adminCreate.php">
             Add Course
-        </button>
+        </a>
     </div>
     <div class="col-lg-6">
         <form method="post" action="logout_abort.php" >
@@ -68,13 +68,13 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
     <table class="table" id="myTable">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">CourseCode</th>
             <th scope="col">CourseName</th>
             <th scope="col">Year</th>
             <th scope="col">course_cluster</th>
             <th scope="col">cut_off_point</th>
             <th scope="col">course_url</th>
-            <th scope="col">new_course</th>
+<!--            <th scope="col">Course_ID</th>-->
             <th scope="col">School</th>
             <th scope="col" colspan="2" style="justify-content:space-around; display:flex; "> Options</th>
 
@@ -83,7 +83,7 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
         <tbody>
 
         <?php
-        require 'adminfunction.php';
+        require 'Controller/adminfunction.php';
 
         getAdminAllCourse();
 

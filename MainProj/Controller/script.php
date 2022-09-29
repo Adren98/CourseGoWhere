@@ -3,21 +3,28 @@
 <script type="text/javascript">
   function submitData(action){
     alert(action);
-    
-    var element =document.getElementById(action);
-    element.parentNode.removeChild(element);
+    // if(action !=="insert" || action!=="edit"){
+    //     var element =document.getElementById(action);
+    //     element.parentNode.removeChild(element);
+    // }
+
     $(document).ready(function(){
       var data = {
         action: action,
-        id: $("#id").val(),
-        name: $("#name").val(),
-        email: $("#email").val(),
-        gender: $("#gender").val(),
-        
+
+          coursecode: $("#coursecode").val(),
+          year: $("#year").val(),
+          courseName: $("#courseName").val(),
+          course_cluster: $("#course_cluster").val(),
+          cutoff: $("#cutoff").val(),
+          url: $("#url").val(),
+          school: $("#school").val(),
+
+
       };
 
       $.ajax({
-        url: 'adminfunction.php',
+        url: 'Controller/adminfunction.php',
         type: 'post',
         data: data,
         success:function(response){
