@@ -71,7 +71,7 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
             <?php
             require_once "Controller/courses.php";
 
-            $courses = getcolNames();
+            $courses = getadmincolNames();
 
             foreach ($courses as $course) {
                 echo '<th scope="col">' . $course. '</th>';

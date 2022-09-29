@@ -26,7 +26,7 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
 
     require_once "Controller/courses.php";
 
-    $colnames = getcolNames();
+    $colnames = getadmincolNames();
 
     while (($row = $result->fetch_assoc()) != NULL) {
 

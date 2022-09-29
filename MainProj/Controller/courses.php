@@ -17,6 +17,23 @@ function getcolNames(){
 
     return $colnames;
 
+}function getadmincolNames(){
+
+    require_once 'courses_sql.php';
+    $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CoursesCatalogue'";
+    $result = genGenericSQL($sql);
+
+    $colnames = array();
+    foreach ($result as $colname){
+        if($colname['COLUMN_NAME'] != 'course_id'&&$colname['COLUMN_NAME'] !='course_url'){
+            array_push($colnames, $colname['COLUMN_NAME']);
+        }
+
+    }
+
+
+    return $colnames;
+
 }
 
 
