@@ -77,10 +77,10 @@ include 'navfloating.php';
     <div class="row">
 
 
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-3 col-sm-12">
 
-            <div class="row">
-            <pre class="wp-block-syntaxhighlighter-code"><form method="POST">
+            <div class="row" >
+            <pre class="wp-block-syntaxhighlighter-code"style="margin-top: 10px;margin-right: 10px"><form method="POST">
             <p>
                 Select choice of School:
                 <select name="School" id="School" onchange="this.form.submit()">
@@ -96,8 +96,8 @@ include 'navfloating.php';
 
 
             <div class="row">
-                <div class="card" style="width:200px;height: 100px;">
-                    <img class="card-img-top" width="180" height="100" src="assets/img/ivana-square.jpg"
+                <div class="card" style="width:250px;height: 150px;">
+                    <img class="card-img-top" width="200" height="150" src="assets/img/ivana-square.jpg"
                          alt="Card image">
                     <div class="card-body">
                         <h4 class="card-title">Ngee Ann Polytechnic</h4>
@@ -111,7 +111,7 @@ include 'navfloating.php';
         </div>
 
 
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-9 col-sm-12" style="margin-top: 10%">
             <div class="col-sm">
                 <?php
                 if (isset($_POST["School"])) {
@@ -120,14 +120,14 @@ include 'navfloating.php';
                     $address = str_replace(" ", "+", " $address");
                     ?>
 
-                    <iframe width="50%" height="600 " style=" padding-left: = 50 %"
+                    <iframe width="100%" height="500 "
                             src="https://maps.google.com/maps?q=<?php echo $address; ?>&output=embed"></iframe>
 
                     <?php
                 } else {
                     ?>
 
-                    <iframe width="50%" height="600" style=" padding-left: = 50%"
+                    <iframe width="100%" height="500"
                             src="https://maps.google.com/maps?q=<?php echo "singapore"; ?>&output=embed"></iframe>
 
                     <?php
