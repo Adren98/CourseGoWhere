@@ -89,7 +89,7 @@ include 'navfloating.php';
                 <div class="card" >
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                            <img class="card-img-top"   alt="Card image" src=Picture/ngee-ann-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/ngee-ann-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Ngee Ann Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseOne" class="collapse" data-parent="#accordion">
@@ -111,7 +111,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                            <img class="card-img-top"   alt="Card image" src=Picture/nanyang-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/nanyang-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Nanyang Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -126,7 +126,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            <img class="card-img-top"   alt="Card image" src=Picture/republic-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/republic-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Republic Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -138,7 +138,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-                            <img class="card-img-top"   alt="Card image" src=Picture/singapore-polytechnic.png height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/singapore-polytechnic.png" height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Singapore Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseFour" class="collapse" data-parent="#accordion">
@@ -150,7 +150,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
-                            <img class="card-img-top"   alt="Card image" src=Picture/temasek_polytechnic.png  height="150">
+                            <img class="card-img-top"   alt="Card image" src="Picture/temasek_polytechnic.png"  height="150" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Temasek Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseFive" class="collapse" data-parent="#accordion">
@@ -164,7 +164,9 @@ include 'navfloating.php';
 
 
         <div class="col-lg-9 col-sm-20" >
-            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=<?php echo $school ?> &output=embed"></iframe>
+<!--            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=--><?php //echo $school ?><!-- &output=embed"></iframe>-->
+
+            <iframe width="100%" height="800 " name="frame" id="frame" src="https://maps.google.com/maps?q=Singapore&output=embed"></iframe>
         </div>
 
     </div>
