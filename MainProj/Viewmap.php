@@ -85,7 +85,7 @@ include 'navfloating.php';
                 Select choice of School:
                 <select name="School" id="School" onchange="this.form.submit()">
                     <option value="Singapore">None selected</option>
-                    <option value="Nanyang Polytechnic">Nanyang Polytechnic</option>
+                    <option value="Nanyang Polytechnic" "><imgsrc="Picture/nanyang-polytechnic.png></imgsrc></option>
                     <option value="Ngee Ann Polytechnic">Ngee Ann Polytechnic</option>
                     <option value="Republic Polytechnic">Republic Polytechnic</option>
                     <option value="Singapore Polytechnic">Singapore Polytechnic</option>
@@ -137,15 +137,53 @@ include 'navfloating.php';
                 }
                 ?>
 
+                <?php
+                    if($button_address!=""){
+                        ?>
 
-                <div class="card" style="width:500px;height:auto;">
-                    <img class="card-img-top" width="180" height="150"
-                         alt="Card image" src=<?php echo $picture_location?>>
-                    <div class="card-body">
-                        <p class="card-text"><?php echo $information?></p>
-                        <a href= <?php echo $button_address?> target="_blank" class="btn btn-primary">Visit School</a>
-                    </div>
-                </div>
+
+                        <div class="rotating-card-container">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                                <div class="front front-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+                                    <div class="card-body py-0 text-center">
+                                        <i class="material-icons text-white text-4xl my-3">touch_app</i>
+                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
+                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
+                                            development have been re-design with the new look.</p>
+                                    </div>
+                                </div>
+                                <div class="back back-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+                                    <div class="card-body pt-7 text-center">
+                                        <h3 class="text-white">Discover More</h3>
+                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
+                                            to full-functional code because all elements are implemented.</p>
+                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                }else {
+                ?>
+                        <div class="card" style="width:500px;height:auto;">
+                            <img class="card-img-top" width="180" height="180"
+                                 alt="Card image" src=<?php echo $picture_location?>>
+                            <div class="card-body">
+                                <p class="card-text"><?php echo $information?></p>
+
+                            </div>
+                        </div>
+
+                <?php
+                }
+                ?>
+
+
+
+
             </div>
 
 
