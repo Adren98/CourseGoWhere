@@ -77,9 +77,9 @@ include 'navfloating.php';
 <div class="container">
 
     <div class="row" style="margin-top: 10%">
-        <div class = "col-sm" >
+        <div class = "col-lg-3 " >
             <div id="accordion">
-                <div class="card">
+                <div class="card" >
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
                             <img class="card-img-top"   alt="Card image" src=Picture/ngee-ann-polytechnic.png  height="100">
@@ -117,11 +117,11 @@ include 'navfloating.php';
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
                             <img class="card-img-top"   alt="Card image" src=Picture/singapore-polytechnic.png height="100">
                         </a>
                     </div>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
@@ -129,11 +129,11 @@ include 'navfloating.php';
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
                             <img class="card-img-top"   alt="Card image" src=Picture/temasek_polytechnic.png  height="150">
                         </a>
                     </div>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
@@ -143,8 +143,8 @@ include 'navfloating.php';
         </div>
 
 
-        <div class="col-lg-9 col-sm-12" >
-            <iframe width="100%" height="700 " src="https://maps.google.com/maps?q=singapore &output=embed"></iframe>
+        <div class="col-lg-9 col-sm-20" >
+            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=singapore &output=embed"></iframe>
         </div>
 
     </div>
