@@ -64,6 +64,12 @@ session_start();
                 }
             }
         }
+
+        $(document).ready(function(){
+
+            $(".collapse").on('show.bs.collapse', function(){
+                alert('The collapsible content is about to be shown.');
+            });
     </script>
 </head>
 
@@ -73,6 +79,7 @@ session_start();
 
 include 'navfloating.php';
 ?>
+<?php $school= "Singapore" ?>
 
 <div class="container">
 
@@ -85,10 +92,20 @@ include 'navfloating.php';
                             <img class="card-img-top"   alt="Card image" src=Picture/ngee-ann-polytechnic.png  height="100">
                         </a>
                     </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            The history of Ngee Ann Polytechnic (NP) could be traced back to 1963, when it started out as Ngee Ann College. Its founder, The Ngee Ann Kongsi, had envisioned setting up a quality educational institution to link the Chinese-speaking community to its cultural roots during the colonial-rule era. The College had since morphed into a full-fledged polytechnic, a public institution overseen by an independent Council.
                         </div>
+                        <?php
+                        if(isset($_POST['btn-np'])){
+                            $school = "Ngee Ann Poly";
+                        }
+                        ?>
+                        <form method="post">
+                            <input type="submit" name="btn-np" value="Go Map!"
+                        </form>
+
                     </div>
                 </div>
                 <div class="card">
@@ -101,6 +118,9 @@ include 'navfloating.php';
                         <div class="card-body">
                             The history of the NYP can be traced back to its predecessor institutions of the late 1970s and early 1980s - the Japan-Singapore Institute (JSI), German-Singapore Institute (GSI) and French-Singapore Institute(FSI) set up by the Economic Development Board (EDB) of Singapore.
                         </div>
+                        <input name="submitBtn" type="submit" value="Choice1">
+
+
                     </div>
                 </div>
                 <div class="card">
@@ -144,7 +164,7 @@ include 'navfloating.php';
 
 
         <div class="col-lg-9 col-sm-20" >
-            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=singapore &output=embed"></iframe>
+            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=<?php echo $school ?> &output=embed"></iframe>
         </div>
 
     </div>
