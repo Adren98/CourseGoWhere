@@ -1,74 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+body {
+    background-color: #100e17;
+    font-family: 'Open Sans', sans-serif;
+}
 
-
+.container {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
+}
 
 .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    cursor: pointer;
-    height: 20px;
-    margin: 20px;
-    padding: 0 20px;
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
     position: relative;
-    -webkit-tap-highlight-color: rgba(0,0,0,0.025);
-    text-align: center;
-    transition: height 1000ms;
+    left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
     width: 150px;
 }
 
-.card.expanded {
-    height: 300px;
+.emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
 }
-.label {
-    margin-top: 30px;
-    transform: translateY(10px);
-    transition: transform 1000ms;
-}
-.card.expanded .label {
-    transform: translateY(0);
-}
-.text1 {
-    clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
-    -webkit-clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
-    transition: clip-path 1000ms;
-}
-.card.expanded .text1 {
-    clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
-    -webkit-clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
-}
-.text2 {
-    clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
-    -webkit-clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
-    transition: clip-path 1000ms;
-}
-.card.expanded .text2 {
-    clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
-    -webkit-clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
-}
-.text-content {
-    transform: translateY(-160px);
-    transition: transform 1000ms;
-}
-.card.expanded .text-content {
-    transform: translateY(-15px);
-}
-.chevron {
+
+.filledbar {
     position: absolute;
-    bottom: 20px;
-    left: calc(50% - 15px);
-    transform-origin: 50%;
-    transform: rotate(180deg);
-    transition: transform 1000ms;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
 }
-.card.expanded .chevron {
-    transform: rotate(0deg);
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
 }
-.title {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 900;
-    margin: 20px 0 12px;
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
 }
-.body-text {
-    padding: 0 20px;
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #17141d;
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
 }
