@@ -102,9 +102,6 @@ include 'navfloating.php';
                             $school = "Ngee Ann Poly";
                         }
                         ?>
-                        <form method="post">
-                            <input type="submit" name="btn-np" value="Go Map!"
-                        </form>
 
                     </div>
                 </div>
@@ -118,9 +115,6 @@ include 'navfloating.php';
                         <div class="card-body">
                             The history of the NYP can be traced back to its predecessor institutions of the late 1970s and early 1980s - the Japan-Singapore Institute (JSI), German-Singapore Institute (GSI) and French-Singapore Institute(FSI) set up by the Economic Development Board (EDB) of Singapore.
                         </div>
-                        <input name="submitBtn" type="submit" value="Choice1">
-
-
                     </div>
                 </div>
                 <div class="card">
@@ -131,7 +125,7 @@ include 'navfloating.php';
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            First established in 2002, Republic Polytechnic (RP) had an initial enrolment of just 800. Over the years, RP has grown from strength to strength building our reputation as a tertiary institution of academic excellence. Today, we are home to a lively community of about 14,000 students and more than 1,000 staff.
                         </div>
                     </div>
                 </div>
@@ -143,7 +137,7 @@ include 'navfloating.php';
                     </div>
                     <div id="collapseFour" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Singapore Polytechnic was set up on 27 October 1954, making it the very first polytechnic to be established in Singapore. Singapore Polytechnic started out right in the heart of the financial district. Today, the polytechnic is located strategically in Dover Road - in the educational belt and science hub in the western part of Singapore.
                         </div>
                     </div>
                 </div>
@@ -155,7 +149,7 @@ include 'navfloating.php';
                     </div>
                     <div id="collapseFive" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Situated in Tampines next to the idyllic Bedok Reservoir, Temasek Polytechnic is a leading institution of higher learning in Singapore. Established in April 1990, we take pride in equipping our students with lifelong skills and digital knowledge for a future of dynamic change..
                         </div>
                     </div>
                 </div>
