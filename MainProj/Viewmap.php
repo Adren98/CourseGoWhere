@@ -85,6 +85,7 @@ include 'navfloating.php';
 
     <div class="row" style="margin-top: 10%">
         <div class = "col-lg-3 " >
+            <h4><center>Click on the School LOGO <br> for more Information</center></h4>
             <div id="accordion">
                 <div class="card" >
                     <div class="card-header">
@@ -160,7 +161,7 @@ include 'navfloating.php';
         <div class="col-lg-9 col-sm-20" >
 <!--            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=--><?php //echo $school ?><!-- &output=embed"></iframe>-->
 
-            <iframe width="100%" height="800 " name="frame" id="frame" src="https://maps.google.com/maps?q=Singapore&output=embed"></iframe>
+            <iframe width="100%" height="800 " name="frame" id="frame" src="https://maps.google.com/maps?q=Singapore polytechincs&output=embed"></iframe>
         </div>
 
     </div>
