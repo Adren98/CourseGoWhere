@@ -143,7 +143,7 @@ include 'navfloating.php';
                          alt="Card image" src=<?php echo $picture_location?>>
                     <div class="card-body">
                         <p class="card-text"><?php echo $information?></p>
-                        <a href= <?php echo $button_address?> class="btn btn-primary">Visit School</a>
+                        <a href= <?php echo $button_address?> target="_blank" class="btn btn-primary">Visit School</a>
                     </div>
                 </div>
             </div>
