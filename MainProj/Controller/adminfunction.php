@@ -15,14 +15,12 @@ if (isset($_POST["action"])) {
 }
 
 if(isset($_POST['submit'])) {
-    echo "uploading";
-    // Configure upload directory and allowed file types
+    // Configure upload directory , file type and file name
     $upload_dir = '../datafiles/';
     $file_tmpname = $_FILES['filename']["tmp_name"];
     $file_name = $_FILES['filename']['name'];
-    // $file_ext = strtolower(end(explode('.', $_FILES['filename']['name'])));
     $file_type = $_FILES['filename']['type'];
-    // var_dump($_FILES);
+
     // Set upload file path
     $filepath = $upload_dir.$file_name;
 
@@ -30,21 +28,21 @@ if(isset($_POST['submit'])) {
     if (preg_match('/\bcsv\b/', $file_type)) {
 
         if(file_exists($filepath)) {
-                echo "Error uploading {$file_name}, file exist <br />";
+                echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}, file exist on server');" . " window.location='../admin.php';</script>";
         }
         else {
             if( move_uploaded_file($file_tmpname, $filepath)) {
-                echo "{$file_name} successfully uploaded <br />";
+                echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
+
             }
             else {
-                echo "Error uploading {$file_name} <br />";
+                echo "<script type='text/javascript'>" . "alert( 'Error uploading {$file_name}. Please try other file' );" . " window.location='../admin.php';</script>";
             }
         }
     }
     else {
         // If file extension not valid
-        echo "Error uploading {$file_name} ";
-        echo "({$file_type} file type is not allowed)<br / >";
+        echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}. Only CSV file type is allowed');" . " window.location='../admin.php';</script>";
     }
 
 }
