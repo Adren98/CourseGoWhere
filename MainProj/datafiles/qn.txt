@@ -1,6 +1,6 @@
 
 business n management(
-Do you balancing numbers
+
 Do you wish to take on roles such as business advisor, consultant and financial analyst?
 )
 engineering(
@@ -8,20 +8,31 @@ engineering(
 
 )
 media and design(
-are you interested in online content creation ?
+
+are you interested in content creation ?
+are you interested in arts / design / media?
+
 
 )
 IT(
 Are you interested in coding
+Working with computers and technology ?
+Creating solutions to problems with softwares?
+
 )
 Applied science(
-
+Attain practical goals based on scientific knowledge ?
+Interested in research and development ?
+work with pharmeceutical, chemical and food companies ?
 )
 
 Built Enviroment(
 Do you aspire to create infrastructure/buildings in the future
+
 )
 Humanities(
+
+
 )
 Health Sciences(
 Do you like to do like to promote sport as a way of life and get Singaporeans to champion their health?
@@ -30,5 +41,5 @@ A Passion To Touch Lives
 )
 Maritime studies(
 )
-School preferences ?
+What are your school preferences School preferences ? check box NP SP NYP TP RP
 
