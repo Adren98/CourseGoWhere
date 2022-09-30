@@ -14,6 +14,41 @@ if (isset($_POST["action"])) {
     }
 }
 
+if(isset($_POST['submit'])) {
+    echo "uploading";
+    // Configure upload directory and allowed file types
+    $upload_dir = '../datafiles/';
+    $file_tmpname = $_FILES['filename']["tmp_name"];
+    $file_name = $_FILES['filename']['name'];
+    // $file_ext = strtolower(end(explode('.', $_FILES['filename']['name'])));
+    $file_type = $_FILES['filename']['type'];
+    // var_dump($_FILES);
+    // Set upload file path
+    $filepath = $upload_dir.$file_name;
+
+    // Check file type is csv
+    if (preg_match('/\bcsv\b/', $file_type)) {
+
+        if(file_exists($filepath)) {
+                echo "Error uploading {$file_name}, file exist <br />";
+        }
+        else {
+            if( move_uploaded_file($file_tmpname, $filepath)) {
+                echo "{$file_name} successfully uploaded <br />";
+            }
+            else {
+                echo "Error uploading {$file_name} <br />";
+            }
+        }
+    }
+    else {
+        // If file extension not valid
+        echo "Error uploading {$file_name} ";
+        echo "({$file_type} file type is not allowed)<br / >";
+    }
+
+}
+
 function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
 {
     $output->execute();
