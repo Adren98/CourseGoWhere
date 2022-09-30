@@ -142,6 +142,7 @@ include 'navfloating.php';
             </div>
         </div>
 
+
         <div class="col-lg-9 col-sm-12" >
             <iframe width="100%" height="700 " src="https://maps.google.com/maps?q=singapore &output=embed"></iframe>
         </div>
