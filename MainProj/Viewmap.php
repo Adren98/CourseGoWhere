@@ -130,7 +130,7 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            <img class="card-img-top"   alt="Card image" src=Picture/Temasek-poly.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src=Picture/temasek_polytechnic.png  height="150">
                         </a>
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
