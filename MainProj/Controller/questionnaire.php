@@ -1,5 +1,5 @@
 <?php
-
+var_dump($_POST);
 if(isset($_POST['submit'])) {
 
     $usrContent=array();
@@ -23,23 +23,69 @@ foreach ($arrForm as $value) {
         $usrContent[$value]="";
     }
 }
-var_dump($usrContent);
+//var_dump($usrContent);
 $totalform = ['business', 'engineering','adm','it','health','appscience','environment','humanities','maritime'];
 $totalvalform=array();
 }
-$counter = 0;
+$counter = 1;
 $sum =0;
 $index =0;
 foreach ($usrContent as $value){
-    if($counter %3 ==0){
-        $sum = $sum + $value;
-        $totalform[$index]=$sum;
+    if($counter ==3){
+        $sum = $sum + (int)$value;
+        $totalvalform[$index]=$sum;
         $sum =0;
         $index +=1;
+        $counter=1;
     }
-    $sum = $sum + $value;
-    $counter +=1;
+//    var_dump($value);
+    else{
+        $sum = $sum + (int)$value;
+        $counter +=1;
+    }
+
+
 
 }
-var_dump($totalform);
-var_dump($totalvalform);
+
+
+//var_dump($totalform);
+//var_dump($totalvalform);
+
+//sorting
+for($i=0;$i<count($totalvalform);$i++){
+    for($j=$i+1;$j<count($totalvalform);$j++){
+        if($totalvalform[$i]<$totalvalform[$j]){
+            $temp = $totalvalform[$i];
+            $totalvalform[$i]=$totalvalform[$j];
+            $totalvalform[$j]=$temp;
+
+
+            $order = $totalform[$i];
+            $totalform[$i]=$totalform[$j];
+            $totalform[$j]=$order;
+        }
+    }
+}
+
+$top= $totalvalform[0];
+$topschool=array();
+$counter=0;
+foreach($totalvalform as $value){
+    if($value == $top){
+        $topschool[$counter]=$totalform[$counter];
+        $counter +=1;
+    }
+    else{
+        break;
+    }
+
+}
+$SQL = "SELECT * FROM coursecatalogue WHERE school = ";
+foreach($topschool as $value){
+    if($value = 'business'){
+        $SQL = $SQL . "'business'";
+    }
+}
+//var_dump($totalform);
+//var_dump($totalvalform);

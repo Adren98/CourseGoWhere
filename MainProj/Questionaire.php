@@ -369,16 +369,16 @@ include 'navfloating.php';
             <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
-                    <label for="heath2" class="col-form-label text-md-right"
+                    <label for="health2" class="col-form-label text-md-right"
                            style="display: flex; justify-content:end;">Interested in being a health care
                         proffesional? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="heath2" name="heath2" value="1">
-                    <input class="col-2" type="radio" id="heath2" name="heath2" value="2">
-                    <input class="col-2" type="radio" id="heath2" name="heath2" value="3" checked>
-                    <input class="col-2" type="radio" id="heath2" name="heath2" value="4">
-                    <input class="col-2" type="radio" id="heath2" name="heath2" value="5">
+                    <input class="col-2" type="radio" id="health2" name="health2" value="1">
+                    <input class="col-2" type="radio" id="health2" name="health2" value="2">
+                    <input class="col-2" type="radio" id="health2" name="health2" value="3" checked>
+                    <input class="col-2" type="radio" id="health2" name="health2" value="4">
+                    <input class="col-2" type="radio" id="health2" name="health2" value="5">
 
                 </div>
             </div>
