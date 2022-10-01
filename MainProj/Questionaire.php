@@ -106,6 +106,8 @@ include 'navfloating.php';
                 </div>
             </div>
 
+
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="engineering1" class="col-form-label text-md-right"
@@ -122,7 +124,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="adm1" class="col-form-label text-md-right"
@@ -142,7 +144,7 @@ include 'navfloating.php';
 
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="it1" class="col-form-label text-md-right"
@@ -159,7 +161,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="appscience1" class="col-form-label text-md-right"
@@ -176,7 +178,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="enviroment1" class="col-form-label text-md-right"
@@ -193,7 +195,7 @@ include 'navfloating.php';
             </div>
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="appscience2" class="col-form-label text-md-right"
@@ -210,7 +212,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="humanities1" class="col-form-label text-md-right"
@@ -227,7 +229,7 @@ include 'navfloating.php';
             </div>
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="maritime1" class="col-form-label text-md-right"
@@ -249,7 +251,7 @@ include 'navfloating.php';
 
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="health1" class="col-form-label text-md-right"
@@ -267,7 +269,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="business2" class="col-form-label text-md-right"
@@ -287,7 +289,7 @@ include 'navfloating.php';
 
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="engineering2" class="col-form-label text-md-right"
@@ -304,7 +306,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="it2" class="col-form-label text-md-right"
@@ -321,7 +323,7 @@ include 'navfloating.php';
             </div>
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="adm2" class="col-form-label text-md-right"
@@ -337,7 +339,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="enviroment2" class="col-form-label text-md-right"
@@ -352,7 +354,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="humanities2" class="col-form-label text-md-right"
@@ -368,7 +370,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="heath2" class="col-form-label text-md-right"
@@ -387,7 +389,7 @@ include 'navfloating.php';
 
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="humanities3" class="col-form-label text-md-right"
@@ -402,7 +404,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="maritime2" class="col-form-label text-md-right"
@@ -418,7 +420,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="business3" class="col-form-label text-md-right"
@@ -437,7 +439,7 @@ include 'navfloating.php';
 
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="health3" class="col-form-label text-md-right"
@@ -452,7 +454,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="engineering3" class="col-form-label text-md-right"
@@ -469,7 +471,7 @@ include 'navfloating.php';
             </div>
 
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="maritime3" class="col-form-label text-md-right"
@@ -485,7 +487,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="enviroment3" class="col-form-label text-md-right"
@@ -500,7 +502,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="adm3" class="col-form-label text-md-right"
@@ -515,7 +517,7 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="appscience3" class="col-form-label text-md-right"
@@ -531,7 +533,7 @@ include 'navfloating.php';
                 </div>
             </div>
 
-
+ <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
                     <label for="it3" class="col-form-label text-md-right"
