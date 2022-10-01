@@ -548,6 +548,49 @@ include 'navfloating.php';
 
                 </div>
             </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="schoolselect" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Which schools are you interested in?</label>
+                </div>
+
+                <div class="col-10">
+                    <div class="col-2">
+                        <label for="nyp">NYP</label><br>
+                        <input type="checkbox" id="nyp" name="nyp" value="nyp">
+                    </div>
+
+                    <div class="col-2">
+                        <label for="np">NP</label><br>
+                        <input type="checkbox" id="np" name="np" value="np">
+                    </div>
+
+                    <div class="col-2">
+                        <label for="sp">SP</label><br>
+                        <input type="checkbox" id="sp" name="sp" value="sp">
+                    </div>
+
+                    <div class="col-2">
+                        <label for="rp">RP</label><br>
+                        <input type="checkbox" id="rp" name="rp" value="rp">
+                    </div>
+
+
+                    <div class="col-2">
+                        <label for="tp">TP</label><br>
+                        <input type="checkbox" id="tp" name="tp" value="tp">
+                    </div>
+
+
+
+<!--                    <input  type="checkbox" id="nyp" name="nyp" value="nyp">-->
+<!--                    <input class="col-2" type="checkbox" id="tp" name="tp" value="tp">-->
+<!--                    <input class="col-2" type="checkbox" id="rp" name="rp" value="rp">-->
+<!--                    <input class="col-2" type="checkbox" id="sp" name="sp" value="sp">-->
+
+                </div>
+            </div>
 
 
         </div>
