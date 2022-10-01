@@ -1,91 +1,52 @@
 <?php
-var_dump($_POST);
-if(isset($_POST['submit'])) {
+//var_dump($_POST);
 
-    $usrContent=array();
-$arrForm = ['business1','business2','business3',
-    'engineering1','engineering2','engineering3',
-    'adm1','adm2','adm3',
-    'it1','it2','it3',
-    'health1','health2','health3',
-    'appscience1','appscience2','appscience3',
-    'environment1','environment2','environment3',
-    'humanities1','humanities2','humanities3',
-    'maritime1','maritime2','maritime3','checkboxSchool'
+$school_cluster = array();
+foreach ($_POST as $key => $data) {
+    if (gettype($data) == "array") {
+        foreach ($data as $value) {
+            echo $value;
+        }
+    } else {
 
-];
-foreach ($arrForm as $value) {
+        if ($key != "submit") {
+            if (!array_key_exists(strval(substr($key, 0, -1)), $school_cluster)) {
+                $school_cluster[substr($key, 0, -1)] = $data;
+//             var_dump($school_cluster);
+            } else {
+                $school_cluster[substr($key, 0, -1)] = $school_cluster[substr($key, 0, -1)] + $data;
+            }
 
-    if(isset($_POST[$value])){
-        $usrContent[$value]=$_POST[$value];
-    }
-    else{
-        $usrContent[$value]="";
-    }
-}
-//var_dump($usrContent);
-$totalform = ['business', 'engineering','adm','it','health','appscience','environment','humanities','maritime'];
-$totalvalform=array();
-}
-$counter = 1;
-$sum =0;
-$index =0;
-foreach ($usrContent as $value){
-    if($counter ==3){
-        $sum = $sum + (int)$value;
-        $totalvalform[$index]=$sum;
-        $sum =0;
-        $index +=1;
-        $counter=1;
-    }
-//    var_dump($value);
-    else{
-        $sum = $sum + (int)$value;
-        $counter +=1;
-    }
-
-
-
-}
-
-
-//var_dump($totalform);
-//var_dump($totalvalform);
-
-//sorting
-for($i=0;$i<count($totalvalform);$i++){
-    for($j=$i+1;$j<count($totalvalform);$j++){
-        if($totalvalform[$i]<$totalvalform[$j]){
-            $temp = $totalvalform[$i];
-            $totalvalform[$i]=$totalvalform[$j];
-            $totalvalform[$j]=$temp;
-
-
-            $order = $totalform[$i];
-            $totalform[$i]=$totalform[$j];
-            $totalform[$j]=$order;
         }
     }
-}
-
-$top= $totalvalform[0];
-$topschool=array();
-$counter=0;
-foreach($totalvalform as $value){
-    if($value == $top){
-        $topschool[$counter]=$totalform[$counter];
-        $counter +=1;
-    }
-    else{
-        break;
-    }
 
 }
-$SQL = "SELECT * FROM coursecatalogue WHERE school = ";
-foreach($topschool as $value){
-    if($value = 'business'){
-        $SQL = $SQL . "'business'";
+
+// sort array by value
+arsort($school_cluster);
+
+//var_dump($school_cluster);
+
+$number_of_top_schools = 0;
+
+$sql = "SELECT * FROM CoursesCatalogue WHERE course_cluster = '";
+$counter = 0;
+foreach ($school_cluster as $key => $value) {
+
+        if ($value == reset($school_cluster)) {
+            if($counter ==0){
+                echo $key . " " . $value . " ";
+                $sql = $sql . str_replace("_", " ", $key) . "'";
+                $counter ++;
+            }
+            else{
+
+                $sql = $sql ." OR course_cluster = '". str_replace("_", " ", $key)."'"  ;
+
+        }
     }
+
 }
-//var_dump($totalform);
-//var_dump($totalvalform);
+
+require_once 'courses_sql.php';
+$_SESSION['qnsearch'] = genGenericSQL($sql);

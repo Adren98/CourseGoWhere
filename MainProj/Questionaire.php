@@ -98,11 +98,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="business1" name="business1" value="1">
-                    <input class="col-2" type="radio" id="business1" name="business1" value="2">
-                    <input class="col-2" type="radio" id="business1" name="business1" value="3" checked>
-                    <input class="col-2" type="radio" id="business1" name="business1" value="4">
-                    <input class="col-2" type="radio" id="business1" name="business1" value="5">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="1">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="2">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="3" checked>
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="4">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="5">
 
                 </div>
             </div>
@@ -117,11 +117,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="engineering1" name="engineering1" value="1">
-                    <input class="col-2" type="radio" id="engineering1" name="engineering1" value="2">
-                    <input class="col-2" type="radio" id="engineering1" name="engineering1" value="3" checked>
-                    <input class="col-2" type="radio" id="engineering1" name="engineering1" value="4">
-                    <input class="col-2" type="radio" id="engineering1" name="engineering1" value="5">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="1">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="2">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="4">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="5">
 
                 </div>
             </div>
@@ -134,11 +134,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="adm1" name="adm1" value="1">
-                    <input class="col-2" type="radio" id="adm1" name="adm1" value="2">
-                    <input class="col-2" type="radio" id="adm1" name="adm1" value="3" checked>
-                    <input class="col-2" type="radio" id="adm1" name="adm1" value="4">
-                    <input class="col-2" type="radio" id="adm1" name="adm1" value="5">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="1">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="2">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="3" checked>
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="4">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="5">
 
                 </div>
             </div>
@@ -153,11 +153,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="it1" name="it1" value="1">
-                    <input class="col-2" type="radio" id="it1" name="it1" value="2">
-                    <input class="col-2" type="radio" id="it1" name="it1" value="3" checked>
-                    <input class="col-2" type="radio" id="it1" name="it1" value="4">
-                    <input class="col-2" type="radio" id="it1" name="it1" value="5">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="1">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="2">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="3" checked>
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="4">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="5">
 
                 </div>
             </div>
@@ -171,11 +171,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="1">
-                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="2">
-                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="3" checked>
-                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="4">
-                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="5">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="1">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="2">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="4">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="5">
 
                 </div>
             </div>
@@ -187,11 +187,11 @@ include 'navfloating.php';
                         in the future? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="environment1" name="environment1" value="1">
-                    <input class="col-2" type="radio" id="environment1" name="environment1" value="2">
-                    <input class="col-2" type="radio" id="environment1" name="environment1" value="3" checked>
-                    <input class="col-2" type="radio" id="environment1" name="environment1" value="4">
-                    <input class="col-2" type="radio" id="environment1" name="environment1" value="5">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="1">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="2">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="3" checked>
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="4">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="5">
 
                 </div>
             </div>
@@ -206,11 +206,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="1">
-                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="2">
-                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="3" checked>
-                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="4">
-                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="5">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="1">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="2">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="4">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="5">
 
                 </div>
             </div>
@@ -222,11 +222,11 @@ include 'navfloating.php';
                         worker? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="1">
-                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="2">
-                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="3" checked>
-                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="4">
-                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="5">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="1">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="2">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="4">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="5">
 
                 </div>
             </div>
@@ -239,11 +239,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Do you like to work on ships? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="1">
-                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="2">
-                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="3" checked>
-                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="4">
-                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="5">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="1">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="2">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="4">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="5">
 
                 </div>
             </div>
@@ -259,11 +259,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="health1" name="health1" value="1">
-                    <input class="col-2" type="radio" id="health1" name="health1" value="2">
-                    <input class="col-2" type="radio" id="health1" name="health1" value="3" checked>
-                    <input class="col-2" type="radio" id="health1" name="health1" value="4">
-                    <input class="col-2" type="radio" id="health1" name="health1" value="5">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="1">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="2">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="3" checked>
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="4">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="5">
 
                 </div>
             </div>
@@ -275,11 +275,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Do you want to be a future entrepreneur? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="business2" name="business2" value="1">
-                    <input class="col-2" type="radio" id="business2" name="business2" value="2">
-                    <input class="col-2" type="radio" id="business2" name="business2" value="3" checked>
-                    <input class="col-2" type="radio" id="business2" name="business2" value="4">
-                    <input class="col-2" type="radio" id="business2" name="business2" value="5">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="1">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="2">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="3" checked>
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="4">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="5">
 
                 </div>
             </div>
@@ -294,11 +294,11 @@ include 'navfloating.php';
                 </div>
 
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="engineering2" name="engineering2" value="1">
-                    <input class="col-2" type="radio" id="engineering2" name="engineering2" value="2">
-                    <input class="col-2" type="radio" id="engineering2" name="engineering2" value="3" checked>
-                    <input class="col-2" type="radio" id="engineering2" name="engineering2" value="4">
-                    <input class="col-2" type="radio" id="engineering2" name="engineering2" value="5">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="1">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="2">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="4">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="5">
 
                 </div>
             </div>
@@ -309,11 +309,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Working with computers and technology? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="it2" name="it2" value="1">
-                    <input class="col-2" type="radio" id="it2" name="it2" value="2">
-                    <input class="col-2" type="radio" id="it2" name="it2" value="3" checked>
-                    <input class="col-2" type="radio" id="it2" name="it2" value="4">
-                    <input class="col-2" type="radio" id="it2" name="it2" value="5">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="1">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="2">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="3" checked>
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="4">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="5">
 
                 </div>
             </div>
@@ -326,11 +326,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Are you interested in content creation?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="adm2" name="adm2" value="1">
-                    <input class="col-2" type="radio" id="adm2" name="adm2" value="2">
-                    <input class="col-2" type="radio" id="adm2" name="adm2" value="3" checked>
-                    <input class="col-2" type="radio" id="adm2" name="adm2" value="4">
-                    <input class="col-2" type="radio" id="adm2" name="adm2" value="5">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="1">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="2">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="3" checked>
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="4">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="5">
 
                 </div>
             </div>
@@ -342,11 +342,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;"> Do you want to be a future architect?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="environment2" name="environment2" value="1">
-                    <input class="col-2" type="radio" id="environment2" name="environment2" value="2">
-                    <input class="col-2" type="radio" id="environment2" name="environment2" value="3" checked>
-                    <input class="col-2" type="radio" id="environment2" name="environment2" value="4">
-                    <input class="col-2" type="radio" id="environment2" name="environment2" value="5">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="1">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="2">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="3" checked>
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="4">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="5">
 
                 </div>
             </div>
@@ -357,11 +357,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Do you want to be a future teacher? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="humanities2" name="humanities2" value="1">
-                    <input class="col-2" type="radio" id="humanities2" name="humanities2" value="2">
-                    <input class="col-2" type="radio" id="humanities2" name="humanities2" value="3" checked>
-                    <input class="col-2" type="radio" id="humanities2" name="humanities2" value="4">
-                    <input class="col-2" type="radio" id="humanities2" name="humanities2" value="5">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="1">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="2">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="4">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="5">
 
                 </div>
             </div>
@@ -374,11 +374,11 @@ include 'navfloating.php';
                         proffesional? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="health2" name="health2" value="1">
-                    <input class="col-2" type="radio" id="health2" name="health2" value="2">
-                    <input class="col-2" type="radio" id="health2" name="health2" value="3" checked>
-                    <input class="col-2" type="radio" id="health2" name="health2" value="4">
-                    <input class="col-2" type="radio" id="health2" name="health2" value="5">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="1">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="2">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="3" checked>
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="4">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="5">
 
                 </div>
             </div>
@@ -392,11 +392,11 @@ include 'navfloating.php';
                         sociology, anthropology, political science, economics?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="humanities3" name="humanities3" value="1">
-                    <input class="col-2" type="radio" id="humanities3" name="humanities3" value="2">
-                    <input class="col-2" type="radio" id="humanities3" name="humanities3" value="3" checked>
-                    <input class="col-2" type="radio" id="humanities3" name="humanities3" value="4">
-                    <input class="col-2" type="radio" id="humanities3" name="humanities3" value="5">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="1">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="2">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="4">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="5">
 
                 </div>
             </div>
@@ -407,11 +407,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;">Do you like naval architecture? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="maritime2" name="maritime2" value="1">
-                    <input class="col-2" type="radio" id="maritime2" name="maritime2" value="2">
-                    <input class="col-2" type="radio" id="maritime2" name="maritime2" value="3" checked>
-                    <input class="col-2" type="radio" id="maritime2" name="maritime2" value="4">
-                    <input class="col-2" type="radio" id="maritime2" name="maritime2" value="5">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="1">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="2">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="4">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="5">
 
                 </div>
             </div>
@@ -424,11 +424,11 @@ include 'navfloating.php';
                         leader? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="business3" name="business3" value="1">
-                    <input class="col-2" type="radio" id="business3" name="business3" value="2">
-                    <input class="col-2" type="radio" id="business3" name="business3" value="3" checked>
-                    <input class="col-2" type="radio" id="business3" name="business3" value="4">
-                    <input class="col-2" type="radio" id="business3" name="business3" value="5">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="1">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="2">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="3" checked>
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="4">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="5">
 
                 </div>
             </div>
@@ -441,11 +441,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;"> A Passion To Touch Lives?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="health3" name="health3" value="1">
-                    <input class="col-2" type="radio" id="health3" name="health3" value="2">
-                    <input class="col-2" type="radio" id="health3" name="health3" value="3" checked>
-                    <input class="col-2" type="radio" id="health3" name="health3" value="4">
-                    <input class="col-2" type="radio" id="health3" name="health3" value="5">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="1">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="2">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="3" checked>
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="4">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="5">
 
                 </div>
             </div>
@@ -456,11 +456,11 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;"> Do you want to be a future engineer? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="engineering3" name="engineering3" value="1">
-                    <input class="col-2" type="radio" id="engineering3" name="engineering3" value="2">
-                    <input class="col-2" type="radio" id="engineering3" name="engineering3" value="3" checked>
-                    <input class="col-2" type="radio" id="engineering3" name="engineering3" value="4">
-                    <input class="col-2" type="radio" id="engineering3" name="engineering3" value="5">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="1">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="2">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="4">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="5">
 
                 </div>
             </div>
@@ -474,11 +474,11 @@ include 'navfloating.php';
                         technology?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="maritime3" name="maritime3" value="1">
-                    <input class="col-2" type="radio" id="maritime3" name="maritime3" value="2">
-                    <input class="col-2" type="radio" id="maritime3" name="maritime3" value="3" checked>
-                    <input class="col-2" type="radio" id="maritime3" name="maritime3" value="4">
-                    <input class="col-2" type="radio" id="maritime3" name="maritime3" value="5">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="1">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="2">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="4">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="5">
 
                 </div>
             </div>
@@ -491,11 +491,11 @@ include 'navfloating.php';
                         designer?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="environment3" name="environment3" value="1">
-                    <input class="col-2" type="radio" id="environment3" name="environment3" value="2">
-                    <input class="col-2" type="radio" id="environment3" name="environment3" value="3" checked>
-                    <input class="col-2" type="radio" id="environment3" name="environment3" value="4">
-                    <input class="col-2" type="radio" id="environment3" name="environment3" value="5">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="1">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="2">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="3" checked>
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="4">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="5">
 
                 </div>
             </div>
@@ -507,11 +507,11 @@ include 'navfloating.php';
                         media? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="adm3" name="adm3" value="1">
-                    <input class="col-2" type="radio" id="adm3" name="adm3" value="2">
-                    <input class="col-2" type="radio" id="adm3" name="adm3" value="3" checked>
-                    <input class="col-2" type="radio" id="adm3" name="adm3" value="4">
-                    <input class="col-2" type="radio" id="adm3" name="adm3" value="5">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="1">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="2">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="3" checked>
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="4">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="5">
 
                 </div>
             </div>
@@ -523,11 +523,11 @@ include 'navfloating.php';
                         and food companies?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="appscience3" name="appscience3" value="1">
-                    <input class="col-2" type="radio" id="appscience3" name="appscience3" value="2">
-                    <input class="col-2" type="radio" id="appscience3" name="appscience3" value="3" checked>
-                    <input class="col-2" type="radio" id="appscience3" name="appscience3" value="4">
-                    <input class="col-2" type="radio" id="appscience3" name="appscience3" value="5">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="1">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="2">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="4">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="5">
 
                 </div>
             </div>
@@ -540,11 +540,11 @@ include 'navfloating.php';
                         programs? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="it3" name="it3" value="1">
-                    <input class="col-2" type="radio" id="it3" name="it3" value="2">
-                    <input class="col-2" type="radio" id="it3" name="it3" value="3" checked>
-                    <input class="col-2" type="radio" id="it3" name="it3" value="4">
-                    <input class="col-2" type="radio" id="it3" name="it3" value="5">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="1">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="2">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="3" checked>
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="4">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="5">
 
                 </div>
             </div>
