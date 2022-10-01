@@ -182,16 +182,16 @@ include 'navfloating.php';
             <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
-                    <label for="enviroment1" class="col-form-label text-md-right"
+                    <label for="environment1" class="col-form-label text-md-right"
                            style="display: flex; justify-content:end;">Do you aspire to create infrastructure/buildings
                         in the future? </label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="1">
-                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="2">
-                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="3" checked>
-                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="4">
-                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="5">
+                    <input class="col-2" type="radio" id="environment1" name="environment1" value="1">
+                    <input class="col-2" type="radio" id="environment1" name="environment1" value="2">
+                    <input class="col-2" type="radio" id="environment1" name="environment1" value="3" checked>
+                    <input class="col-2" type="radio" id="environment1" name="environment1" value="4">
+                    <input class="col-2" type="radio" id="environment1" name="environment1" value="5">
 
                 </div>
             </div>
@@ -338,15 +338,15 @@ include 'navfloating.php';
             <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
-                    <label for="enviroment2" class="col-form-label text-md-right"
+                    <label for="environment2" class="col-form-label text-md-right"
                            style="display: flex; justify-content:end;"> Do you want to be a future architect?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="enviroment2" name="enviroment2" value="1">
-                    <input class="col-2" type="radio" id="enviroment2" name="enviroment2" value="2">
-                    <input class="col-2" type="radio" id="enviroment2" name="enviroment2" value="3" checked>
-                    <input class="col-2" type="radio" id="enviroment2" name="enviroment2" value="4">
-                    <input class="col-2" type="radio" id="enviroment2" name="enviroment2" value="5">
+                    <input class="col-2" type="radio" id="environment2" name="environment2" value="1">
+                    <input class="col-2" type="radio" id="environment2" name="environment2" value="2">
+                    <input class="col-2" type="radio" id="environment2" name="environment2" value="3" checked>
+                    <input class="col-2" type="radio" id="environment2" name="environment2" value="4">
+                    <input class="col-2" type="radio" id="environment2" name="environment2" value="5">
 
                 </div>
             </div>
@@ -486,16 +486,16 @@ include 'navfloating.php';
             <hr class="border-1 border-top border-dark">
             <div class="row">
                 <div class="col-2">
-                    <label for="enviroment3" class="col-form-label text-md-right"
+                    <label for="environment3" class="col-form-label text-md-right"
                            style="display: flex; justify-content:end;">Do you want to be a future interior
                         designer?</label>
                 </div>
                 <div class="col-10">
-                    <input class="col-2" type="radio" id="enviroment3" name="enviroment3" value="1">
-                    <input class="col-2" type="radio" id="enviroment3" name="enviroment3" value="2">
-                    <input class="col-2" type="radio" id="enviroment3" name="enviroment3" value="3" checked>
-                    <input class="col-2" type="radio" id="enviroment3" name="enviroment3" value="4">
-                    <input class="col-2" type="radio" id="enviroment3" name="enviroment3" value="5">
+                    <input class="col-2" type="radio" id="environment3" name="environment3" value="1">
+                    <input class="col-2" type="radio" id="environment3" name="environment3" value="2">
+                    <input class="col-2" type="radio" id="environment3" name="environment3" value="3" checked>
+                    <input class="col-2" type="radio" id="environment3" name="environment3" value="4">
+                    <input class="col-2" type="radio" id="environment3" name="environment3" value="5">
 
                 </div>
             </div>
