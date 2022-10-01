@@ -92,8 +92,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="business1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you wish to take on roles such as business
-                        advisor, consultant and financial analyst?</label>
+                           style="display: flex; justify-content:end;">Do you wish to take on roles such as business advisor, consultant and financial analyst?</label>
 
                 </div>
 
@@ -110,7 +109,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="engineering1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Enjoy physical Creation?</label>
+                           style="display: flex; justify-content:end;">Do you enjoy physical Creation?                     </label>
 
                 </div>
 
@@ -123,8 +122,6 @@ include 'navfloating.php';
 
                 </div>
             </div>
-
-
 
             <div class="row">
                 <div class="col-2">
