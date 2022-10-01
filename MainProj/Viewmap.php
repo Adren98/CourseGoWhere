@@ -64,6 +64,12 @@ session_start();
                 }
             }
         }
+
+        $(document).ready(function(){
+
+            $(".collapse").on('show.bs.collapse', function(){
+                alert('The collapsible content is about to be shown.');
+            });
     </script>
 </head>
 
@@ -73,28 +79,37 @@ session_start();
 
 include 'navfloating.php';
 ?>
+<?php $school= "Singapore" ?>
 
 <div class="container">
 
     <div class="row" style="margin-top: 10%">
         <div class = "col-lg-3 " >
+            <h4><center>Click on the School LOGO <br> for more Information</center></h4>
             <div id="accordion">
                 <div class="card" >
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                            <img class="card-img-top"   alt="Card image" src=Picture/ngee-ann-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/ngee-ann-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Ngee Ann Polytechnic&output=embed'">
                         </a>
                     </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            The history of Ngee Ann Polytechnic (NP) could be traced back to 1963, when it started out as Ngee Ann College. Its founder, The Ngee Ann Kongsi, had envisioned setting up a quality educational institution to link the Chinese-speaking community to its cultural roots during the colonial-rule era. The College had since morphed into a full-fledged polytechnic, a public institution overseen by an independent Council.
                         </div>
+                        <?php
+                        if(isset($_POST['btn-np'])){
+                            $school = "Ngee Ann Poly";
+                        }
+                        ?>
+
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                            <img class="card-img-top"   alt="Card image" src=Picture/nanyang-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/nanyang-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Nanyang Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -106,36 +121,36 @@ include 'navfloating.php';
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            <img class="card-img-top"   alt="Card image" src=Picture/republic-polytechnic.png  height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/republic-polytechnic.png"  height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Republic Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            First established in 2002, Republic Polytechnic (RP) had an initial enrolment of just 800. Over the years, RP has grown from strength to strength building our reputation as a tertiary institution of academic excellence. Today, we are home to a lively community of about 14,000 students and more than 1,000 staff.
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-                            <img class="card-img-top"   alt="Card image" src=Picture/singapore-polytechnic.png height="100">
+                            <img class="card-img-top"   alt="Card image" src="Picture/singapore-polytechnic.png" height="100" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Singapore Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseFour" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Singapore Polytechnic was set up on 27 October 1954, making it the very first polytechnic to be established in Singapore. Singapore Polytechnic started out right in the heart of the financial district. Today, the polytechnic is located strategically in Dover Road - in the educational belt and science hub in the western part of Singapore.
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
-                            <img class="card-img-top"   alt="Card image" src=Picture/temasek_polytechnic.png  height="150">
+                            <img class="card-img-top"   alt="Card image" src="Picture/temasek_polytechnic.png"  height="150" onclick="document.getElementById('frame').src='https://maps.google.com/maps?q=Temasek Polytechnic&output=embed'">
                         </a>
                     </div>
                     <div id="collapseFive" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Situated in Tampines next to the idyllic Bedok Reservoir, Temasek Polytechnic is a leading institution of higher learning in Singapore. Established in April 1990, we take pride in equipping our students with lifelong skills and digital knowledge for a future of dynamic change..
                         </div>
                     </div>
                 </div>
@@ -144,7 +159,9 @@ include 'navfloating.php';
 
 
         <div class="col-lg-9 col-sm-20" >
-            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=singapore &output=embed"></iframe>
+<!--            <iframe width="100%" height="800 " src="https://maps.google.com/maps?q=--><?php //echo $school ?><!-- &output=embed"></iframe>-->
+
+            <iframe width="100%" height="800 " name="frame" id="frame" src="https://maps.google.com/maps?q=Singapore polytechincs&output=embed"></iframe>
         </div>
 
     </div>
