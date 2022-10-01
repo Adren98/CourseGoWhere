@@ -1,6 +1,8 @@
 <?php
 //var_dump($_POST);
 
+
+
 $school_cluster = array();
 foreach ($_POST as $key => $data) {
     if (gettype($data) == "array") {
@@ -47,6 +49,13 @@ foreach ($school_cluster as $key => $value) {
     }
 
 }
-
+session_start();
 require_once 'courses_sql.php';
-$_SESSION['qnsearch'] = genGenericSQL($sql);
+//$_SESSION['qnsearch'] = "123123";
+
+;
+
+
+
+$_SESSION['qnsearch']=$sql;
+header("Location: /courses.php");

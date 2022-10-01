@@ -242,7 +242,7 @@ include 'navfloating.php';
             </div>
             <br>
             <div class="col-12 col text-center">
-                <a class = 'btn btn-primary' href="/courses.php?customised" style="">
+                <a class = 'btn btn-primary' href="courses.php?customised" style="">
                     Apply Customised Questionnaire Filter
 
                 </a>
@@ -288,11 +288,15 @@ include 'navfloating.php';
                                 <?php
                                 require_once "Controller/courses.php";
 
-                                $courses = getcolNames();
 
-                                foreach ($courses as $course) {
-                                    echo '<th scope="col">' . $course . '</th>';
-                                }
+
+                                    $courses = getcolNames();
+
+                                    foreach ($courses as $course) {
+                                        echo '<th scope="col">' . $course . '</th>';
+                                    }
+
+
 
 
                                 ?>
@@ -315,8 +319,10 @@ include 'navfloating.php';
                                 echo '<script>history.pushState(null, "", location.href.split("?")[0]);location.reload();</script>';
 
 
-
                             }
+
+
+
 
 
                             if (isset($_GET['submit'])) {
@@ -324,7 +330,17 @@ include 'navfloating.php';
                                 coursesDisplay();
 
                             } else {
-                                getAllCourse();
+                                if (isset($_GET['customised'])) {
+
+                                    getcustomisedCourse($_SESSION['qnsearch']);
+
+
+//
+
+                                }else{
+                                    getAllCourse();
+                                }
+
                             }
 
 
