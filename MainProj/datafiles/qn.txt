@@ -4,13 +4,13 @@ Do you wish to take on roles such as business advisor, consultant and financial 
 Do you want to be a future entrepreneur? DONE
 Do you want to be a future business leader? DONE
 )
-engineering(
-    Enjoy physical Creation?
-    Do you like to solve problems?
-    Do you want to be a future engineer?
+engineering  (engineering#)(
+    Enjoy physical Creation? DONE
+    Do you like to solve problems? DONE
+    Do you want to be a future engineer? DONE
 
 )
-media and design(
+media and design  (adm#)(
 
 Are you a creative person? DONE
 are you interested in content creation ? DONE
@@ -18,10 +18,10 @@ are you interested in arts / design / media? DONE
 
 
 )
-IT(
-Are you interested in coding?
-Working with computers and technology ?
-Creating solutions to problems with software programs?
+it#(
+Are you interested in coding? DONE
+Working with computers and technology ? DONE
+Creating solutions to problems with software programs? DONE
 
 )
 Applied science  (appscience#)(
@@ -30,17 +30,17 @@ Interested in research and development ? DONE
 work with pharmaceutical, chemical and food companies? DONE
 )
 
-Built Environment(
-Do you aspire to create infrastructure/buildings in the future?
-Do you want to be a future architect?
-Do you want to be a future interior designer?
+Built Environment (enviroment#(
+Do you aspire to create infrastructure/buildings in the future? DONE
+Do you want to be a future architect? DONE
+Do you want to be a future interior designer? DONE
 
 )
 humanities# (
 
-Do you like to study the human psychology, sociology, anthropology, political science, economics, history, geography, linguistics, religion, philosophy, psychology, and other related fields?
-Do you want to be a future teacher?
-Do you want to be a future social worker?
+Do you like to study the human psychology, sociology, anthropology, political science, economics, history, geography, linguistics, religion, philosophy, psychology, and other related fields? DONE
+Do you want to be a future teacher? DONE
+Do you want to be a future social worker? DONE
 
 
 )

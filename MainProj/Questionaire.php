@@ -163,6 +163,133 @@ include 'navfloating.php';
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-2">
+                    <label for="appscience1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Attain practical goals based on scientific knowledge </label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="1">
+                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="2">
+                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="3">
+                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="4">
+                    <input class="col-2" type="radio" id="appscience1" name="appscience1" value="5">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="enviroment1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you aspire to create infrastructure/buildings in the future? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="1">
+                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="2">
+                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="3">
+                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="4">
+                    <input class="col-2" type="radio" id="enviroment1" name="enviroment1" value="5">
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="appscience2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Interested in research and development?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="1">
+                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="2">
+                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="3">
+                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="4">
+                    <input class="col-2" type="radio" id="appscience2" name="appscience2" value="5">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="humanities1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future social worker? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="1">
+                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="2">
+                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="3">
+                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="4">
+                    <input class="col-2" type="radio" id="humanities1" name="humanities1" value="5">
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="maritime1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like to work on ships? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="1">
+                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="2">
+                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="3">
+                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="4">
+                    <input class="col-2" type="radio" id="maritime1" name="maritime1" value="5">
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="health1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like to do like to promote sport as a way of life and get Singaporeans to champion their health?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="health1" name="health1" value="1">
+                    <input class="col-2" type="radio" id="health1" name="health1" value="2">
+                    <input class="col-2" type="radio" id="health1" name="health1" value="3">
+                    <input class="col-2" type="radio" id="health1" name="health1" value="4">
+                    <input class="col-2" type="radio" id="health1" name="health1" value="5">
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="business2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future entrepreneur? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="business2" name="business2" value="1">
+                    <input class="col-2" type="radio" id="business2" name="business2" value="2">
+                    <input class="col-2" type="radio" id="business2" name="business2" value="3">
+                    <input class="col-2" type="radio" id="business2" name="business2" value="4">
+                    <input class="col-2" type="radio" id="business2" name="business2" value="5">
+
+                </div>
+            </div>
+
+
+
+
+
 
             <div class="row">
                 <div class="col-2">
