@@ -1,45 +1,60 @@
 
 business n management(
-
 Do you wish to take on roles such as business advisor, consultant and financial analyst?
+Do you want to be a future entrepreneur?
+Do you want to be a future business leader?
 )
 engineering(
-    Enjoy physical Creation ?
+    Enjoy physical Creation?
+    Do you like to solve problems?
+    Do you want to be a future engineer?
 
 )
 media and design(
 
+Are you a creative person?
 are you interested in content creation ?
 are you interested in arts / design / media?
 
 
 )
 IT(
-Are you interested in coding
+Are you interested in coding?
 Working with computers and technology ?
-Creating solutions to problems with softwares?
+Creating solutions to problems with software programs?
 
 )
 Applied science(
 Attain practical goals based on scientific knowledge ?
 Interested in research and development ?
-work with pharmeceutical, chemical and food companies ?
+work with pharmaceutical, chemical and food companies ?
 )
 
-Built Enviroment(
-Do you aspire to create infrastructure/buildings in the future
+Built Environment(
+Do you aspire to create infrastructure/buildings in the future?
+Do you want to be a future architect?
+Do you want to be a future interior designer?
 
 )
 Humanities(
+
+Do you like to study the human psychology, sociology, anthropology, political science, economics, history, geography, linguistics, religion, philosophy, psychology, and other related fields?
+Do you want to be a future teacher?
+Do you want to be a future social worker?
 
 
 )
 Health Sciences(
 Do you like to do like to promote sport as a way of life and get Singaporeans to champion their health?
 Interested in being a health care proffesional ?
-A Passion To Touch Lives
+A Passion To Touch Lives?
 )
 Maritime studies(
+Do you like to work on ships?
+Do you like naval architecture?
+Do you like to work with offshore design technology?
+
+
 )
 What are your school preferences School preferences ? check box NP SP NYP TP RP
 
