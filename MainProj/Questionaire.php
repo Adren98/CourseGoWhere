@@ -76,7 +76,7 @@ include 'navfloating.php';
 <!-- End Navbar -->
 <div class="card">
 
-    <form>
+    <form method="post" action="Controller/questionnaire.php">
 
 
         <div class="container">
@@ -555,44 +555,52 @@ include 'navfloating.php';
                            style="display: flex; justify-content:end;"> Which schools are you interested in?</label>
                 </div>
 
-                <div class="col-10">
-                    <div class="col-2">
-                        <label for="nyp">NYP</label><br>
-                        <input type="checkbox" id="nyp" name="nyp" value="nyp">
-                    </div>
 
-                    <div class="col-2">
-                        <label for="np">NP</label><br>
-                        <input type="checkbox" id="np" name="np" value="np">
-                    </div>
-
-                    <div class="col-2">
-                        <label for="sp">SP</label><br>
-                        <input type="checkbox" id="sp" name="sp" value="sp">
-                    </div>
-
-                    <div class="col-2">
-                        <label for="rp">RP</label><br>
-                        <input type="checkbox" id="rp" name="rp" value="rp">
-                    </div>
+                <div class="col-sm">
 
 
-                    <div class="col-2">
-                        <label for="tp">TP</label><br>
-                        <input type="checkbox" id="tp" name="tp" value="tp">
-                    </div>
+                    <input type="checkbox" id="nyp" name="checkboxSchool[]"" value="nyp" checked>
+                    <label for="nyp">NYP</label>
 
-
-
-<!--                    <input  type="checkbox" id="nyp" name="nyp" value="nyp">-->
-<!--                    <input class="col-2" type="checkbox" id="tp" name="tp" value="tp">-->
-<!--                    <input class="col-2" type="checkbox" id="rp" name="rp" value="rp">-->
-<!--                    <input class="col-2" type="checkbox" id="sp" name="sp" value="sp">-->
 
                 </div>
+
+
+                <div class="col-sm">
+
+                    <input type="checkbox" id="np" name="checkboxSchool[]" value="np" checked>
+                    <label for="np">NP</label>
+                </div>
+
+                <div class="col-sm">
+
+                    <input type="checkbox" id="sp" name="checkboxSchool[]" value="sp" checked>
+                    <label for="sp">SP</label>
+                </div>
+
+                <div class="col-sm">
+
+                    <input type="checkbox" id="rp" name="checkboxSchool[]" value="rp" checked>
+                    <label for="rp">RP</label>
+
+                </div>
+                <div class="col-sm">
+
+                    <input type="checkbox" id="tp" name="checkboxSchool[]" value="tp" checked>
+                    <label for="tp">TP</label>
+                </div>
+
+
             </div>
 
 
+
+            <div class="row">
+
+                <div class="col-12 col text-center">
+                    <button  type="submit" id="submit" name="submit" value="submit" class="btn btn-primary ">Submit</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>

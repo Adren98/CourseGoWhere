@@ -30,7 +30,7 @@ Interested in research and development ? DONE
 work with pharmaceutical, chemical and food companies? DONE
 )
 
-Built Environment (enviroment#(
+Built Environment (environment#(
 Do you aspire to create infrastructure/buildings in the future? DONE
 Do you want to be a future architect? DONE
 Do you want to be a future interior designer? DONE
