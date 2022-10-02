@@ -80,7 +80,9 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
 //
 //        echo '<td>' . $row['school'] . '</td>';
         echo '<td><button type="button" class="btn btn-primary" name="delete" onclick=submitData(' . $row['course_id'] . ')>' . "Delete" . '</button></td>';
-        echo '<td><button type="button" class="btn btn-primary" name ="edit" onclick=Edit()>' . "Edit" . '</button></td>';
+
+        echo '<td><a type="button" class="btn btn-primary" href="/adminEdit.php?id=' . $row['course_id'] . '">Edit</a></td>';
+
         echo '</tr>';
     }
     $output->close();
@@ -106,7 +108,24 @@ function delete()
 
 
 }
+function edit()
+{
+    echo "Editing ";
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    if (mysqli_connect_errno()) {
 
+        die(mysqli_connect_error());
+    }
+    require_once "courses.php";
+    $colnames = getcolNames();
+
+    $Query = "UPDATE CoursesCatalogue SET ";
+    foreach ($colnames as $colname) {
+        $Query .= $colname . " = '" . $_POST[$colname] . "', ";
+    }
+    $Query = $Query. " WHERE course_id = " . $_GET['id'];
+    var_dump($Query);
+}
 function insert()
 {
     echo "Inserting ";
@@ -118,16 +137,8 @@ function insert()
 
 
     $coursecode = $_POST["course_code"];
-//    $year= $_POST["year"];
-//    $courseName = $_POST["courseName"];
-//    $course_cluster =$_POST["course_cluster"];
-//    $cutoff = $_POST["cutoff"];
-//    $url = $_POST["url"];
     $school = $_POST["school"];
-
-
     echo '<script type="text/javascript">    alert("Before query");    </script>';
-
     //Check if exist in DB
     $exist = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue WHERE course_code = '$coursecode' and school = '$school' ");
     $exist->execute();

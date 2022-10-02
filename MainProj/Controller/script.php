@@ -2,11 +2,7 @@
 
 <script type="text/javascript">
   function submitData(action){
-    alert(action);
-    if(action !=="insert" && action!=="edit"){
-        var element =document.getElementById(action);
-        element.parentNode.removeChild(element);
-    }
+
 
     $(document).ready(function(){
       var data = {
@@ -41,6 +37,8 @@
           alert(response);
           if(response === "Deleted Successfully"){
             $("#"+action).css("display", "none");
+              var element =document.getElementById(action);
+              element.parentNode.removeChild(element);
           }
         }
       });

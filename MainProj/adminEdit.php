@@ -19,13 +19,35 @@ require 'Controller/script.php';
 
                             <?php
                             require_once 'Controller/courses.php';
+//                            require_once'Controller/adminfunction.php';
+                            require_once 'Controller/config.php';
+                            $id = $_GET['id'];
+                            $conn = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+//                            $sql = "SELECT * FROM CoursesCatalogue WHERE course_id = $id";
+//                            $result = mysqli_query($conn, $sql);
 
+                            if ($findcourse = mysqli_prepare($conn, "SELECT * FROM CoursesCatalogue WHERE course_id =?")) {
+
+                                $findcourse->bind_param('i', $id);
+                                $findcourse->execute();
+//                                var_dump($findcourse);
+                                $result = $findcourse->get_result();
+                            }
+                            $arr = array();
+                            while ($row = $result->fetch_assoc()) {
+                                $arr[] = $row;
+                            }
+
+//                            var_dump($findcourse);
+                            var_dump($arr);
+                            var_dump($arr[0]['course_id']);
                             $cols = getcolNames();
                             foreach ($cols as $col){
                                 echo "<div class='form-group row'>";
                                 echo "<label for='".$col."' class='col-md-4 col-form-label text-md-right d-flex justify-content-end'>".$col."</label>";
                                 echo "<div class='col-md-6'>";
-                                echo "<input id='".$col."' type='text' class='form-control-text' name='".$col."' value='' required autofocus>";
+                                echo "<input id='".$col."' type='text' class='form-control-text' name='".$col."' value='".$arr[0][$col]."' required autofocus>";
+
                                 echo "</div>";
                                 echo "</div>";
                                 echo "<br>";
@@ -38,9 +60,9 @@ require 'Controller/script.php';
 
                             <div class="col-md-6 offset-md-4">
 
-                                <button type="button" class="btn btn-primary" name="insert" style="margin-top: 10px"
-                                        onclick="submitData('insert');">
-                                    Create
+                                <button type="button" class="btn btn-primary" name="edit" style="margin-top: 10px"
+                                        onclick="submitData('edit');">
+                                    Edit
                                 </button>
                                 <a href="admin.php" class="btn btn-link">
                                     Back to Homepage
@@ -49,11 +71,11 @@ require 'Controller/script.php';
 
 
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 </main>

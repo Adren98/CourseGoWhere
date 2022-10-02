@@ -17,7 +17,26 @@ function getcolNames(){
 
     return $colnames;
 
-}function getadmincolNames(){
+}
+function getALLcolNames(){
+
+    require_once 'courses_sql.php';
+    $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CoursesCatalogue'";
+    $result = genGenericSQL($sql);
+
+    $colnames = array();
+    foreach ($result as $colname){
+
+            array_push($colnames, $colname['COLUMN_NAME']);
+
+
+    }
+
+
+    return $colnames;
+
+}
+function getadmincolNames(){
 
     require_once 'courses_sql.php';
     $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CoursesCatalogue'";
