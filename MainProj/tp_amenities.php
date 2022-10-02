@@ -308,7 +308,7 @@ include 'navfloating.php';
                         <div class="rotating-card-container">
                             <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">F&B Incubation Offices!
                                 <div class="front front-background"
-                                     style="background-image: url(Picture/Amenities/tp/FB-Incubation-Space.png); background-size: cover; width: 650px">
+                                     style="background-image: url(Picture/Amenities/desc_bg.png); background-size: cover; width: 650px">
                                     <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
                                         <h3 class="text-white"></h3>
