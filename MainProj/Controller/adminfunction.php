@@ -123,8 +123,8 @@ function edit()
     foreach ($colnames as $colname) {
         $Query .= $colname . " = '" . $_POST[$colname] . "', ";
     }
-    $Query = $Query. " WHERE course_id = " . $_GET['id'];
-    var_dump($Query);
+    $Query = $Query. " WHERE course_id = " . $_POST['course_id'];
+    var_dump($_POST['course_id']);
 }
 function insert()
 {

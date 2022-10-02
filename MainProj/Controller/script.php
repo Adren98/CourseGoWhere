@@ -11,7 +11,7 @@
           <?php
 
           require_once 'courses.php';
-          $cols = getcolNames();
+          $cols = getALLcolNames();
 
             foreach ($cols as $col){
                 echo $col.": $('#".$col."').val(),";
