@@ -524,20 +524,18 @@
                             <!--                                       data-bs-placement="bottom" title="Star us on Github">Github</p>-->
                             <!--                                </a>-->
                             <!--                            </li>-->
+
                             <li class="nav-item my-auto ms-3 ms-lg-0">
                                 <?php
-if(isset($_SESSION['email'])){
-//    welcome message
-
-    echo '<a class="btn btn-sm btn-primary mb-0" href="Controller/logout_abort.php">Logout</a>';
-}else{
-    echo '<a class="btn btn-sm btn-primary mb-0" href="login.php">Login/Register</a>';
-}
-
+                                if(isset($_SESSION['email'])){
+                                //    welcome message
+                                    echo '<a class="btn btn-sm btn-primary mb-0" href="Controller/logout_abort.php">Logout</a>';
+                                }else{
+                                    echo '<a class="btn btn-sm btn-primary mb-0" href="login.php">Login/Register</a>';
+                                    $savebutton = 'savebuttonhidden';
+                                }
                                 ?>
-
-
-<!--                                <a href="login.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>-->
+<!--                             <a href="login.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Login/Register</a>-->
 
                             </li>
                         </ul>
@@ -550,25 +548,26 @@ if(isset($_SESSION['email'])){
                     <div class="DDcontainer">
                         <div class="item">
                             <span class="course_name"> Name 1</span>
-                            <span class="remarks"> Remarks</span>
+                            <span class="remarks"> Add Remarks</span>
                             <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                         <div class="item">
                             <span class="course_name"> Name 2</span>
-                            <span class="remarks"> Remarks</span>
+                            <span class="remarks"> Add Remarks</span>
                             <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                         <div class="item">
                             <span class="course_name"> Name 3</span>
-                            <span class="remarks"> Remarks</span>
+                            <span class="remarks"> Add Remarks</span>
                             <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
-                    <button type="button" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>
+                    <button type="button" class="<?php echo $savebutton; ?>" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>
                 </div>
+
             </nav>
             <!-- End Navbar -->
         </div>
