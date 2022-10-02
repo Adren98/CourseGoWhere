@@ -323,7 +323,7 @@ include 'navfloating.php';
                                         <p class="text-white opacity-10">
                                             TP's F&B incubation space SPROUT houses facilities for F&B start-ups to utilise and also functions as a student lounge and social space for events.
                                         </p>
-                                        <a href="https://www.tp.edu.sg/life-at-tp/tp-students-digital-access-it-matters/library/facilities-collection-detail.html" target="_blank"
+                                        <a href="https://www.tp.edu.sg/research-and-industry/innovation-and-entrepreneurship/Facilities.html" target="_blank"
                                            class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
