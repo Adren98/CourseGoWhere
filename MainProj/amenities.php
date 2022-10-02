@@ -121,8 +121,6 @@ include 'navfloating.php';
         <div class="col-sm">
             <div class = "row">
             <div class="col-lg-6">
-
-
                 <div class="rotating-card-container">
                     <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">LifeStyle Library
                         <div class="front front-background"
@@ -135,13 +133,14 @@ include 'navfloating.php';
                             </div>
                         </div>
                         <div class="back back-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                            <div class="card-body pt-1 text-center">
-                                <h3 class="text-white">Discover More</h3>
-                                <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                    to full-functional code because all elements are implemented.</p>
-                                <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                   class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                             style="background-image: url(Picture/Amenities/primary_colour.png); background-size: cover;width: 300px">
+                            <div class="card-body pt-1 text-center" >
+                                <h3 class="text-primary"></h3>
+                                <p class="text-white opacity-10">
+                                    Keep yourself updated with trends in fashion, entertainment and food through the lifestyle magazines.
+                                </p>
+                                <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                   class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                             </div>
                         </div>
                     </div>
@@ -151,24 +150,25 @@ include 'navfloating.php';
                 <div class="col-lg-6">
 
                     <div class="rotating-card-container">
-                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">iSpace
                             <div class="front front-background"
-                                 style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                                <div class="card-body py-1 text-center">
+                                 style="background-image: url(Picture/Amenities/ispace.png) ; background-size: cover; width: 300px">
+                                <div class="card-body py-6 text-left">
                                     <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                    <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                    <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                        development have been re-design with the new look.</p>
+                                    <h3 class="text-white"></h3>
+                                    <p class="text-white opacity-10">
+                                    </p>
                                 </div>
                             </div>
                             <div class="back back-background"
-                                 style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                                <div class="card-body pt-1 text-center">
-                                    <h3 class="text-white">Discover More</h3>
-                                    <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                        to full-functional code because all elements are implemented.</p>
-                                    <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                       class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                 style="background-image: url(Picture/Amenities/primary_colour.png); background-size: cover;width: 300px">
+                                <div class="card-body pt-1 text-center" >
+                                    <h3 class="text-primary"></h3>
+                                    <p class="text-white opacity-10">
+                                        iSpace is equipped with writable wall and interactive projector to support group learning and discussion. The room can accommodate up to 12 people.​
+                                    </p>
+                                    <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                       class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                 </div>
                             </div>
                         </div>
@@ -185,24 +185,25 @@ include 'navfloating.php';
                     <div class="col-lg-6">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">SmartCube
                                 <div class="front front-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                                    <div class="card-body py-1 text-center">
+                                     style="background-image: url(Picture/Amenities/SmartCube.png) ; background-size: cover; width: 300px">
+                                    <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                            development have been re-design with the new look.</p>
+                                        <h3 class="text-white"></h3>
+                                        <p class="text-white opacity-10">
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="back back-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                                    <div class="card-body pt-1 text-center">
-                                        <h3 class="text-white">Discover More</h3>
-                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                            to full-functional code because all elements are implemented.</p>
-                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                     style="background-image: url(Picture/Amenities/primary_colour.png); background-size: cover;width: 300px">
+                                    <div class="card-body pt-1 text-center" >
+                                        <h3 class="text-primary"></h3>
+                                        <p class="text-white opacity-10">
+                                            Smart Cube is equipped with writable wall, writable table and TV projector to support group learning and discussion. Each room can accommodate up to 6 people.
+                                        </p>
+                                        <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
                             </div>
@@ -212,24 +213,25 @@ include 'navfloating.php';
                     <div class="col-lg-6">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Lien Ying Chow Gallery
                                 <div class="front front-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                                    <div class="card-body py-1 text-center">
+                                     style="background-image: url(Picture/Amenities/gallery.png) ; background-size: cover; width: 300px">
+                                    <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                            development have been re-design with the new look.</p>
+                                        <h3 class="text-white"></h3>
+                                        <p class="text-white opacity-10">
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="back back-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                                    <div class="card-body pt-1 text-center">
-                                        <h3 class="text-white">Discover More</h3>
-                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                            to full-functional code because all elements are implemented.</p>
-                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                     style="background-image: url(Picture/Amenities/primary_colour.png); background-size: cover;width: 300px">
+                                    <div class="card-body pt-1 text-center" >
+                                        <h3 class="text-primary"></h3>
+                                        <p class="text-white opacity-10">
+                                            Be inspired to emulate Dr Lien’s qualities of perseverance, tenacity, philanthropy and humility, fire up your entrepreneurial spirit, achieve your own greatness and give back to society.
+                                        </p>
+                                        <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
                             </div>
@@ -245,28 +247,29 @@ include 'navfloating.php';
 
         </div>
             <div class="col-sm">
-                <div class = "row" style="margin-top: 15px">
+                <div class = "row" style="margin-top: 15px"> Special Mentions:
                     <div class="col-lg-12">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Dialogue in the Dark
                                 <div class="front front-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                                    <div class="card-body py-1 text-center">
+                                     style="background-image: url(Picture/Amenities/np_dialogueid.png) ; background-size: cover; width: 650px">
+                                    <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                            development have been re-design with the new look.</p>
+                                        <h3 class="text-white"></h3>
+                                        <p class="text-white opacity-10">
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="back back-background"
-                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                                    <div class="card-body pt-1 text-center">
-                                        <h3 class="text-white">Discover More</h3>
-                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                            to full-functional code because all elements are implemented.</p>
-                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                     style="background-image: url(Picture/Amenities/primary_colour.png); background-size: cover;width: 650px">
+                                    <div class="card-body pt-1 text-center" >
+                                        <h3 class="text-primary"></h3>
+                                        <p class="text-white opacity-10">
+                                            Dialogue in the Dark is one of the world’s most exciting life-changing experiences where visitors are guided by blind guides in absolute darkness. You get the chance to experience daily environments from a completely new perspective, when you enjoy a walk in the park, take a boat cruise or visit a café in our specially designed darkened rooms. Daily routines become exciting and a reversal of role is created where sighted become blind and blind become sighted.
+                                        </p>
+                                        <a href="https://www.dialogue-se.com/what-we-do/dialogue-in-the-dark/" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
                             </div>
