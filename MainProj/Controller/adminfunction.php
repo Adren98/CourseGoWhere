@@ -53,7 +53,7 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
     $result = $output->get_result();
     $index = 0;
 
-    require 'script.php';
+    require_once 'script.php';
 
     require_once "Controller/courses.php";
 
