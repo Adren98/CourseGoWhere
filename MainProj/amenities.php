@@ -122,6 +122,7 @@ include 'navfloating.php';
             <div class = "row">
             <div class="col-lg-6">
 
+
                 <div class="rotating-card-container">
                     <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">LifeStyle Library
                         <div class="front front-background"
