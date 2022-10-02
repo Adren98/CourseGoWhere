@@ -79,7 +79,7 @@ session_start();
 
 include 'navfloating.php';
 ?>
-<?php $school= "Singapore" ?>
+
 
 <div class="container">
 
@@ -98,12 +98,6 @@ include 'navfloating.php';
                         <div class="card-body">
                             The history of Ngee Ann Polytechnic (NP) could be traced back to 1963, when it started out as Ngee Ann College. Its founder, The Ngee Ann Kongsi, had envisioned setting up a quality educational institution to link the Chinese-speaking community to its cultural roots during the colonial-rule era. The College had since morphed into a full-fledged polytechnic, a public institution overseen by an independent Council.
                         </div>
-                        <?php
-                        if(isset($_POST['btn-np'])){
-                            $school = "Ngee Ann Poly";
-                        }
-                        ?>
-
                     </div>
                 </div>
                 <div class="card">
