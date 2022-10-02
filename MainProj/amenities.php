@@ -27,6 +27,11 @@ session_start();
     <title>
         CourseGoWhere
     </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/amenities.css">
+
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
@@ -75,11 +80,29 @@ session_start();
 
 include 'navfloating.php';
 ?>
+
+
 <div class="container">
     <div class="row" style="margin-top: 10%">
+        <div class="dropdown">
+            <button class="btn bg-gradient-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
 
+                <a href="amenities.php"> <img src="Picture/ngee-ann-polytechnic.png" style="height:100px; width:250px"; ></a>
+
+                <a href="sp_amenities.php"> <img src="Picture/singapore-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="nyp_amenities.php"> <img src="Picture/nanyang-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="rp_amenities.php"> <img src="Picture/republic-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="tp_amenities.php"> <img src="Picture/temasek_polytechnic.png" style="height:100px; width:200px"; ></a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
 
         <div class="col-sm" >
+
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -115,6 +138,41 @@ include 'navfloating.php';
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./assets/css/amenities.css">
+
+        <!--     Fonts and icons     -->
+        <link rel="stylesheet" type="text/css"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+        <!-- Nucleo Icons -->
+        <link href="./assets/css/nucleo-icons.css" rel="stylesheet"/>
+        <link href="./assets/css/nucleo-svg.css" rel="stylesheet"/>
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <!-- CSS Files -->
+        <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
+
+
+
+
+
 
 
 
