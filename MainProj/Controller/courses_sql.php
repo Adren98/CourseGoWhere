@@ -137,6 +137,19 @@ function getAllCourse()
 
 }
 
+function getcustomisedCourse($sql)
+{
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+    if (mysqli_connect_errno()) {
+        die(mysqli_connect_error());
+
+    }
+    if ($output = mysqli_prepare($connection, $sql)) {
+        printHtmlRow($output, $connection);
+    }
+
+}
+
 
 ?>
 

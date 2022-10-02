@@ -76,80 +76,532 @@ include 'navfloating.php';
 <!-- End Navbar -->
 <div class="card">
 
-    <form>
+    <form method="post" action="Controller/questionnaire.php">
 
 
+        <div class="container">
+
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-5">Not interested</div>
+                <div class="col-5" style="text-align: center">Interested</div>
+
+            </div>
 
 
+            <div class="row">
+                <div class="col-2">
+                    <label for="business1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you wish to take on roles such as business
+                        advisor, consultant and financial analyst?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="1">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="2">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="3" checked>
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="4">
+                    <input class="col-2" type="radio" id="business1" name="Business and Management1" value="5">
+
+                </div>
+            </div>
 
 
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="engineering1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you enjoy physical Creation? </label>
 
-            <div class="container">
+                </div>
 
-                <div class="row">
-                    <div class="col-2"></div>
-                                    <div class="col-5">Not interested</div>
-                                    <div class="col-5" style="text-align: center">Interested</div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="1">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="2">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="4">
+                    <input class="col-2" type="radio" id="engineering1" name="Engineering1" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="adm1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Are you a creative person?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="1">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="2">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="3" checked>
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="4">
+                    <input class="col-2" type="radio" id="adm1" name="Media and Design1" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="it1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Are you interested in coding?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="1">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="2">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="3" checked>
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="4">
+                    <input class="col-2" type="radio" id="it1" name="Information and Digital Technologies1" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="appscience1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Attain practical goals based on scientific
+                        knowledge </label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="1">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="2">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="4">
+                    <input class="col-2" type="radio" id="appscience1" name="Applied Sciences1" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="environment1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you aspire to create infrastructure/buildings
+                        in the future? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="1">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="2">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="3" checked>
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="4">
+                    <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="appscience2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Interested in research and development?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="1">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="2">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="4">
+                    <input class="col-2" type="radio" id="appscience2" name="Applied Sciences2" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="humanities1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future social
+                        worker? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="1">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="2">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="4">
+                    <input class="col-2" type="radio" id="humanities1" name="Humanities1" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="maritime1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like to work on ships? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="1">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="2">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="4">
+                    <input class="col-2" type="radio" id="maritime1" name="Maritime Studies1" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="health1" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like to do like to promote sport as a way
+                        of life and get Singaporeans to champion their health?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="1">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="2">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="3" checked>
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="4">
+                    <input class="col-2" type="radio" id="health1" name="Health Sciences1" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="business2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future entrepreneur? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="1">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="2">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="3" checked>
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="4">
+                    <input class="col-2" type="radio" id="business2" name="Business and Management2" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="engineering2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Do you like to solve problems?</label>
+
+                </div>
+
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="1">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="2">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="4">
+                    <input class="col-2" type="radio" id="engineering2" name="Engineering2" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="it2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Working with computers and technology? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="1">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="2">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="3" checked>
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="4">
+                    <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="adm2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Are you interested in content creation?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="1">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="2">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="3" checked>
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="4">
+                    <input class="col-2" type="radio" id="adm2" name="Media and Design2" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="environment2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Do you want to be a future architect?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="1">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="2">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="3" checked>
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="4">
+                    <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="humanities2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future teacher? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="1">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="2">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="4">
+                    <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="health2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Interested in being a health care
+                        proffesional? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="1">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="2">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="3" checked>
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="4">
+                    <input class="col-2" type="radio" id="health2" name="Health Sciences2" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="humanities3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like to study the human psychology,
+                        sociology, anthropology, political science, economics?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="1">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="2">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="3" checked>
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="4">
+                    <input class="col-2" type="radio" id="humanities3" name="Humanities3" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="maritime2" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like naval architecture? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="1">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="2">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="4">
+                    <input class="col-2" type="radio" id="maritime2" name="Maritime Studies2" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="business3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future business
+                        leader? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="1">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="2">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="3" checked>
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="4">
+                    <input class="col-2" type="radio" id="business3" name="Business and Management3" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="health3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> A Passion To Touch Lives?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="1">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="2">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="3" checked>
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="4">
+                    <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="engineering3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Do you want to be a future engineer? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="1">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="2">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="3" checked>
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="4">
+                    <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="5">
+
+                </div>
+            </div>
+
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="maritime3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Do you like to work with offshore design
+                        technology?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="1">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="2">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="3" checked>
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="4">
+                    <input class="col-2" type="radio" id="maritime3" name="Maritime Studies3" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="environment3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you want to be a future interior
+                        designer?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="1">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="2">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="3" checked>
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="4">
+                    <input class="col-2" type="radio" id="environment3" name="Built Environment3" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="adm3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> are you interested in arts / design /
+                        media? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="1">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="2">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="3" checked>
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="4">
+                    <input class="col-2" type="radio" id="adm3" name="Media and Design3" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="appscience3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;">Do you like working with pharmaceutical, chemical
+                        and food companies?</label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="1">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="2">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="3" checked>
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="4">
+                    <input class="col-2" type="radio" id="appscience3" name="Applied Sciences3" value="5">
+
+                </div>
+            </div>
+
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="it3" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Creating solutions to problems with software
+                        programs? </label>
+                </div>
+                <div class="col-10">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="1">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="2">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="3" checked>
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="4">
+                    <input class="col-2" type="radio" id="it3" name="Information and Digital Technologies3" value="5">
+
+                </div>
+            </div>
+            <hr class="border-1 border-top border-dark">
+            <div class="row">
+                <div class="col-2">
+                    <label for="schoolselect" class="col-form-label text-md-right"
+                           style="display: flex; justify-content:end;"> Which schools are you interested in?</label>
+                </div>
+
+
+                <div class="col-sm">
+
+
+                    <input type="checkbox" id="nyp" name="checkboxSchool[]"" value="nyp" checked>
+                    <label for="nyp">NYP</label>
+
 
                 </div>
 
 
-                <div class="row">
-                    <div class="col-2">
-                        <label for="mathInterest" class="col-form-label text-md-right"
-                               style="display: flex; justify-content:end;">Interest level for Math</label>
+                <div class="col-sm">
 
-                    </div>
-
-                    <div class="col-10">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="1">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="2">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="3">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="4">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="5">
-
-                    </div>
+                    <input type="checkbox" id="np" name="checkboxSchool[]" value="np" checked>
+                    <label for="np">NP</label>
                 </div>
 
-                <div class="row">
-                    <div class="col-2">
-                        <label for="mathInterest" class="col-form-label text-md-right"
-                               style="display: flex; justify-content:end;">Interest level for</label>
+                <div class="col-sm">
 
-                    </div>
-
-                    <div class="col-10">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="1">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="2">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="3">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="4">
-                        <input class="col-2" type="radio" id="mathInterest" name="mathInterest" value="5">
-
-                    </div>
+                    <input type="checkbox" id="sp" name="checkboxSchool[]" value="sp" checked>
+                    <label for="sp">SP</label>
                 </div>
 
+                <div class="col-sm">
 
+                    <input type="checkbox" id="rp" name="checkboxSchool[]" value="rp" checked>
+                    <label for="rp">RP</label>
+
+                </div>
+                <div class="col-sm">
+
+                    <input type="checkbox" id="tp" name="checkboxSchool[]" value="tp" checked>
+                    <label for="tp">TP</label>
+                </div>
 
 
             </div>
 
 
 
+            <div class="row">
 
-<!--                <label for="speaking" class="col-md-4 col-form-label text-md-right"-->
-<!--                       style="display: flex; justify-content:end;">Public Speaking</label>-->
-<!--                <div class="col-md-6">-->
-<!--                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="1">-->
-<!--                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="2">-->
-<!--                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="3">-->
-<!--                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="4">-->
-<!--                    <input class="col-md-2" type="radio" id="speaking" name="speaking" value="5">-->
-<!---->
-<!--                </div>-->
-
-
-
-
+                <div class="col-12 col text-center">
+                    <button  type="submit" id="submit" name="submit" value="submit" class="btn btn-primary ">Submit</button>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
 
