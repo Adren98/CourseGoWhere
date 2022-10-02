@@ -241,12 +241,34 @@ include 'navfloating.php';
 
             </div>
             <br>
+
+            <?php
+            if(isset($_SESSION['qnsearch'])){
+
+
+
+            ?>
             <div class="col-12 col text-center">
                 <a class = 'btn btn-primary' href="courses.php?customised" style="">
                     Apply Customised Questionnaire Filter
 
                 </a>
             </div>
+
+            <?php
+            }else{
+            ?>
+                <div class="col-12 col text-center">
+                    <a class = 'btn btn-primary' href="questionnaire.php" style="">
+                        Take your Questionnaire here now!
+
+                    </a>
+                </div>
+
+
+            <?php
+            }
+            ?>
             <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
                 <div class="container border-bottom">
                     <div class="row justify-space-between py-2">
