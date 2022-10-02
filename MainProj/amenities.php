@@ -108,13 +108,13 @@ include 'navfloating.php';
                     <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
                     <ul data-slides>
                         <li class="slide" data-active>
-                            <img src="Picture/NP_direction.png" alt="Nature Image #1">
+                            <img src="Picture/Amenities/Amenities_location/NP/busmrt.jpg" alt="Nature Image #1">
                         </li>
                         <li class="slide">
-                            <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
+                            <img src="Picture/Amenities/Amenities_location/NP/car.jpg" alt="Nature Image #2">
                         </li>
                         <li class="slide">
-                            <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
+                            <img src="Picture/Amenities/Amenities_location/NP/Gatehours.jpg" alt="Nature Image #3">
                         </li>
                     </ul>
                 </div>

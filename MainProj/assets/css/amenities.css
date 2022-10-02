@@ -7,10 +7,10 @@ body {
 }
 
 .carousel {
-    border-radius: .75rem;
+
     width: 30vw;
     height: 60vh;
-
+    border-radius: 9px;
     position: absolute;
 }
 
@@ -60,11 +60,11 @@ body {
 .carousel-button:hover,
 .carousel-button:focus {
     color: white;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(239, 15, 220, 0.87);
 }
 
 .carousel-button:focus {
-    outline: 1px solid black;
+    outline: 1px solid deeppink;
 }
 
 .carousel-button.prev {
