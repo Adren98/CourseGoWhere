@@ -11,7 +11,7 @@
                 <div class="container-fluid px-0">
                     <a class="navbar-brand font-weight-bolder ms-sm-3"
                        href="/" rel="tooltip"
-                       title="Home" data-placement="bottom" target="_blank">
+                       title="Home" data-placement="bottom" >
                         CourseGoWhere
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
