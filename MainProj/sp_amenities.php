@@ -27,6 +27,11 @@ session_start();
     <title>
         CourseGoWhere
     </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/amenities.css">
+
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
@@ -75,11 +80,27 @@ session_start();
 
 include 'navfloating.php';
 ?>
+
+
 <div class="container">
     <div class="row" style="margin-top: 10%">
-
+        <div class="dropdown">
+            <button class="btn bg-gradient-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="amenities.php"> <img src="Picture/ngee-ann-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="sp_amenities.php"> <img src="Picture/singapore-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="nyp_amenities.php"> <img src="Picture/nanyang-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="rp_amenities.php"> <img src="Picture/republic-polytechnic.png" style="height:100px; width:250px"; ></a>
+                <a href="tp_amenities.php"> <img src="Picture/temasek_polytechnic.png" style="height:100px; width:200px"; ></a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
 
         <div class="col-sm" >
+
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -118,41 +139,48 @@ include 'navfloating.php';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./assets/css/amenities.css">
+
+        <!--     Fonts and icons     -->
+        <link rel="stylesheet" type="text/css"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+        <!-- Nucleo Icons -->
+        <link href="./assets/css/nucleo-icons.css" rel="stylesheet"/>
+        <link href="./assets/css/nucleo-svg.css" rel="stylesheet"/>
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <!-- CSS Files -->
+        <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
+
+
+
+
+
+
+
+
         <div class="col-sm">
             <div class = "row">
-            <div class="col-lg-6">
-                <div class="rotating-card-container">
-                    <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">LifeStyle Library
-                        <div class="front front-background"
-                             style="background-image: url(Picture/np_lifestyle.png) ; background-size: cover; width: 300px">
-                            <div class="card-body py-6 text-left">
-                                <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                <h3 class="text-white"></h3>
-                                <p class="text-white opacity-10">
-                                </p>
-                            </div>
-                        </div>
-                        <div class="back back-background"
-                             style="background-image: url(Picture/Amenities/np/primary_colour.png); background-size: cover;width: 300px">
-                            <div class="card-body pt-1 text-center" >
-                                <h3 class="text-primary"></h3>
-                                <p class="text-white opacity-10">
-                                    Keep yourself updated with trends in fashion, entertainment and food through the lifestyle magazines.
-                                </p>
-                                <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
-                                   class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
                 <div class="col-lg-6">
-
                     <div class="rotating-card-container">
-                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">iSpace
+                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">AI and Analytics Collab
                             <div class="front front-background"
-                                 style="background-image: url(Picture/Amenities/np/ispace.png) ; background-size: cover; width: 300px">
+                                 style="background-image: url(Picture/Amenities/sp/colab1.png) ; background-size: cover; width: 300px">
                                 <div class="card-body py-6 text-left">
                                     <i class="material-icons text-white text-4xl my-3">touch_app</i>
                                     <h3 class="text-white"></h3>
@@ -165,9 +193,37 @@ include 'navfloating.php';
                                 <div class="card-body pt-1 text-center" >
                                     <h3 class="text-primary"></h3>
                                     <p class="text-white opacity-10">
-                                        iSpace is equipped with writable wall and interactive projector to support group learning and discussion. The room can accommodate up to 12 people.​
+                                        Equipped with a High Performance Computing server, students can experiment with deep learning applications to distill hidden insights in big data.
                                     </p>
-                                    <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                    <a href="https://www.sp.edu.sg/soc/about-soc/our-facilities" target="_blank"
+                                       class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="rotating-card-container">
+                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">App Studio
+                            <div class="front front-background"
+                                 style="background-image: url(Picture/Amenities/sp/Appstudio.png) ; background-size: cover; width: 300px">
+                                <div class="card-body py-6 text-left">
+                                    <i class="material-icons text-white text-4xl my-3">touch_app</i>
+                                    <h3 class="text-white"></h3>
+                                    <p class="text-white opacity-10">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="back back-background"
+                                 style="background-image: url(Picture/Amenities/np/primary_colour.png); background-size: cover;width: 300px">
+                                <div class="card-body pt-1 text-center" >
+                                    <h3 class="text-primary"></h3>
+                                    <p class="text-white opacity-10">
+                                        A software development environment focusing on creating UI / UX design, web and mobile apps.
+                                    </p>
+                                    <a href="https://www.sp.edu.sg/soc/about-soc/our-facilities" target="_blank"
                                        class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                 </div>
                             </div>
@@ -185,9 +241,9 @@ include 'navfloating.php';
                     <div class="col-lg-6">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">SmartCube
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Cyber Warefare Centre
                                 <div class="front front-background"
-                                     style="background-image: url(Picture/Amenities/np/SmartCube.png) ; background-size: cover; width: 300px">
+                                     style="background-image: url(Picture/Amenities/sp/Cyberwarfare.png) ; background-size: cover; width: 300px">
                                     <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
                                         <h3 class="text-white"></h3>
@@ -200,9 +256,9 @@ include 'navfloating.php';
                                     <div class="card-body pt-1 text-center" >
                                         <h3 class="text-primary"></h3>
                                         <p class="text-white opacity-10">
-                                            Smart Cube is equipped with writable wall, writable table and TV projector to support group learning and discussion. Each room can accommodate up to 6 people.
+                                            Students get to hone their cyber defence skills through scenario-based simulated cyber attacks.
                                         </p>
-                                        <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                        <a href="https://www.sp.edu.sg/soc/about-soc/our-facilities" target="_blank"
                                            class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
@@ -213,9 +269,9 @@ include 'navfloating.php';
                     <div class="col-lg-6">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Lien Ying Chow Gallery
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Immersive Lab
                                 <div class="front front-background"
-                                     style="background-image: url(Picture/Amenities/gallery.png) ; background-size: cover; width: 300px">
+                                     style="background-image: url(Picture/Amenities/sp/immersive-lab-photo.png) ; background-size: cover; width: 300px">
                                     <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
                                         <h3 class="text-white"></h3>
@@ -228,9 +284,9 @@ include 'navfloating.php';
                                     <div class="card-body pt-1 text-center" >
                                         <h3 class="text-primary"></h3>
                                         <p class="text-white opacity-10">
-                                            Be inspired to emulate Dr Lien’s qualities of perseverance, tenacity, philanthropy and humility, fire up your entrepreneurial spirit, achieve your own greatness and give back to society.
+                                            A design studio specialising in advance software capabilities to simulate immersions into the virtual and augmented worlds.
                                         </p>
-                                        <a href="https://www.np.edu.sg/library/pages/facilities.aspx" target="_blank"
+                                        <a href="https://www.sp.edu.sg/soc/about-soc/our-facilities" target="_blank"
                                            class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
@@ -245,15 +301,15 @@ include 'navfloating.php';
                 </div>
 
 
-        </div>
+            </div>
             <div class="col-sm">
                 <div class = "row" style="margin-top: 15px"> Special Mentions:
                     <div class="col-lg-12">
 
                         <div class="rotating-card-container">
-                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Dialogue in the Dark
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">Mobile Food Van by Old Change Kee
                                 <div class="front front-background"
-                                     style="background-image: url(Picture/Amenities/np/np_dialogueid.png) ; background-size: cover; width: 650px">
+                                     style="background-image: url(Picture/Amenities/sp/oldchangkee-sp.png) ; background-size: cover; width: 650px">
                                     <div class="card-body py-6 text-left">
                                         <i class="material-icons text-white text-4xl my-3">touch_app</i>
                                         <h3 class="text-white"></h3>
@@ -266,9 +322,11 @@ include 'navfloating.php';
                                     <div class="card-body pt-1 text-center" >
                                         <h3 class="text-primary"></h3>
                                         <p class="text-white opacity-10">
-                                            Dialogue in the Dark is one of the world’s most exciting life-changing experiences where visitors are guided by blind guides in absolute darkness. You get the chance to experience daily environments from a completely new perspective, when you enjoy a walk in the park, take a boat cruise or visit a café in our specially designed darkened rooms. Daily routines become exciting and a reversal of role is created where sighted become blind and blind become sighted.
+                                            Term time:
+                                            <br>Level 1 T12A</br><br>Mon, Tue & Thurs: 8am to 3pm </br><br>Vacation period:
+                                            Thurs: 8am to 3pm</br>
                                         </p>
-                                        <a href="https://www.dialogue-se.com/what-we-do/dialogue-in-the-dark/" target="_blank"
+                                        <a href="https://www.sp.edu.sg/sp/about-sp/facilities/retail-dining" target="_blank"
                                            class="btn btn-white btn-sm w-50 mx-auto mt-3">Find out more!</a>
                                     </div>
                                 </div>
@@ -278,19 +336,19 @@ include 'navfloating.php';
                     </div>
 
 
-                    </div>
-
-
-
-
                 </div>
 
 
+
+
             </div>
+
+
         </div>
-
-
     </div>
+
+
+</div>
 </div>
 
 
