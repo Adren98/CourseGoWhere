@@ -10,7 +10,8 @@
 
           <?php
 
-          require_once 'courses.php';
+//          require_once 'courses.php';
+          require_once $_SERVER['DOCUMENT_ROOT']."/Controller/courses.php";
           $cols = getALLcolNames();
 
             foreach ($cols as $col){
