@@ -23,7 +23,7 @@ session_start();
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./assets/css/amenities.css">
+
     <title>
         CourseGoWhere
     </title>
@@ -79,27 +79,58 @@ include 'navfloating.php';
     <div class="row" style="margin-top: 10%">
 
 
-        <div class="col-sm" style = "border: 1px solid #dd2d65">
-            <div class="card bg-dark text-white border-0">
-                <img class="card-img" src="" alt="Card image">
+        <div class="col-sm" >
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="Picture/NP_direction.png" alt="Los Angeles" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="" alt="Chicago" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="" alt="New york" style="width:100%;">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
         </div>
 
 
 
         <div class="col-sm">
             <div class = "row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
 
                 <div class="rotating-card-container">
-                    <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                    <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">LifeStyle Library
                         <div class="front front-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                            <div class="card-body py-1 text-center">
+                             style="background-image: url(Picture/np_lifestyle.png) ; background-size: cover; width: 300px">
+                            <div class="card-body py-6 text-left">
                                 <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                    development have been re-design with the new look.</p>
+                                <h3 class="text-white"></h3>
+                                <p class="text-white opacity-10">
+                                </p>
                             </div>
                         </div>
                         <div class="back back-background"
@@ -116,7 +147,7 @@ include 'navfloating.php';
                 </div>
 
             </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
 
                     <div class="rotating-card-container">
                         <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
@@ -145,58 +176,113 @@ include 'navfloating.php';
                 </div>
 
 
+
+
             </div>
             <div class="col-sm">
-                <div class="rotating-card-container">
-                    <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
-                        <div class="front front-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                            <div class="card-body py-1 text-center">
-                                <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                    development have been re-design with the new look.</p>
+                <div class = "row" style="margin-top: 15px">
+                    <div class="col-lg-6">
+
+                        <div class="rotating-card-container">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                                <div class="front front-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+                                    <div class="card-body py-1 text-center">
+                                        <i class="material-icons text-white text-4xl my-3">touch_app</i>
+                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
+                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
+                                            development have been re-design with the new look.</p>
+                                    </div>
+                                </div>
+                                <div class="back back-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+                                    <div class="card-body pt-1 text-center">
+                                        <h3 class="text-white">Discover More</h3>
+                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
+                                            to full-functional code because all elements are implemented.</p>
+                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="back back-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                            <div class="card-body pt-1 text-center">
-                                <h3 class="text-white">Discover More</h3>
-                                <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                    to full-functional code because all elements are implemented.</p>
-                                <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                   class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
-                            </div>
-                        </div>
+
                     </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="rotating-card-container">
-                    <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
-                        <div class="front front-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                            <div class="card-body py-1 text-center">
-                                <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                    development have been re-design with the new look.</p>
+                    <div class="col-lg-6">
+
+                        <div class="rotating-card-container">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                                <div class="front front-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+                                    <div class="card-body py-1 text-center">
+                                        <i class="material-icons text-white text-4xl my-3">touch_app</i>
+                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
+                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
+                                            development have been re-design with the new look.</p>
+                                    </div>
+                                </div>
+                                <div class="back back-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+                                    <div class="card-body pt-1 text-center">
+                                        <h3 class="text-white">Discover More</h3>
+                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
+                                            to full-functional code because all elements are implemented.</p>
+                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="back back-background"
-                             style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                            <div class="card-body pt-1 text-center">
-                                <h3 class="text-white">Discover More</h3>
-                                <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                    to full-functional code because all elements are implemented.</p>
-                                <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                   class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
-                            </div>
-                        </div>
+
                     </div>
+
+
+
+
                 </div>
 
+
         </div>
+            <div class="col-sm">
+                <div class = "row" style="margin-top: 15px">
+                    <div class="col-lg-12">
+
+                        <div class="rotating-card-container">
+                            <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+                                <div class="front front-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+                                    <div class="card-body py-1 text-center">
+                                        <i class="material-icons text-white text-4xl my-3">touch_app</i>
+                                        <h3 class="text-white">Feel the <br/> Material Kit</h3>
+                                        <p class="text-white opacity-8">All the Bootstrap components that you need in a
+                                            development have been re-design with the new look.</p>
+                                    </div>
+                                </div>
+                                <div class="back back-background"
+                                     style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+                                    <div class="card-body pt-1 text-center">
+                                        <h3 class="text-white">Discover More</h3>
+                                        <p class="text-white opacity-8"> You will save a lot of time going from prototyping
+                                            to full-functional code because all elements are implemented.</p>
+                                        <a href=".//sections/page-sections/hero-sections.html" target="_blank"
+                                           class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
         </div>
 
 
