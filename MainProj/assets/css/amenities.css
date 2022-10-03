@@ -58,7 +58,7 @@ body {
 .carousel-button:hover,
 .carousel-button:focus {
     color: white;
-    background-color: rgba(239, 15, 220, 0.87);
+    background-color: rgba(221, 45, 101, 0.87);
 }
 
 .carousel-button:focus {
