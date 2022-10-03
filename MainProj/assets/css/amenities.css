@@ -7,11 +7,8 @@ body {
 }
 
 .carousel {
-    border-radius: 55px 55px 55px 55px;
-    border-color: #1a2035;
-    width: 15vw;
-    height: 60vh;
-    border-radius: 9px;
+    width: 35vw;
+    height: 90vh;
     position: absolute;
 }
 
