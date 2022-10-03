@@ -99,7 +99,7 @@ include 'navfloating.php';
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="nyp_amenities.php" role="tab" aria-controls="dashboard" aria-selected="false">
-                        <img src="Picture/nanyang-polytechnic.png" style="height:100px; width:250px"; >
+                        <img src="Picture/nanyang-polytechnic.png" style="height:100px; width:250px;padding:1px;border:thick solid pink;" >
                     </a>
                 </li>
                 <li class="nav-item">

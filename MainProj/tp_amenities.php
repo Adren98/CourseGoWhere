@@ -109,7 +109,7 @@ include 'navfloating.php';
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="tp_amenities.php" role="tab" aria-controls="dashboard" aria-selected="false">
-                        <img src="Picture/temasek_polytechnic.png" style="height:100px; width:200px"; >
+                        <img src="Picture/temasek_polytechnic.png" style="height:100px; width:200px;padding:1px;border:thick solid pink;" >
                     </a>
                 </li>
             </ul>

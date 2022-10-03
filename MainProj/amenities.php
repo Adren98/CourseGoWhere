@@ -88,12 +88,13 @@ include 'navfloating.php';
             <ul class="nav nav-pills nav-fill p-1" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="amenities.php" role="tab" aria-controls="profile" aria-selected="true">
-                        <img src="Picture/ngee-ann-polytechnic.png" style="height:100px; width:250px"; >
+                        <img src="Picture/ngee-ann-polytechnic.png" style="height:100px; width:250px;padding:1px;border:thick solid pink;" >
+
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="sp_amenities.php" role="tab" aria-controls="dashboard" aria-selected="false">
-                        <img src="Picture/singapore-polytechnic.png" style="height:100px; width:250px"; >
+                        <img src="Picture/singapore-polytechnic.png" style="height:100px; width:250px;" >
                     </a>
                 </li>
                 <li class="nav-item">
