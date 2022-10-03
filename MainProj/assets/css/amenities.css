@@ -7,9 +7,9 @@ body {
 }
 
 .carousel {
-    width: 35vw;
-    height: 90vh;
-    position: absolute;
+    width: 500px;
+    height: 800px;
+    position: static;
 }
 
 .carousel > ul {
