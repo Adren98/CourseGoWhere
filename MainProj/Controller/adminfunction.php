@@ -134,7 +134,7 @@ function edit()
 }
 function insert()
 {
-    echo "Inserting ";
+//    echo "Inserting ";
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
     if (mysqli_connect_errno()) {
 
@@ -144,7 +144,7 @@ function insert()
 
     $coursecode = $_POST["course_code"];
     $school = $_POST["school"];
-    echo '<script type="text/javascript">    alert("Before query");    </script>';
+//    echo '<script type="text/javascript">    alert("Before query");    </script>';
     //Check if exist in DB
     $exist = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue WHERE course_code = '$coursecode' and school = '$school' ");
     $exist->execute();
