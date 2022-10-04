@@ -12,7 +12,7 @@ require 'Controller/script.php';
             <div class="col-md-8">
                 <div class="card">
                     <h1 style="display:Flex; justify-content:center">
-                        Create Course
+                        Edit Course
                     </h1>
                     <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -39,8 +39,8 @@ require 'Controller/script.php';
                             }
 
 //                            var_dump($findcourse);
-                            var_dump($arr);
-                            var_dump($arr[0]['course_id']);
+//                            var_dump($arr);
+//                            var_dump($arr[0]['course_id']);
                             $cols = getcolNames();
                             foreach ($cols as $col){
                                 echo "<div class='form-group row'>";
@@ -54,6 +54,7 @@ require 'Controller/script.php';
                             }
 
                             ?>
+                            <input id ="course_id" type="hidden" name="course_id" value="<?php echo $arr[0]['course_id']; ?>">
 
 
                             <br>

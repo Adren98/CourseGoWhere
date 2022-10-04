@@ -3,13 +3,12 @@ require_once('config.php');
 
 if (isset($_POST["action"])) {
     if ($_POST["action"] == "insert") {
-        echo 'I AM HERE in insert action:';
         insert();
     } else if ($_POST["action"] == "edit") {
-        echo 'I AM HERE in edit action:';
+        var_dump($_POST['course_name']);
         edit();
     } else {
-        echo 'I AM HERE in delete action:';
+
         delete();
     }
 }
@@ -92,7 +91,7 @@ function printAdminHtmlRow(mysqli_stmt $output, mysqli $connection)
 
 function delete()
 {
-    echo "INDELETE ";
+//    echo "INDELETE ";
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
     if (mysqli_connect_errno()) {
@@ -110,7 +109,7 @@ function delete()
 }
 function edit()
 {
-    echo "Editing ";
+//    echo "Editing ";
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
     if (mysqli_connect_errno()) {
 
@@ -123,8 +122,15 @@ function edit()
     foreach ($colnames as $colname) {
         $Query .= $colname . " = '" . $_POST[$colname] . "', ";
     }
-    $Query = $Query. " WHERE course_id = " . $_POST['course_id'];
-    var_dump($_POST['course_id']);
+    $Query = substr($Query, 0, -2);
+
+
+    $Query = $Query. " WHERE course_id = " . $_POST['course_id'].";";
+//    var_dump($Query);
+    $exist = mysqli_prepare($connection, $Query);
+    $exist->execute();
+    echo "<script type='text/javascript'>" . "alert('Edit Successful. Redirecting you back to Index page');" . " window.location='admin.php';</script>";
+
 }
 function insert()
 {
@@ -177,7 +183,9 @@ function insert()
         $stmt->close();
         $connection->close();
 
-        echo '<script type="text/javascript">    alert("added");    </script>';
+
+        echo "<script type='text/javascript'>" . "alert('added.');" . " window.location='admin.php';</script>";
+        //        echo <script>"window.location.reload();window.location='index.php';"</script>;
     }
 }
 

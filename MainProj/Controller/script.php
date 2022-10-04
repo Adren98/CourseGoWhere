@@ -2,7 +2,11 @@
 
 <script type="text/javascript">
   function submitData(action){
-
+    alert(action);
+    if(action !=="insert" && action!=="edit"){
+        var element =document.getElementById(action);
+        element.parentNode.removeChild(element);
+    }
 
     $(document).ready(function(){
       var data = {
@@ -35,11 +39,13 @@
         type: 'post',
         data: data,
         success:function(response){
-          alert(response);
-          if(response === "Deleted Successfully"){
-            $("#"+action).css("display", "none");
-              var element =document.getElementById(action);
-              element.parentNode.removeChild(element);
+            alert(action);
+            alert(response);
+            if(response === "Deleted Successfully"){
+            console.log("why cant i go in")
+            alert("Deleted Sfghghfhffgh");
+
+
           }
         }
       });
