@@ -60,16 +60,39 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
     </div>
 </div>
 
+
+<!-- csv file upload to server -->
 <div >
-    <!-- csv file upload to server -->
     <form action="Controller/adminfunction.php" method="post" enctype="multipart/form-data">
-        <label> Or Upload courses CSV file Here</label>
+        <label>Upload course CSV data file here</label>
         <input size='50' type='file' name='filename' required >
-        <input type='submit' name='submit' value='Upload CSV'  >
+        <input type='submit' name='upload' value='Upload CSV'  >
     </form>
 
 </div>
 
+<!-- Select csv file from server to repopulate database -->
+<div id="wrapper">
+    <div id="file_div" float: right>
+        <form action="/Controller/importDataset.php" method="post" >
+        <label for="file">Choose a file to repopulate database</label>
+        <select id="csvfile" name="repopulate">
+            <?php
+            require_once "Controller/importDataset.php";
+            $files = showDatafiles();
+
+            foreach ( $files as $file) {
+                echo '<option value= "'.$file .'">' .$file .'</option>';
+            }
+             ?>
+        </select>
+        <input type="submit" value="Repopulate"
+             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the course catalogue data stored in database will be erased. Click OK to confirm to repopulate the database with the selected CSV.')"
+        />
+      </form>
+    </div>
+
+</div>
 
 <div class="tab-pane active" id="preview-pagination-simple">
     <table class="table" id="myTable">

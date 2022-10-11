@@ -12,7 +12,7 @@ if (isset($_POST["action"])) {
     }
 }
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['upload'])) {
     // Configure upload directory , file type and file name
     $upload_dir = '../datafiles/';
     $file_tmpname = $_FILES['filename']["tmp_name"];
@@ -32,10 +32,9 @@ if(isset($_POST['submit'])) {
             if( move_uploaded_file($file_tmpname, $filepath)) {
                 // Do Check here if file has the right column names
                     require_once('importDataset.php');
-                    if(checkCSVFormat($filepath, 0))
+                    if(checkCSVheaders($filepath, 0))
                         echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
-                    // else
-                        // echo "<script type='text/javascript'> window.location='../admin.php';</script>";
+
             }
             else {
                 echo "<script type='text/javascript'>" . "alert( 'Error uploading {$file_name}. Please try other file' );" . " window.location='../admin.php';</script>";
