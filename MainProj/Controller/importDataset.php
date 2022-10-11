@@ -187,7 +187,7 @@ function importCourses($filepath, $req_headers, $reset)
         }
 
         else {
-            echo "Adding " ."$row[$courseName_id]";
+            echo "Adding " ."$row[$courseName_id]" . ", " .$row[$courseCode_id].  " from " ."$row[$school_id]";
             $course_name = $row[$courseName_id];
             $course_code = $row[$courseCode_id];
             $school = $row[$school_id];
