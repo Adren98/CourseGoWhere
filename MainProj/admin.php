@@ -63,7 +63,7 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 
 <!-- csv file upload to server -->
 <div >
-    <form action="Controller/adminfunction.php" method="post" enctype="multipart/form-data">
+    <form action="Controller/importDataset.php" method="post" enctype="multipart/form-data">
         <label>Upload course CSV data file here</label>
         <input size='50' type='file' name='filename' required >
         <input type='submit' name='upload' value='Upload CSV'  >
@@ -74,9 +74,9 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 <!-- Select csv file from server to repopulate database -->
 <div id="wrapper">
     <div id="file_div" float: right>
-        <form action="/Controller/importDataset.php" method="post" >
+        <form action="Controller/importDataset.php" method="post" >
         <label for="file">Choose a file to repopulate database</label>
-        <select id="csvfile" name="repopulate">
+        <select id="csvfile" name = 'file' required>
             <?php
             require_once "Controller/importDataset.php";
             $files = showDatafiles();
@@ -86,9 +86,13 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
             }
              ?>
         </select>
-        <input type="submit" value="Repopulate"
-             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the course catalogue data stored in database will be erased. Click OK to confirm to repopulate the database with the selected CSV.')"
+        <input type="submit" name ="repopulate" value="Repopulate database"
+             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the courses catalogue data stored in database will be erased. Click OK to proceed with repopulating the database with the selected CSV.')"
         />
+        <input type="submit" name="remove" value="Remove CSV"
+             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, this will remove selected CSV file from server. Click OK to proceed. ')"
+        />
+
       </form>
     </div>
 

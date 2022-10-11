@@ -2,34 +2,82 @@
 
 require_once("config.php");
 
+if(isset($_POST['upload'])) {
+    if(isset($_FILES)){
+    // Configure upload directory , file type and file name
+        $upload_dir = '../datafiles/';
+        $file_tmpname = $_FILES['filename']["tmp_name"];
+        $file_name = $_FILES['filename']['name'];
+        $file_type = $_FILES['filename']['type'];
 
-if(isset($_POST['repopulate'])) {
+        // Set upload file path
+        $filepath = $upload_dir.$file_name;
 
-    $file_name = ($_POST['repopulate']);
-    $upload_dir = '../datafiles/';
-
-    $filepath = $upload_dir.$file_name;
-
-    $req_headers = array();
-    if(!is_null($req_headers = checkCSVheaders($filepath, 1)) ){
-
-        // importCourses($filepath, $headers, boolean to reset database entries)
-        // importCourses($filepath, $req_headers, true);
-
-        $count = importCourses($filepath, $req_headers, true);
-
-        // var_dump($req_headers);
-    }
-
-    if($count > 0 ){
-        echo "<script type='text/javascript'>" . "alert( 'Database repopulated Successfully with {$count} number of courses' );". "window.location='../admin.php';</script>";
-    }
-    else {
-        echo "<script type='text/javascript'>" . "alert( 'Database repopulated unsuccessfully with {$count} number of courses' );". "window.location='../admin.php';</script>";
-
+        // Check file type is csv
+        if (preg_match('/\bcsv\b/', $file_type)) {
+            if(file_exists($filepath)) {
+                    echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}, file exist on server');" . " window.location='../admin.php';</script>";
+            }
+            else {
+                if( move_uploaded_file($file_tmpname, $filepath)) {
+                    // Do Check here if file has the right column names
+                        require_once('importDataset.php');
+                        if(checkCSVheaders($filepath, 0))
+                            echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
+                }
+                else {
+                    echo "<script type='text/javascript'>" . "alert( 'Error uploading {$file_name}. Please try other file' );" . " window.location='../admin.php';</script>";
+                }
+            }
+        }
+        else {
+            // If file extension not valid
+            echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}. Only CSV file type is allowed');" . " window.location='../admin.php';</script>";
+        }
     }
 
 }
+
+if(isset($_POST['repopulate'])) {
+    if(isset($_POST['file'])){
+        $file_name = ($_POST['file']);
+        $upload_dir = '../datafiles/';
+
+        $filepath = $upload_dir.$file_name;
+
+        $count = 0;
+        $req_headers = array();
+        if(!is_null($req_headers = checkCSVheaders($filepath, 1)) ){
+            // importCourses($filepath, $headers, boolean to reset database entries)
+            // importCourses($filepath, $req_headers, false);
+            $count = importCourses($filepath, $req_headers, false);
+        }
+
+        if($count > 0 ){
+            echo "<script type='text/javascript'>" . "alert( 'Database repopulated Successfully with {$count} number of courses added' );". "window.location='../admin.php';</script>";
+        }
+        else {
+            echo "<script type='text/javascript'>" . "alert( 'Database repopulated unsuccessfully with {$count} number of courses added' );". "window.location='../admin.php';</script>";
+        }
+    }
+}
+
+
+if(isset($_POST['remove'])) {
+    if(isset($_POST['file'])){
+        $file_name = ($_POST['file']);
+        $upload_dir = '../datafiles/';
+
+        $filepath = $upload_dir.$file_name;
+
+        if( unlink($filepath)){
+            echo "<script type='text/javascript'>" . "alert( '{$file_name} is removed successfully.' );". "window.location='../admin.php';</script>";
+        }
+        else echo "<script type='text/javascript'>" . "alert( 'Error removing {$fie_name}.' );". "window.location='../admin.php';</script>";
+    }
+
+}
+
 
 
 // A simple function to show files in ../datafiles/
@@ -150,16 +198,16 @@ function importCourses($filepath, $req_headers, $reset)
         echo "Removing all entries from CoursesCatalogue";
         $result = mysqli_prepare($connection, "DELETE FROM CoursesCatalogue" );
         if($result->execute()){
-            echo " - Success <br>";
+            echo " - Success ! <br>";
         }
-        else echo " - Failed <br>";
+        else echo " - Failed ! <br>";
 
         echo "Resetting Auto increment indexing";
         $result = mysqli_prepare($connection, "ALTER TABLE CoursesCatalogue AUTO_INCREMENT = 1");
         if($result->execute()){
-            echo " - Success <br>";
+            echo " - Success ! <br>";
         }
-        else echo " - Failed <br>";
+        else echo " - Failed ! <br>";
     }
 
     // //Extract index of column headers
