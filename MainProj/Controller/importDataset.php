@@ -3,37 +3,72 @@
 require_once("config.php");
 
 // Check if form was submitted
-if(isset($_POST['submit'])) {
-    echo "uploading";
-    // Configure upload directory and allowed file types
-    $upload_dir = '../datafiles/';
-    $file_tmpname = $_FILES['filename']["tmp_name"];
-    $file_name = $_FILES['filename']['name'];
-    // $file_ext = strtolower(end(explode('.', $_FILES['filename']['name'])));
-    $file_type = $_FILES['filename']['type'];
-    // var_dump($_FILES);
-    // Set upload file path
-    $filepath = $upload_dir.$file_name;
+function showDatafiles(){
+    $path = ("../datafiles/");
 
-    // Check file type is allowed or not
-    if (preg_match('/\bcsv\b/', $file_type)) {
+}
 
-        if(file_exists($filepath)) {
-                echo "Error uploading {$file_name}, file exist <br />";
+
+//Course Name,Course code,School,Admission type,Cut off Point,Course duration,
+//Field of study,Certification offered,Website//
+
+function checkCSVFormat($filepath, $returnCol){
+
+    if (($handle = fopen($filepath, "r")) !== FALSE)
+    {
+        // Using associative array in PHP
+        // read header row and check if all requirement exist and grab col id
+        // for mapping to SQL statement
+        $req_headers = array("Course Name" => NULL, "Course Code" => NULL, "School" =>NULL,
+        "Cut off Point" => NULL , "Course duration" => NULL , "Field of study" => NULL , "Certification offered" => NULL , "Website" => NULL);
+
+        $data = fgetcsv($handle, 1000, ",");
+
+        $num = count($data);
+        for ($c=0; $c < $num; $c++)
+        {
+            if (preg_match("/\bCourse Name\b/i", $data[$c])) $req_headers['Course Name'] = $c;
+            if (preg_match("/\bCourse code\b/i", $data[$c])) $req_headers['Course Code'] = $c;
+            if (preg_match("/\bSchool\b/i", $data[$c])) $req_headers['School'] = $c;
+            if (preg_match("/\bCut off Point\b/i", $data[$c]))$req_headers['Cut off Point'] = $c;
+            if (preg_match("/\bCourse duration\b/i", $data[$c]))$req_headers['Course duration'] = $c;
+            if (preg_match("/\bField of study\b/i", $data[$c]))$req_headers['Field of study'] = $c;
+            if (preg_match("/\bCertification offered\b/i", $data[$c]))$req_headers['Certification offered'] = $c;
+            if (preg_match("/\bWebsite\b/i", $data[$c]))$req_headers['Website'] = $c;
         }
-        else {
-            if( move_uploaded_file($file_tmpname, $filepath)) {
-                echo "{$file_name} successfully uploaded <br />";
-            }
-            else {
-                echo "Error uploading {$file_name} <br />";
+
+        fclose($handle);
+
+        $message = NULL ;
+        foreach ($req_headers as $header => $head_val){
+            if(is_null($head_val) == 1){
+                // echo $header . "value = " .$head_val;
+                $message .= $header . "\\n";
             }
         }
     }
-    else {
-        // If file extension not valid
-        echo "Error uploading {$file_name} ";
-        echo "({$file_type} file type is not allowed)<br / >";
+    if (!$returnCol){
+        if (is_null($message))
+            return 1;
+
+        else{
+            unlink($filepath);
+            // echo $message;
+            echo "<script type='text/javascript'>" . "alert( 'File not uploaded. \\n{$message} not found in CSV as column headers. Please ensure CSV file have these column headers' );". "window.location='../admin.php';</script>";
+            return 0;
+        }
+    }
+    else
+    {
+        if (is_null($message))
+            return $message;
+
+        else{
+            unlink($filepath);
+            // echo $message;
+            echo "<script type='text/javascript'>" . "alert( '{$message} not found in CSV as headers. File may be corrupted. Automatically removing...' );". "window.location='../admin.php';</script>";
+            return 0;
+        }
     }
 }
 
@@ -47,7 +82,7 @@ function importCourses()
     }
 
     // Import Polytechnic courses csv
-    if (($open = fopen("..\datafiles\Polytechnic_Courses.csv", "r")) !== FALSE)
+    if (($open = fopen("../datafiles/Polytechnic_Courses.csv", "r")) !== FALSE)
     {
         while (($data = fgetcsv($open, 1000, ",")) !== FALSE)
         {

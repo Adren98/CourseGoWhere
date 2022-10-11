@@ -8,7 +8,6 @@ if (isset($_POST["action"])) {
         var_dump($_POST['course_name']);
         edit();
     } else {
-
         delete();
     }
 }
@@ -31,8 +30,12 @@ if(isset($_POST['submit'])) {
         }
         else {
             if( move_uploaded_file($file_tmpname, $filepath)) {
-                echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
-
+                // Do Check here if file has the right column names
+                    require_once('importDataset.php');
+                    if(checkCSVFormat($filepath, 0))
+                        echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
+                    // else
+                        // echo "<script type='text/javascript'> window.location='../admin.php';</script>";
             }
             else {
                 echo "<script type='text/javascript'>" . "alert( 'Error uploading {$file_name}. Please try other file' );" . " window.location='../admin.php';</script>";
@@ -196,7 +199,6 @@ function getAdminAllCourse()
         die(mysqli_connect_error());
 
     }
-
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
         $result = printAdminHtmlRow($output, $connection);
     }

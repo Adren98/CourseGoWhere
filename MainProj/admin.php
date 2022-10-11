@@ -61,25 +61,14 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 </div>
 
 <div >
-
-
-<form action="Controller/adminfunction.php" method="post" enctype="multipart/form-data">
-
-        <label> Or Upload Product CSV file Here</label>
+    <!-- csv file upload to server -->
+    <form action="Controller/adminfunction.php" method="post" enctype="multipart/form-data">
+        <label> Or Upload courses CSV file Here</label>
         <input size='50' type='file' name='filename' required >
-        <input type='submit' name='submit' value='Upload CSV' href="Controller/importDataset.php" >
-
+        <input type='submit' name='submit' value='Upload CSV'  >
     </form>
+
 </div>
-
-
-<!--
-<form action="Controller/importDataset.php" method="post" enctype="multipart/form-data">
-        <label> Or Upload Product CSV file Here</label>
-        <input size='50' type='file' name='filename' required>
-        <input type='submit' name='submit' value='Upload CSV' href="Controller/importDataset.php" >
-    </form>
-</div> -->
 
 
 <div class="tab-pane active" id="preview-pagination-simple">
