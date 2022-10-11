@@ -16,23 +16,32 @@ if(isset($_POST['upload'])) {
         // Check file type is csv
         if (preg_match('/\bcsv\b/', $file_type)) {
             if(file_exists($filepath)) {
-                    echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}, file exist on server');" . " window.location='../admin.php';</script>";
+                    echo "<script type='text/javascript'>"."alert('Error uploading {$file_name}, file exist on server');". "window.location='../admin.php';</script>";
             }
             else {
                 if( move_uploaded_file($file_tmpname, $filepath)) {
                     // Do Check here if file has the right column names
-                        require_once('importDataset.php');
-                        if(checkCSVheaders($filepath, 0))
-                            echo "<script type='text/javascript'>" . "alert( '{$file_name} successfully uploaded' );" . " window.location='../admin.php';</script>";
+                    $result = checkCSVheaders($filepath);
+                    $message = $result[1];
+
+                    // check message from result
+                    if($message === NULL )
+                        echo "<script type='text/javascript'>"."alert( '{$file_name} successfully uploaded' );". "window.location='../admin.php';</script>";
+                    else
+                    {
+                        unlink($filepath);
+                        echo "<script type='text/javascript'>"."alert( 'File not uploaded. \\n{$message} not found in CSV as column headers. Please ensure CSV file have these column headers' );"."window.location='../admin.php';</script>";
+                    }
                 }
+                // if error moving file to directory
                 else {
-                    echo "<script type='text/javascript'>" . "alert( 'Error uploading {$file_name}. Please try other file' );" . " window.location='../admin.php';</script>";
+                    echo "<script type='text/javascript'>"."alert( 'Error uploading {$file_name} to {$upload_dir}. Please try other file' );". "window.location='../admin.php';</script>";
                 }
             }
         }
         else {
             // If file extension not valid
-            echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}. Only CSV file type is allowed');" . " window.location='../admin.php';</script>";
+            echo "<script type='text/javascript'>" . "alert('Error uploading {$file_name}. Only CSV file type is allowed');". "window.location='../admin.php';</script>";
         }
     }
 
@@ -46,18 +55,27 @@ if(isset($_POST['repopulate'])) {
         $filepath = $upload_dir.$file_name;
 
         $count = 0;
-        $req_headers = array();
-        if(!is_null($req_headers = checkCSVheaders($filepath, 1)) ){
-            // importCourses($filepath, $headers, boolean to reset database entries)
-            // importCourses($filepath, $req_headers, false);
-            $count = importCourses($filepath, $req_headers, false);
+        $result =  checkCSVheaders($filepath);
+        $req_headers = $result[0];
+        $message = $result[1];
+
+        //Check error message from result
+        if($message)
+        {
+            unlink($filepath);
+            echo "<script type='text/javascript'>". "alert('$result[1]  not found in CSV as headers. File may be corrupted. Automatically removing CSV from server...' );"."window.location='../admin.php';</script>";
+        }
+
+        else if ($req_headers && !$message)
+        {
+             $count = importCourses($filepath, $req_headers , true);
         }
 
         if($count > 0 ){
-            echo "<script type='text/javascript'>" . "alert( 'Database repopulated Successfully with {$count} number of courses added' );". "window.location='../admin.php';</script>";
+            echo "<script type='text/javascript'>"."alert( 'Database repopulated Successfully with {$count} number of courses added' );". "window.location='../admin.php';</script>";
         }
         else {
-            echo "<script type='text/javascript'>" . "alert( 'Database repopulated unsuccessfully with {$count} number of courses added' );". "window.location='../admin.php';</script>";
+            echo "<script type='text/javascript'>"."alert( 'Database repopulated unsuccessfully with {$count} number of courses added' );"."window.location='../admin.php';</script>";
         }
     }
 }
@@ -103,8 +121,7 @@ function showDatafiles(){
 //Course Name,Course code,School,Admission type,Cut off Point,Course duration,
 //Field of study,Certification offered,Website//
 
-// If return_headers is true, index of the matching required column headers for the csv file will be return as associative array
-function checkCSVheaders($filepath, $return_headers){
+function checkCSVheaders($filepath){
 
     $message = NULL ;
     if (($handle = fopen($filepath, "r")) !== FALSE)
@@ -137,40 +154,12 @@ function checkCSVheaders($filepath, $return_headers){
         foreach ($req_headers as $header => $head_val){
             if(is_null($head_val) == 1){
                 // echo $header . "value = " .$head_val;
-                $message .= $header . "\\n";
+                $message .= $header.'\\n';
             }
         }
     }
-
-
-    if (!$return_headers){
-        // No missing headers
-        if (is_null($message))
-            return 1;
-
-        else{
-            unlink($filepath);
-            // echo $message;
-            echo "<script type='text/javascript'>" . "alert( 'File not uploaded. \\n{$message} not found in CSV as column headers. Please ensure CSV file have these column headers' );". "window.location='../admin.php';</script>";
-            return NULL;
-        }
-    }
-
-    // For reading any CSV admin selected from server and returning the index with the expected column headers
-    else
-    {
-        // No missing headers
-        if (is_null($message)){
-            // var_dump ($req_headers);
-            return $req_headers;
-    }
-        else{
-            unlink($filepath);
-            // echo $message;
-            echo "<script type='text/javascript'>" . "alert( '{$message} not found in CSV as headers. File may be corrupted. Automatically removing CSV from server...' );". "window.location='../admin.php';</script>";
-            return NULL;
-        }
-    }
+    // if message is !null, there are errors in CSV file headers
+    return  array($req_headers, $message);
 }
 
 function importCourses($filepath, $req_headers, $reset)

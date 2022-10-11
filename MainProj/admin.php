@@ -75,7 +75,7 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 <div id="wrapper">
     <div id="file_div" float: right>
         <form action="Controller/importDataset.php" method="post" >
-        <label for="file">Choose a file to repopulate database</label>
+        <label for="file">Select a csv file to repopulate database</label>
         <select id="csvfile" name = 'file' required>
             <?php
             require_once "Controller/importDataset.php";
@@ -87,10 +87,10 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
              ?>
         </select>
         <input type="submit" name ="repopulate" value="Repopulate database"
-             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the courses catalogue data stored in database will be erased. Click OK to proceed with repopulating the database with the selected CSV.')"
+             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the courses catalogue data stored in database will be erased. \nClick OK to proceed with repopulating the database with the selected CSV.')"
         />
         <input type="submit" name="remove" value="Remove CSV"
-             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, this will remove selected CSV file from server. Click OK to proceed. ')"
+             onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, this will remove the selected CSV file from server. \nClick OK to proceed. ')"
         />
 
       </form>
