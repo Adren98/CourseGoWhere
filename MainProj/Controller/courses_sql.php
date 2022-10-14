@@ -78,7 +78,7 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 //        echo '<td>' . $row['course_url'] . '</td>';
 //
 //        echo '<td>' . $row['school'] . '</td>';
-
+        echo '<td colspan="6"><button type="button" class="btn btn-primary" >Add to planner</button></td>';
 
         echo '</tr>';
     }
@@ -133,6 +133,8 @@ function getAllCourse()
     }
     if ($output = mysqli_prepare($connection, "SELECT * FROM CoursesCatalogue")) {
         printHtmlRow($output, $connection);
+
+
     }
 
 }
