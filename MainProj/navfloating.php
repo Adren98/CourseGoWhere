@@ -545,25 +545,8 @@
                 <div class="planner_popup" id="planner">
                     <h2>Planner</h2>
                     <p>Arrange your courses from most(top) to least(bottom) interested</p>
-                    <div class="DDcontainer">
-                        <div class="item">
-                            <span class="course_name"> Name 1</span>
-                            <span class="remarks"> Add Remarks</span>
-                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 2</span>
-                            <span class="remarks"> Add Remarks</span>
-                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="item">
-                            <span class="course_name"> Name 3</span>
-                            <span class="remarks"> Add Remarks</span>
-                            <i class="fas fa-minus" title="Remove course from planner" type="button"></i>
-                            <i class="fas fa-bars"></i>
-                        </div>
+                    <div class="DDcontainer" id="course_list">
+                            <!-- fill list of courses using script -->
                     </div>
                     <button type="button" class="<?php echo $savebutton; ?>" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>
                 </div>
@@ -574,9 +557,27 @@
     </div>
 </div>
 
+
 <!-- Planner popup & draggable -->
 <script>
+    var list = document.getElementById("course_list");
 
+    var added_courses = [["name 1", "13", "SP", "remarks"], ["name 3", "12", "RP", "remarks"]];
+    added_courses.push(["name 2", "10", "NYP", "remarks"]);
+    
+    //sort planner
+    added_courses = sortKeys(added_courses);
+    for (var i=0; i<added_courses.length; i++) {
+        list.innerHTML += ('<div class="item"><span class="course_name">' + added_courses[i][0] + 
+        '</span><span class="COP">' + added_courses[i][1] + 
+        '</span><span class="school">' + added_courses[i][2] + 
+        '</span><span class="remarks">' + added_courses[i][3] + 
+        '</span><i class="fas fa-minus" title="Remove course from planner" type="button"></i><i class="fas fa-bars"></i></div>');
+    }
+    //
+
+
+    //planner UI
     let popup = document.getElementById("planner");
     function openPlannerPopup() {
         if(popup.classList.contains("open-planner_popup")){popup.classList.remove("open-planner_popup");}
@@ -598,6 +599,29 @@
 
     const dragArea = document.querySelector(".DDcontainer");
     new Sortable(dragArea, {animation: 350});
+    //
+
+
+    //functions
+    function sortKeys(dict) {
+        var sorted = [];
+        for (var i=0; i<dict.length; i++) {
+        sorted[sorted.length] = dict[i][0];
+        }
+        sorted.sort();
+
+        var temparray = [];
+        for(var i = 0; i < sorted.length; i++) {
+            for(var j = 0; j < sorted.length; j++) {
+                if(sorted[i] == dict[j][0]){
+                    temparray[i] = dict[j];
+                }
+            }
+        }
+
+        return temparray;
+    }
+    //
 
 </script>
 <!--     
