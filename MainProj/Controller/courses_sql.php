@@ -78,9 +78,20 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 //        echo '<td>' . $row['course_url'] . '</td>';
 //
 //        echo '<td>' . $row['school'] . '</td>';
-        echo '<td colspan="6"><button type="button" class="btn btn-primary" >Add to planner</button></td>';
+
+        //create form
+        echo '<td colspan="6">';
+        echo '<form action="Controller/addtoplanner.php" method="post">';
+        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
+
+        echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
+        echo '</form>';
+        echo '</td>';
 
         echo '</tr>';
+
+
+
     }
     $output->close();
     $connection->close();

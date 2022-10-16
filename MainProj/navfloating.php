@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="./assets/css/planner.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
         integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
@@ -561,17 +563,28 @@
 <!-- Planner popup & draggable -->
 <script>
     var list = document.getElementById("course_list");
+    var added_courses=[];
+    <?php
+        if(isset($_SESSION['planner'])) {
+            $planner = $_SESSION['planner'];
+            foreach ($planner as $course) {
+                echo " added_courses.push(['$course[1]','$course[2]','$course[3]','$course[4]']);";
 
-    var added_courses = [["name 1", "13", "SP", "remarks"], ["name 3", "12", "RP", "remarks"]];
-    added_courses.push(["name 2", "10", "NYP", "remarks"]);
+            }
+
+        }
+
+    ?>
+    // var added_courses = [["name 1", "13", "SP", "remarks"], ["name 3", "12", "RP", "remarks"]];
+    // added_courses.push(["name 2", "10", "NYP", "remarks"]);
     
     //sort planner
     added_courses = sortKeys(added_courses);
     for (var i=0; i<added_courses.length; i++) {
-        list.innerHTML += ('<div class="item"><span class="course_name">' + added_courses[i][0] + 
-        '</span><span class="COP">' + added_courses[i][1] + 
-        '</span><span class="school">' + added_courses[i][2] + 
-        '</span><span class="remarks">' + added_courses[i][3] + 
+        list.innerHTML += ('<div class="item"><span class="course_name col-3">' + added_courses[i][0] +
+        '</span><span class="COP col-3">' + added_courses[i][1] +
+        '</span><span class="school col-3">' + added_courses[i][2] +
+        '</span><span class="remarks col-3" >' + added_courses[i][3] +
         '</span><i class="fas fa-minus" title="Remove course from planner" type="button"></i><i class="fas fa-bars"></i></div>');
     }
     //
@@ -600,6 +613,10 @@
     const dragArea = document.querySelector(".DDcontainer");
     new Sortable(dragArea, {animation: 350});
     //
+
+
+
+
 
 
     //functions
