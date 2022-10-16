@@ -563,12 +563,14 @@
 <!-- Planner popup & draggable -->
 <script>
     var list = document.getElementById("course_list");
+    var divContents = document.getElementsByClassName("item");
     var added_courses=[];
+    
     <?php
         if(isset($_SESSION['planner'])) {
             $planner = $_SESSION['planner'];
             foreach ($planner as $course) {
-                echo " added_courses.push(['$course[1]','$course[2]','$course[3]','$course[4]']);";
+                echo " added_courses.push(['$course[0]','$course[1]','$course[2]','$course[3]','$course[4]']);";
 
             }
 
@@ -579,12 +581,13 @@
     // added_courses.push(["name 2", "10", "NYP", "remarks"]);
     
     //sort planner
-    added_courses = sortKeys(added_courses);
+    //added_courses = sortKeys(added_courses);
     for (var i=0; i<added_courses.length; i++) {
-        list.innerHTML += ('<div class="item"><span class="course_name col-3">' + added_courses[i][0] +
-        '</span><span class="COP col-3">' + added_courses[i][1] +
-        '</span><span class="school col-3">' + added_courses[i][2] +
-        '</span><span class="remarks col-3" >' + added_courses[i][3] +
+        list.innerHTML += ('<div class="item">' +
+        '<span class="course_name col-3">' + added_courses[i][1] +
+        '</span><span class="COP col-3">' + added_courses[i][2] +
+        '</span><span class="school col-3">' + added_courses[i][3] +
+        '</span><span class="remarks col-3">' + added_courses[i][4] +
         '</span><i class="fas fa-minus" title="Remove course from planner" type="button"></i><i class="fas fa-bars"></i></div>');
     }
     //
@@ -607,6 +610,14 @@
         const clickedOnClosedPopup = !plannerbutton && !withinplanner && plannerpu;
         if (clickedOnClosedPopup) {
             popup.classList.remove("open-planner_popup");
+
+            //get current course order when closing planner
+            console.log(divContents.length);
+            for(var i = 0; i < divContents.length; i++) {
+            var names = '';
+            names += divContents[i].innerHTML;
+            console.log(names);
+            }
         }
     });
 
