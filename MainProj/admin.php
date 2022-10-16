@@ -73,7 +73,7 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
 
 <!-- Select csv file from server to repopulate database -->
 <div id="wrapper">
-    <div id="file_div" float: right>
+    <div id="file_div" style="float: right" >
         <form action="Controller/importDataset.php" method="post" >
         <label for="file">Select a csv file to repopulate database</label>
         <select id="csvfile" name = 'file' required>
