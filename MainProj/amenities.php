@@ -23,7 +23,7 @@ session_start();
 <html lang="en">
 
 <head>
-
+    <link rel="shortcut icon" type="image/x-icon" href="Picture/logo.png" />
     <title>
         CourseGoWhere
     </title>
