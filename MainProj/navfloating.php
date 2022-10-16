@@ -616,7 +616,7 @@
             popup.classList.remove("open-planner_popup");
             saveInSession();
         }
-        if(!plannerpu){
+        if(plannerbutton && !plannerpu){
             saveInSession();
         }
 
