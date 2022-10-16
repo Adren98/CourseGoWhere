@@ -563,7 +563,10 @@
 <!-- Planner popup & draggable -->
 <script>
     var list = document.getElementById("course_list");
-    var divContents = document.getElementsByClassName("item");
+    var course_name = document.getElementsByClassName("course_name");
+    var COP = document.getElementsByClassName("COP");
+    var school = document.getElementsByClassName("school");
+    var remarks = document.getElementsByClassName("remarks");
     var added_courses=[];
     
     <?php
@@ -583,12 +586,12 @@
     //sort planner
     //added_courses = sortKeys(added_courses);
     for (var i=0; i<added_courses.length; i++) {
-        list.innerHTML += ('<div class="item">' +
+        list.innerHTML += ('<div class="item" id=' + added_courses[i][0] + '>' +
         '<span class="course_name col-3">' + added_courses[i][1] +
         '</span><span class="COP col-3">' + added_courses[i][2] +
         '</span><span class="school col-3">' + added_courses[i][3] +
         '</span><span class="remarks col-3">' + added_courses[i][4] +
-        '</span><i class="fas fa-minus" title="Remove course from planner" type="button"></i><i class="fas fa-bars"></i></div>');
+        '</span><i class="fas fa-minus" title="Remove course from planner" type="button" onclick="removeCourseFromPlanner(' + added_courses[i][0] + ')"></i><i class="fas fa-bars"></i></div>');
     }
     //
 
@@ -601,6 +604,7 @@
     }
     function closePlannerPopup() {
         popup.classList.remove("open-planner_popup");
+        savePlannerInDB();
     }
 
     window.addEventListener('click', ({target}) => {
@@ -610,15 +614,12 @@
         const clickedOnClosedPopup = !plannerbutton && !withinplanner && plannerpu;
         if (clickedOnClosedPopup) {
             popup.classList.remove("open-planner_popup");
-
-            //get current course order when closing planner
-            console.log(divContents.length);
-            for(var i = 0; i < divContents.length; i++) {
-            var names = '';
-            names += divContents[i].innerHTML;
-            console.log(names);
-            }
+            saveInSession();
         }
+        if(!plannerpu){
+            saveInSession();
+        }
+
     });
 
     const dragArea = document.querySelector(".DDcontainer");
@@ -631,7 +632,7 @@
 
 
     //functions
-    function sortKeys(dict) {
+    function sortByAlphabeticalOrder(dict) {
         var sorted = [];
         for (var i=0; i<dict.length; i++) {
         sorted[sorted.length] = dict[i][0];
@@ -648,6 +649,40 @@
         }
 
         return temparray;
+    }
+
+
+    function saveInSession(){
+        //get current course order when closing planner
+        var order = [];
+        console.log(course_name.length);
+
+        for(var i = 0; i < course_name.length; i++) {
+        order.push([course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        }
+
+        console.log(order);
+        //need to save order into session
+    }
+
+
+    function savePlannerInDB(){
+        //get current course order when closing planner
+        var order = [];
+        console.log(course_name.length);
+
+        for(var i = 0; i < course_name.length; i++) {
+        order.push([course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        }
+
+        console.log(order);
+        //need to save order into DB
+    }
+
+
+    function removeCourseFromPlanner(id){
+        var removeCourse = document.getElementById(id);
+        removeCourse.remove();
     }
     //
 
