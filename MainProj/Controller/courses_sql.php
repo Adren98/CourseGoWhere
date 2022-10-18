@@ -66,10 +66,16 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 
         $index++;
         echo '<tr>';
+        $url_pattern = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
 
 
         foreach ($colnames as $colname) {
+            if($colname === "course_url"){
+                $row[$colname] = preg_replace($url_pattern, '<a href="$0">$0</a>', $row[$colname]);
+            }
+
             echo '<td>' . $row[$colname] . '</td>';
+
         }
 //        echo '<td>' . $row['course_name'] . '</td>';
 //        echo '<td>' . $row['year'] . '</td>';

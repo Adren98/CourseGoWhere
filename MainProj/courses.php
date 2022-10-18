@@ -307,7 +307,7 @@ include 'navfloating.php';
                         <table class="table" id="myTable">
                             <thead>
                             <tr>
-                                <?php
+                                 <?php
                                 require_once "Controller/courses.php";
 
 
@@ -315,6 +315,7 @@ include 'navfloating.php';
                                     $courses = getcolNames();
 
                                     foreach ($courses as $course) {
+                                        $course = str_replace("_", ' ', $course);
                                         echo '<th scope="col">' . $course . '</th>';
                                     }
 
