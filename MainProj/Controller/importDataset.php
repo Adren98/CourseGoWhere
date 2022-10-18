@@ -2,10 +2,11 @@
 
 require_once("config.php");
 
+$upload_dir = '../datafiles/';
+
 if(isset($_POST['upload'])) {
     if(isset($_FILES)){
     // Configure upload directory , file type and file name
-        $upload_dir = '../datafiles/';
         $file_tmpname = $_FILES['filename']["tmp_name"];
         $file_name = $_FILES['filename']['name'];
         $file_type = $_FILES['filename']['type'];
@@ -51,7 +52,6 @@ if(isset($_POST['upload'])) {
 if(isset($_POST['repopulate'])) {
     if(isset($_POST['file'])){
         $file_name = ($_POST['file']);
-        $upload_dir = '../datafiles/';
 
         $filepath = $upload_dir.$file_name;
 
@@ -85,7 +85,6 @@ if(isset($_POST['repopulate'])) {
 if(isset($_POST['remove'])) {
     if(isset($_POST['file'])){
         $file_name = ($_POST['file']);
-        $upload_dir = '../datafiles/';
 
         $filepath = $upload_dir.$file_name;
 
@@ -99,12 +98,10 @@ if(isset($_POST['remove'])) {
 
 
 
-// A simple function to show files in ../datafiles/
+// A simple function to show files in specified directory
 // Returns only names of file with type .csv
-function showDatafiles(){
-    // $path = ("../datafiles/");
-    $folder = "../MainProj/datafiles/";
-    if ($dir = opendir($folder))
+function showFolderCSVs($directory){
+    if ($dir = opendir($directory))
     {
         $files = array();
         $i = 0;
@@ -233,7 +230,10 @@ function importCourses($filepath, $req_headers, $reset)
             $course_cluster = $row[$fieldofStudy_id];
             $course_url = $row[$website_id];
 
-            if($course_name == ""|| $course_code == "" || $school == "" ||  $course_cluster == "") {continue;}
+            if($course_name == ""|| $course_code == "" || $school == "" ||  $course_cluster == "") {
+                echo " - Failed. Data is with missing fields";
+                continue;
+            }
 
             if(!preg_match("/\bedu\b/i", $row[$website_id])){
                 $course_url = "Link not available";

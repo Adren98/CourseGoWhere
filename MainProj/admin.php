@@ -68,33 +68,35 @@ if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
         <input size='50' type='file' name='filename' required >
         <input type='submit' name='upload' value='Upload CSV'  >
     </form>
-
-</div>
-
-<!-- Select csv file from server to repopulate database -->
-<div id="wrapper">
     <div id="file_div" style="float: right" >
         <form action="Controller/importDataset.php" method="post" >
         <label for="file">Select a csv file to repopulate database</label>
-        <select id="csvfile" name = 'file' required>
+        <select id="csvfile" name = 'file' ng-model="data.singleSelect" required>
+            <option value="">---Please select---</option> <!-- not selected / blank option -->
             <?php
             require_once "Controller/importDataset.php";
-            $files = showDatafiles();
+            $files = showFolderCSVs("../MainProj/datafiles/");
 
             foreach ( $files as $file) {
                 echo '<option value= "'.$file .'">' .$file .'</option>';
             }
-             ?>
+            ?>
         </select>
         <input type="submit" name ="repopulate" value="Repopulate database"
              onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, any changes made so far to the courses catalogue data stored in database will be erased. \nClick OK to proceed with repopulating the database with the selected CSV.')"
         />
+        <label>Or </label>
         <input type="submit" name="remove" value="Remove CSV"
              onclick="return confirm('  !! Proceed with caution !! \nThis action is irreversible, this will remove the selected CSV file from server. \nClick OK to proceed. ')"
         />
 
-      </form>
+        </form>
     </div>
+</div>
+
+<!-- Select csv file from server to repopulate database -->
+<div id="wrapper">
+
 
 </div>
 
