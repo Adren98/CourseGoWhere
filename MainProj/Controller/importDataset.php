@@ -49,6 +49,7 @@ if(isset($_POST['upload'])) {
 
 }
 
+
 if(isset($_POST['repopulate'])) {
     if(isset($_POST['file'])){
         $file_name = ($_POST['file']);
@@ -235,29 +236,42 @@ function importCourses($filepath, $req_headers, $reset)
                 continue;
             }
 
-            if(!preg_match("/\bedu\b/i", $row[$website_id])){
+            // check if Valid URL
+            if(!preg_match( '/^(http|https):\\/\\/[a-z0-9_]+([\\-\\.]{1}[a-z_0-9]+)*\\.[_a-z]{2,5}'.'((:[0-9]{1,5})?\\/.*)?$/i' ,$row[$website_id])){
                 $course_url = "Link not available";
             }
 
             preg_match_all('!\d+!', $row[$duration_id], $duration);
-            if(sizeof($duration[0]) == 1){
-                $duration = $duration[0][0];
+            if(is_array($duration)){
+                if(sizeof($duration[0]) == 1){
+                    $duration = $duration[0][0];
+                }
+                else{
+                    $duration = "Not determined";
+                }
             }
-            else if (sizeof($duration[0]) == 0){
-                $duration = -1;
+            else if (is_null($duration)) {
+                $duration = "Not determined";
             }
+
+            // For int Cut_off_point in coursescatagogue
             preg_match_all('!\d+!', $row[$cutOff_id], $cut_off_point);
-            if (sizeof($cut_off_point[0]) == 2 ){
-                $point = intval($cut_off_point[0][1]);
+            if (is_array($cut_off_point)){
+                if (sizeof($cut_off_point[0]) == 2 ){
+                    $cut_off_point = intval($cut_off_point[0][1]);
+                }
+                else
+                    $cut_off_point = -1;
             }
-            else if (sizeof($cut_off_point[0]) == 0){
-                $point = -1;
+            else {
+                $cut_off_point = -1;
             }
 
 
             // Inserting Course to DB
-            $query = "INSERT INTO CoursesCatalogue (course_name, course_code, year, course_cluster, cut_off_point, course_url,
-                      school) VALUES ('$course_name', '$course_code', '$duration' , '$course_cluster' , '$point' , '$course_url' , '$school' )";
+            $query = "INSERT INTO CoursesCatalogue (course_name, course_code, year, course_cluster, cut_off_point, course_url, school)
+                      VALUES ('$course_name', '$course_code', '$duration' , '$course_cluster' , '$cut_off_point' , '$course_url' , '$school' )";
+
             if($insert = mysqli_prepare($connection, $query ))
                         {
                             if($insert->execute()){
