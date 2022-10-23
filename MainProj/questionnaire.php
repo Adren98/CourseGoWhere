@@ -112,7 +112,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="engineering1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you enjoy physical Creation? </label>
+                           style="display: flex; justify-content:end;">Do you enjoy creating robots? </label>
 
                 </div>
 
@@ -165,7 +165,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="appscience1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Attain practical goals based on scientific
+                           style="display: flex; justify-content:end;">Create items based on scientific
                         knowledge </label>
 
                 </div>
@@ -183,8 +183,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="environment1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you aspire to create infrastructure/buildings
-                        in the future? </label>
+                           style="display: flex; justify-content:end;">Do you aspire to create infrastructure/buildings ? </label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="environment1" name="Built Environment1" value="1">
@@ -218,7 +217,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="humanities1" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you want to be a future social
+                           style="display: flex; justify-content:end;">Are you interested in being a social
                         worker? </label>
                 </div>
                 <div class="col-10">
@@ -272,7 +271,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="business2" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you want to be a future entrepreneur? </label>
+                           style="display: flex; justify-content:end;">Do you want to be a entrepreneur? </label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="business2" name="Business and Management2" value="1">
@@ -306,7 +305,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="it2" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Working with computers and technology? </label>
+                           style="display: flex; justify-content:end;">Are you interested in working with computers and technology? </label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="it2" name="Information and Digital Technologies2" value="1">
@@ -339,7 +338,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="environment2" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;"> Do you want to be a future architect?</label>
+                           style="display: flex; justify-content:end;"> Do you want to be an Architect?</label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="environment2" name="Built Environment2" value="1">
@@ -354,7 +353,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="humanities2" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you want to be a future teacher? </label>
+                           style="display: flex; justify-content:end;">Do you want to be a teacher? </label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="humanities2" name="Humanities2" value="1">
@@ -420,7 +419,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="business3" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you want to be a future business
+                           style="display: flex; justify-content:end;">Do you want to be a business
                         leader? </label>
                 </div>
                 <div class="col-10">
@@ -438,7 +437,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="health3" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;"> A Passion To Touch Lives?</label>
+                           style="display: flex; justify-content:end;"> Do you have a passion to help people?</label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="health3" name="Health Sciences3" value="1">
@@ -453,7 +452,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="engineering3" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;"> Do you want to be a future engineer? </label>
+                           style="display: flex; justify-content:end;"> Do you want to be an engineer? </label>
                 </div>
                 <div class="col-10">
                     <input class="col-2" type="radio" id="engineering3" name="Engineering3" value="1">
@@ -487,7 +486,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="environment3" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;">Do you want to be a future interior
+                           style="display: flex; justify-content:end;">Do you want to be an interior
                         designer?</label>
                 </div>
                 <div class="col-10">
@@ -503,7 +502,7 @@ include 'navfloating.php';
             <div class="row">
                 <div class="col-2">
                     <label for="adm3" class="col-form-label text-md-right"
-                           style="display: flex; justify-content:end;"> are you interested in arts / design /
+                           style="display: flex; justify-content:end;"> Are you interested in arts / design /
                         media? </label>
                 </div>
                 <div class="col-10">
