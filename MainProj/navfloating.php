@@ -4,6 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
         integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Navbar -->
 <div class="container position-sticky z-index-sticky top-0">
@@ -563,6 +564,7 @@
 <!-- Planner popup & draggable -->
 <script>
     var list = document.getElementById("course_list");
+    var courseid = document.getElementsByClassName("course_id");
     var course_name = document.getElementsByClassName("course_name");
     var COP = document.getElementsByClassName("COP");
     var school = document.getElementsByClassName("school");
@@ -584,10 +586,14 @@
     // added_courses.push(["name 2", "10", "NYP", "remarks"]);
     
     //sort planner
+
+
+
     //added_courses = sortKeys(added_courses);
     for (var i=0; i<added_courses.length; i++) {
         list.innerHTML += ('<div class="item" id=' + added_courses[i][0] + '>' +
-        '<span class="course_name col-3">' + added_courses[i][1] +
+        '<span class="course_id" hidden>' + added_courses[i][0] +
+        '</span><span class="course_name col-3">' + added_courses[i][1] +
         '</span><span class="COP col-3">' + added_courses[i][2] +
         '</span><span class="school col-3">' + added_courses[i][3] +
         '</span><span class="remarks col-3">' + added_courses[i][4] +
@@ -658,7 +664,7 @@
         console.log(course_name.length);
 
         for(var i = 0; i < course_name.length; i++) {
-        order.push([course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
         }
 
         console.log(order);
@@ -672,7 +678,7 @@
         console.log(course_name.length);
 
         for(var i = 0; i < course_name.length; i++) {
-        order.push([course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
         }
 
         console.log(order);
@@ -683,6 +689,10 @@
     function removeCourseFromPlanner(id){
         var removeCourse = document.getElementById(id);
         removeCourse.remove();
+        // console.log("before delete");
+
+
+        // console.log("Ran delete");
     }
     //
 
