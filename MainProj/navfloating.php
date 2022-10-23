@@ -617,8 +617,8 @@ $mainarr = array();
         '</span><span class="course_name col-3">' + added_courses[i][1] +
         '</span><span class="COP col-3">' + added_courses[i][2] +
         '</span><span class="school col-3">' + added_courses[i][3] +
-        '</span><span class="remarks col-3">' + added_courses[i][4] +
-        '</span><i class="fas fa-minus" title="Remove course from planner" type="button" onclick="removeCourseFromPlanner(' + added_courses[i][0] + ')"></i><i class="fas fa-bars"></i></div>');
+        '</span><textarea class="remarks col-3">' + added_courses[i][4] +
+        '</textarea><i class="fas fa-minus" title="Remove course from planner" type="button" onclick="removeCourseFromPlanner(' + added_courses[i][0] + ')"></i><i class="fas fa-bars"></i></div>');
     }
     //
 
@@ -685,7 +685,7 @@ $mainarr = array();
         console.log(course_name.length);
 
         for(var i = 0; i < course_name.length; i++) {
-        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].value,]);
         }
 
         $.ajax({
@@ -712,7 +712,7 @@ $mainarr = array();
         console.log(course_name.length);
 
         for(var i = 0; i < course_name.length; i++) {
-        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
+        order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].value,]);
         }
 
         console.log(order);
