@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $arr[] = $result[0]['course_name'];
     $arr[] = $result[0]['cut_off_point'];
     $arr[] = $result[0]['school'];
-    $arr[] = "No remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarksNo remarks";
+    $arr[] = "";
 
 
     $_SESSION['planner'][] = $arr;

@@ -551,7 +551,7 @@
                     <div class="DDcontainer" id="course_list">
                             <!-- fill list of courses using script -->
                     </div>
-                    <button type="button" class="<?php echo $savebutton; ?>" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>
+<!--                    <button type="button" class="--><!--" title="Save planner" onclick="closePlannerPopup()">Save Planner</button>-->
                 </div>
 
             </nav>
@@ -687,6 +687,19 @@ $mainarr = array();
         for(var i = 0; i < course_name.length; i++) {
         order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].innerHTML,]);
         }
+
+        $.ajax({
+            url: 'Controller/addtoplanner.php',
+            type: 'POST',
+            data: {delete: order},
+
+            success: function(data) {
+                console.log(data);
+            }
+        });
+
+
+
 
         console.log(order);
         //need to save order into session
