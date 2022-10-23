@@ -4,7 +4,7 @@ function test_input($data)
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-    $data=str_replace(array("\r\n", "\n", "\r"), '<br>', $data);
+    $data=str_replace(array("\r\n", "\n", "\r"), '&#13;&#10', $data);
     return $data;
 }
 

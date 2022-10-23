@@ -577,11 +577,14 @@
             $_SESSION['retrievedPlanner']=1;
             $email = $_SESSION['email'];
             $sql = "Select * from Planner LEFT OUTER JOIN CoursesCatalogue ON Planner.Course_ID = CoursesCatalogue.course_id where Email_ID = "."'"."$email"."'". " ORDER BY Priority";
-           require_once 'Controller/courses_sql.php';
-           $result = genGenericSQL($sql);
-$mainarr = array();
+            require_once 'Controller/courses_sql.php';
+            $result = genGenericSQL($sql);
+            $mainarr = array();
                     foreach ($result as $row) {
 //                        var_dump($row);
+                        //reaplce $Row[array] <br> with \n
+//                        $test = str_replace("<br>", "\n", $row['Remarks']);
+//                        var_dump($test);
                         $temparr = array($row['Course_ID'], $row['course_name'], $row['cut_off_point'], $row['school'], $row['Remarks']);
                         array_push($mainarr, $temparr);
 
