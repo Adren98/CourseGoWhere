@@ -1,4 +1,12 @@
 <?php
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    $data=str_replace(array("\r\n", "\n", "\r"), '<br>', $data);
+    return $data;
+}
 
 if (isset($_POST['submit'])) {
     session_start();
@@ -31,6 +39,8 @@ if (isset($_POST['submit'])) {
 
 
 } elseif (isset($_POST['delete'])) {
+
+
     session_start();
 //var_dump($_POST['delete']);
 //var_dump($_SESSION['planner']);
@@ -47,7 +57,7 @@ require_once 'courses_sql.php';
 
         $index=0;
         foreach ($_SESSION['planner'] as $course) {
-            $sql = "INSERT INTO Planner (Course_id,  Priority, Email_ID,Remarks) VALUES ('" . $course[0] ."', '" . "$index"."','".$_SESSION['email'] .   "', '" . $course[4] . "')";
+            $sql = "INSERT INTO Planner (Course_id,  Priority, Email_ID,Remarks) VALUES ('" . $course[0] ."', '" . "$index"."','".$_SESSION['email'] .   "', '" . test_input($course[4]) . "')";
             gendeleteGenericSQL($sql);
             $index++;
 
