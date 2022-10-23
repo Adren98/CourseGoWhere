@@ -34,7 +34,30 @@ if (isset($_POST['submit'])) {
     session_start();
 //var_dump($_POST['delete']);
 //var_dump($_SESSION['planner']);
+require_once 'courses_sql.php';
     $_SESSION['planner'] = $_POST['delete'];
+
+
+
+    //check if array is not empty
+    if(isset($_SESSION['email'])) {
+//        var_dump($_SESSION['email']);
+        $sql = "Delete FROM Planner WHERE Email_ID = " ."'" .$_SESSION['email']."'";
+        gendeleteGenericSQL($sql);
+
+        $index=0;
+        foreach ($_SESSION['planner'] as $course) {
+            $sql = "INSERT INTO Planner (Course_id,  Priority, Email_ID,Remarks) VALUES ('" . $course[0] ."', '" . "$index"."','".$_SESSION['email'] .   "', '" . $course[4] . "')";
+            gendeleteGenericSQL($sql);
+            $index++;
+
+        }
+
+
+
+    }
+
+
 
 } else {
 

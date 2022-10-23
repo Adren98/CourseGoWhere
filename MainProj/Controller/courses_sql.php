@@ -28,6 +28,29 @@ function genGenericSQL($sql)
     }
 
 }
+function gendeleteGenericSQL($sql)
+{
+    $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+
+    if (mysqli_connect_errno()) {
+
+        die(mysqli_connect_error());
+    }
+//var_dump("DEBUGGER:",$sql);
+
+    if ($output = mysqli_prepare($connection, strval($sql))) {
+        $output->execute();
+
+
+
+        $output->close();
+        mysqli_close($connection);
+
+    } else {
+        die(mysqli_error($connection));
+    }
+
+}
 
 
 function getFilteredCourses($sql, array $parameters)
