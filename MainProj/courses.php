@@ -307,7 +307,10 @@ include 'navfloating.php';
                          style=" overflow-x: auto;overflow-y: auto; height: 500px">
                         <table class="table" id="myTable">
                             <thead>
+
+                          
                             <tr>
+                                <th>zds</th>
                                  <?php
                                 require_once "Controller/courses.php";
 
