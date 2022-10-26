@@ -100,7 +100,7 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         $url_pattern = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
 
         //create form
-        echo '<td colspan="2">';
+        echo '<td >';
         echo '<form action="Controller/addtoplanner.php" method="post">';
         echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
         if (in_array($row['course_id'], $course_id_arr)) {

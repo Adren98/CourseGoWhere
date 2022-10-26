@@ -310,7 +310,7 @@ include 'navfloating.php';
 
 
                             <tr>
-                                <th>zds</th>
+                                <th></th>
                                  <?php
                                 require_once "Controller/courses.php";
 
