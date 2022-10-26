@@ -84,6 +84,9 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         foreach ($_SESSION['planner'] as $course_id) {
             $course_id_arr[] = $course_id[0];
         }
+        if($_SESSION['planner'] == null){
+            $course_id_arr[] = null;
+        }
     }
 
 
