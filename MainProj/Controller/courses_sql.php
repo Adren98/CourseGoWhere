@@ -99,6 +99,19 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<tr>';
         $url_pattern = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
 
+        //create form
+        echo '<td colspan="2">';
+        echo '<form action="Controller/addtoplanner.php" method="post">';
+        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
+        if (in_array($row['course_id'], $course_id_arr)) {
+            echo '<input type="submit" value="Added to Planner" name="added" class="btn btn-danger" disabled>';
+        } else {
+            echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
+
+        }
+
+        echo '</form>';
+        echo '</td>';
 
         foreach ($colnames as $colname) {
             if ($colname === "course_url") {
@@ -117,18 +130,18 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 //        echo '<td>' . $row['school'] . '</td>';
 
         //create form
-        echo '<td colspan="6">';
-        echo '<form action="Controller/addtoplanner.php" method="post">';
-        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
-        if (in_array($row['course_id'], $course_id_arr)) {
-            echo '<input type="submit" value="Added to Planner" name="added" class="btn btn-danger" disabled>';
-        } else {
-            echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
-
-        }
-
-        echo '</form>';
-        echo '</td>';
+//        echo '<td colspan="6">';
+//        echo '<form action="Controller/addtoplanner.php" method="post">';
+//        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
+//        if (in_array($row['course_id'], $course_id_arr)) {
+//            echo '<input type="submit" value="Added to Planner" name="added" class="btn btn-danger" disabled>';
+//        } else {
+//            echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
+//
+//        }
+//
+//        echo '</form>';
+//        echo '</td>';
 
         echo '</tr>';
 
