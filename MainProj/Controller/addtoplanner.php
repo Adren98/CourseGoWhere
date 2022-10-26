@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
 
     }
 
+
     $length = count($_SESSION['planner']);
 
     $arr[] = $course_id;
