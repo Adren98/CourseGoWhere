@@ -100,7 +100,7 @@ include 'navfloating.php';
                             <div class="p-3 text-center">
                                 <h1 class="text-gradient text-primary"><span id="state1" countTo="100">0</span>+</h1>
                                 <h5 class="mt-3"> Students helped</h5>
-                                <p class="text-sm font-weight-normal">Start planning your tertiary education now!</p>
+                                <p class="text-sm font-weight-normal">Start planning your tertiary education now</p>
                             </div>
                             <hr class="vertical dark">
                         </div>
@@ -108,7 +108,7 @@ include 'navfloating.php';
                             <div class="p-3 text-center">
                                 <h1 class="text-gradient text-primary"><span id="state2" countTo="5">0</span></h1>
                                 <h5 class="mt-3">Institutions</h5>
-                                <p class="text-sm font-weight-normal">Find out more about the institutions!</p>
+                                <p class="text-sm font-weight-normal">Find out more about the institutions</p>
                             </div>
                             <hr class="vertical dark">
                         </div>
@@ -116,7 +116,7 @@ include 'navfloating.php';
                             <div class="p-3 text-center">
                                 <h1 class="text-gradient text-primary"><span id="state3" countTo="2">0</span>+</h1>
                                 <h5 class="mt-3">Hours</h5>
-                                <p class="text-sm font-weight-normal">Save hours of work finding your ideal courses!</p>
+                                <p class="text-sm font-weight-normal">Save hours of work finding your ideal courses</p>
                             </div>
                         </div>
                     </div>
