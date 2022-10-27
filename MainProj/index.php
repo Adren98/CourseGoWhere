@@ -73,7 +73,7 @@ include 'navfloating.php';
 
 
 <header class="header-2">
-    <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/bg2.jpg')">
+    <div class="page-header min-vh-75 relative" style="background-image: url('Picture/coverpage-picture.jpg')">
         <span class="mask bg-gradient-primary opacity-4"></span>
         <div class="container">
             <div class="row">
@@ -100,95 +100,23 @@ include 'navfloating.php';
                             <div class="p-3 text-center">
                                 <h1 class="text-gradient text-primary"><span id="state1" countTo="100">0</span>+</h1>
                                 <h5 class="mt-3"> Students helped</h5>
-                                <p class="text-sm font-weight-normal">From buttons, to inputs, navbars, alerts or cards,
-                                    you are covered</p>
+                                <p class="text-sm font-weight-normal">Start planning your tertiary education now</p>
                             </div>
                             <hr class="vertical dark">
                         </div>
                         <div class="col-md-4 position-relative">
                             <div class="p-3 text-center">
-                                <h1 class="text-gradient text-primary"><span id="state2" countTo="15">0</span>+</h1>
-                                <h5 class="mt-3">Design Blocks</h5>
-                                <p class="text-sm font-weight-normal">Mix the sections, change the colors and unleash
-                                    your creativity</p>
+                                <h1 class="text-gradient text-primary"><span id="state2" countTo="5">0</span></h1>
+                                <h5 class="mt-3">Institutions</h5>
+                                <p class="text-sm font-weight-normal">Find out more about the institutions</p>
                             </div>
                             <hr class="vertical dark">
                         </div>
                         <div class="col-md-4">
                             <div class="p-3 text-center">
-                                <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
-                                <h5 class="mt-3">Pages</h5>
-                                <p class="text-sm font-weight-normal">Save 3-4 weeks of work when you use our pre-made
-                                    pages for your website</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="my-5 py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
-                    <div class="rotating-card-container">
-                        <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
-                            <div class="front front-background"
-                                 style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-                                <div class="card-body py-7 text-center">
-                                    <i class="material-icons text-white text-4xl my-3">touch_app</i>
-                                    <h3 class="text-white">Feel the <br/> Material Kit</h3>
-                                    <p class="text-white opacity-8">All the Bootstrap components that you need in a
-                                        development have been re-design with the new look.</p>
-                                </div>
-                            </div>
-                            <div class="back back-background"
-                                 style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-                                <div class="card-body pt-7 text-center">
-                                    <h3 class="text-white">Discover More</h3>
-                                    <p class="text-white opacity-8"> You will save a lot of time going from prototyping
-                                        to full-functional code because all elements are implemented.</p>
-                                    <a href=".//sections/page-sections/hero-sections.html" target="_blank"
-                                       class="btn btn-white btn-sm w-50 mx-auto mt-3">Start with Headers</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 ms-auto">
-                    <div class="row justify-content-start">
-                        <div class="col-md-6">
-                            <div class="info">
-                                <i class="material-icons text-gradient text-primary text-3xl">content_copy</i>
-                                <h5 class="font-weight-bolder mt-3">Full Documentation</h5>
-                                <p class="pe-5">Built by developers for developers. Check the foundation and you will
-                                    find everything inside our documentation.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info">
-                                <i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>
-                                <h5 class="font-weight-bolder mt-3">Bootstrap 5 Ready</h5>
-                                <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass
-                                    variables and mixins.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-start mt-5">
-                        <div class="col-md-6 mt-3">
-                            <i class="material-icons text-gradient text-primary text-3xl">price_change</i>
-                            <h5 class="font-weight-bolder mt-3">Save Time & Money</h5>
-                            <p class="pe-5">Creating your design from scratch with dedicated designers can be very
-                                expensive. Start with our Design System.</p>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <div class="info">
-                                <i class="material-icons text-gradient text-primary text-3xl">devices</i>
-                                <h5 class="font-weight-bolder mt-3">Fully Responsive</h5>
-                                <p class="pe-3">Regardless of the screen size, the website content will naturally fit
-                                    the given resolution.</p>
+                                <h1 class="text-gradient text-primary"><span id="state3" countTo="2">0</span>+</h1>
+                                <h5 class="mt-3">Hours</h5>
+                                <p class="text-sm font-weight-normal">Save hours of work finding your ideal courses</p>
                             </div>
                         </div>
                     </div>
@@ -203,245 +131,16 @@ include 'navfloating.php';
 
 
 
-    <div class="container">
-        <div class="row">
 
 
 
 
-            <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
-                <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4 h-100">
-                    <i class="material-icons text-gradient text-primary text-3xl">precision_manufacturing</i>
-                    <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-                        <h5>Plugins</h5>
-                        <p>Get inspiration and have an overview about the plugins that we used to create the Material
-                            Kit.</p>
-                        <a href="https://www.creative-tim.com/learning-lab/bootstrap/datepicker/material-kit"
-                           class="text-primary icon-move-right">
-                            Read more
-                            <i class="fas fa-arrow-right text-sm ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4">
-                <div class="info-horizontal bg-gradient-primary border-radius-xl d-block d-md-flex p-4">
-                    <i class="material-icons text-white text-3xl">flag</i>
-                    <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-                        <h5 class="text-white">Getting Started</h5>
-                        <p class="text-white">Check the possible ways of working with our product and the necessary
-                            files for building your own project.</p>
-                        <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit"
-                           class="text-white icon-move-right">
-                            Let's start
-                            <i class="fas fa-arrow-right text-sm ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 mt-lg-0 mt-4">
-                <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4">
-                    <i class="material-icons text-gradient text-primary text-3xl">receipt_long</i>
-                    <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-                        <h5>Utility Classes</h5>
-                        <p>Material Kit is giving you a lot of pre-made elements. For those who want flexibility, we
-                            included many utility classes.</p>
-                        <a href="https://www.creative-tim.com/learning-lab/bootstrap/utilities/material-kit"
-                           class="text-primary icon-move-right">
-                            Read more
-                            <i class="fas fa-arrow-right text-sm ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- -------- END Content Presentation Docs ------- -->
 
 
 </div>
 
 
-<footer class="footer pt-5 mt-5">
-    <div class="container">
-        <div class=" row">
-            <div class="col-md-3 mb-4 ms-auto">
-                <div>
-                    <a href="https://www.creative-tim.com/product/material-kit">
-                        <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
-                    </a>
-                    <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
-                </div>
-                <div>
-                    <ul class="d-flex flex-row ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
-                                <i class="fab fa-facebook text-lg opacity-8"></i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
-                                <i class="fab fa-twitter text-lg opacity-8"></i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
-                                <i class="fab fa-dribbble text-lg opacity-8"></i>
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
-                                <i class="fab fa-github text-lg opacity-8"></i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
-                               target="_blank">
-                                <i class="fab fa-youtube text-lg opacity-8"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h6 class="text-sm">Company</h6>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
-                                About Us
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-                                Freebies
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-                                Premium Tools
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h6 class="text-sm">Resources</h6>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                                Illustrations
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                                Bits & Snippets
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-                                Affiliate Program
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h6 class="text-sm">Help & Support</h6>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
-                                Contact Us
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-                                Knowledge Center
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer"
-                               target="_blank">
-                                Custom Development
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-                                Sponsorships
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-                <div>
-                    <h6 class="text-sm">Legal</h6>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service"
-                               target="_blank">
-                                Terms & Conditions
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy"
-                               target="_blank">
-                                Privacy Policy
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
-                                Licenses (EULA)
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="text-center">
-                    <p class="text-dark my-4 text-sm font-weight-normal">
-                        All rights reserved. Copyright ©
-                        <script>document.write(new Date().getFullYear())</script>
-                        Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 
 <!--   Core JS Files   -->

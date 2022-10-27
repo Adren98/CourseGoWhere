@@ -28,6 +28,7 @@ function genGenericSQL($sql)
     }
 
 }
+
 function gendeleteGenericSQL($sql)
 {
     $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -40,7 +41,6 @@ function gendeleteGenericSQL($sql)
 
     if ($output = mysqli_prepare($connection, strval($sql))) {
         $output->execute();
-
 
 
         $output->close();
@@ -79,6 +79,17 @@ function getFilteredCourses($sql, array $parameters)
  */
 function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 {
+    $course_id_arr = array();
+    if(isset($_SESSION['planner'])){
+        foreach ($_SESSION['planner'] as $course_id) {
+            $course_id_arr[] = $course_id[0];
+        }
+        if($_SESSION['planner'] == null){
+            $course_id_arr[] = null;
+        }
+    }
+
+
     $output->execute();
     $result = $output->get_result();
     $index = 0;
@@ -91,9 +102,22 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
         echo '<tr>';
         $url_pattern = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
 
+        //create form
+        echo '<td >';
+        echo '<form action="Controller/addtoplanner.php" method="post">';
+        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
+        if (in_array($row['course_id'], $course_id_arr)) {
+            echo '<input type="submit" value="Added to Planner" name="added" class="btn btn-danger" disabled>';
+        } else {
+            echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
+
+        }
+
+        echo '</form>';
+        echo '</td>';
 
         foreach ($colnames as $colname) {
-            if($colname === "course_url"){
+            if ($colname === "course_url") {
                 $row[$colname] = preg_replace($url_pattern, '<a href="$0">$0</a>', $row[$colname]);
             }
 
@@ -109,16 +133,20 @@ function printHtmlRow(mysqli_stmt $output, mysqli $connection)
 //        echo '<td>' . $row['school'] . '</td>';
 
         //create form
-        echo '<td colspan="6">';
-        echo '<form action="Controller/addtoplanner.php" method="post">';
-        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
-
-        echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
-        echo '</form>';
-        echo '</td>';
+//        echo '<td colspan="6">';
+//        echo '<form action="Controller/addtoplanner.php" method="post">';
+//        echo '<input type="hidden" name="course_id" value="' . $row['course_id'] . '">';
+//        if (in_array($row['course_id'], $course_id_arr)) {
+//            echo '<input type="submit" value="Added to Planner" name="added" class="btn btn-danger" disabled>';
+//        } else {
+//            echo '<input name="submit" type="submit" class="btn btn-primary" value="Add to Planner">';
+//
+//        }
+//
+//        echo '</form>';
+//        echo '</td>';
 
         echo '</tr>';
-
 
 
     }

@@ -691,6 +691,11 @@
         order.push([courseid[i].innerHTML,course_name[i].innerHTML, COP[i].innerHTML, school[i].innerHTML, remarks[i].value,]);
         }
 
+        if(order.length===0){
+            order="empty";
+        }
+        console.log(order);
+
         $.ajax({
             url: 'Controller/addtoplanner.php',
             type: 'POST',

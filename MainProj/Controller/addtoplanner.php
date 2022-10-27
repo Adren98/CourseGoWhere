@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
 
     }
 
+
     $length = count($_SESSION['planner']);
 
     $arr[] = $course_id;
@@ -47,7 +48,11 @@ if (isset($_POST['submit'])) {
 require_once 'courses_sql.php';
     $_SESSION['planner'] = $_POST['delete'];
 
+//    var_dump( $_POST['delete']);
 
+    if($_POST['delete']=="empty"){
+        $_SESSION['planner'] = [];
+    }
 
     //check if array is not empty
     if(isset($_SESSION['email'])) {
@@ -67,7 +72,7 @@ require_once 'courses_sql.php';
 
     }
 
-
+echo 'success';
 
 } else {
 

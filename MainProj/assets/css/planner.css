@@ -99,6 +99,7 @@
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     font-size: 12px;
 }
+
 .open-planner_popup{
     visibility: visible;
     top: 900%;
