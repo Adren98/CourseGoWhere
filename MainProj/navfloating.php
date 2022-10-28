@@ -620,7 +620,7 @@
         '</span><span class="course_name col-3">' + added_courses[i][1] +
         '</span><span class="COP col-3">' + added_courses[i][2] +
         '</span><span class="school col-3">' + added_courses[i][3] +
-        '</span><textarea class="remarks col-3" style="white-space: pre-line">' + added_courses[i][4] +
+        '</span><textarea  placeholder=" Add your remarks here" style="font-style:italic" class="remarks col-3" style="white-space: pre-line">' + added_courses[i][4] +
         '</textarea><i class="fas fa-minus" title="Remove course from planner" type="button" onclick="removeCourseFromPlanner(' + added_courses[i][0] + ')"></i><i class="fas fa-bars"></i></div>');
     }
     //
