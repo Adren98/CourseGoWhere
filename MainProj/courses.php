@@ -223,9 +223,21 @@ include 'navfloating.php';
                             </div>
 
 
+                            <script>
+
+                                function validate(){
+                                    var cutoffpoint = document.getElementById("cutoffpoint").value;
+                                    if(cutoffpoint < 0 || cutoffpoint > 100){
+                                        alert("Please enter a valid cut off point");
+                                        return false;
+                                    }
+                                    return true;
+                                }
+
+                            </script>
                             <div class="col-md-6 offset-md-4">
 
-                                <button type="submit" class="btn btn-primary" name="submit">
+                                <button type="submit" class="btn btn-primary" name="submit" onclick="return validate();">
                                     Filter
                                 </button>
                                 <button type="submit" class="btn btn-primary" name="submitClear">
