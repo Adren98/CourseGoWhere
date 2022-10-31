@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
   function submitData(action){
-    alert(action);
+    // alert(action);
 
 
     $(document).ready(function(){
@@ -37,10 +37,10 @@
         data: data,
         success:function(response){
             // alert(action);
-            alert(response);
+            // alert(response);
             if(response === "Deleted Successfully"){
-                console.log("why cant i go in");
-                alert("Deleted Sfghghfhffgh");
+                // console.log("why cant i go in");
+                // alert("Deleted Sfghghfhffgh");
 
 
           }

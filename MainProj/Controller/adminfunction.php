@@ -5,7 +5,7 @@ if (isset($_POST["action"])) {
     if ($_POST["action"] == "insert") {
         insert();
     } else if ($_POST["action"] == "edit") {
-        var_dump($_POST['course_name']);
+//        var_dump($_POST['course_name']);
         edit();
     } else {
         delete();
