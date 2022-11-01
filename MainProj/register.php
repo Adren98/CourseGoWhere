@@ -35,8 +35,8 @@ if (isset($_POST['submit'])) {
         $passwordER = "Please enter a password.";
     } else {
 
-        if (!preg_match("/\w{8,}/", $_POST["password"])) {
-            $passwordER = "Password must be alphanumeric and be at least 8 characters long";
+        if (!preg_match('#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#', $_POST["password"])) {
+            $passwordER = "Password must be alphanumeric, at least 8 characters long,  contains upper and lower case and at least 1 special character";
         } else {
             $password = test_input($_POST["password"]);
             $validcount++;
