@@ -6,6 +6,22 @@
 <?php
 require 'Controller/script.php';
 ?>
+
+<?php
+
+session_start();
+
+if (!isset($_SESSION['user_type'])) {
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+
+}
+
+if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+
+}
+
+?>
 <main class="addcourse">
     <div class="cotainer">
         <div class="row justify-content-center">

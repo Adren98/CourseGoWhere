@@ -3,6 +3,22 @@
     <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet"/>
 </head>
 <body>
+
+<?php
+
+session_start();
+
+if (!isset($_SESSION['user_type'])) {
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+
+}
+
+if (isset($_SESSION['user_type'])&&$_SESSION['user_type'] != 'admin') {
+    echo "<script type='text/javascript'>" . "alert('You are not an admin. Redirecting you back to homepage now.');" . " window.location='index.php';</script>";
+
+}
+
+?>
 <?php
 require 'Controller/script.php';
 ?>
