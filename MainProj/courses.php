@@ -227,7 +227,7 @@ include 'navfloating.php';
 
                                 function validate(){
                                     var cutoffpoint = document.getElementById("cutoffpoint").value;
-                                    if(cutoffpoint < 0 || cutoffpoint > 100){
+                                    if(cutoffpoint < 0 || cutoffpoint > 50){
                                         alert("Please enter a valid cut off point");
                                         return false;
                                     }
